@@ -1,0 +1,20 @@
+
+> get-phd@1.0.0 start
+> node src/api/server.js
+
+Initializing browser pool...
+(node:3308) ExperimentalWarning: CommonJS module E:\Projects 2\Real-chatplatform-main\get-phd\src\api\server.js is loading ES Module E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\uuid\dist-node\index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Browser pool initialized successfully
+
+============================================================
+✓ FindAPhD API Server running on port 3000
+✓ Browser pool initialized with max 100 tabs
+
+📚 Documentation URLs:
+   • Swagger UI:    http://localhost:3000/api-docs
+   • API Info:      http://localhost:3000/
+   • Health Check:  http://localhost:3000/api/health
+============================================================
+

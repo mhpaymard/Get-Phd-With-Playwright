@@ -1,0 +1,47 @@
+nohup: ignoring input
+
+> get-phd@1.0.0 start
+> node src/api/server.js
+
+Initializing browser pool...
+(node:16748) ExperimentalWarning: CommonJS module E:\Projects 2\Real-chatplatform-main\get-phd\src\api\server.js is loading ES Module E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\uuid\dist-node\index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Browser pool initialized successfully
+
+============================================================
+✓ FindAPhD API Server running on port 3000
+✓ Browser pool initialized with max 100 tabs
+
+📚 Documentation URLs:
+   • Swagger UI:    http://localhost:3000/api-docs
+   • API Info:      http://localhost:3000/
+   • Health Check:  http://localhost:3000/api/health
+============================================================
+
+[2025-10-05T17:38:43.339Z] POST /api/search - Request ID: 002dceb0-934f-46b5-ab72-7b32feb34c4c
+[SessionManager] Session created: 98b91932-8ab8-4479-a4b9-9e091b0bdb6d for user test-user
+[SessionManager] Search state saved: 16e4fb7a-030a-44b9-8f5b-ab461b72fcdf for session 98b91932-8ab8-4479-a4b9-9e091b0bdb6d
+[SearchService] Starting search for session 98b91932-8ab8-4479-a4b9-9e091b0bdb6d
+[SearchService] Error during search: TypeError: this.browserPool.acquire is not a function
+    at FindAPhDCrawler.crawlSearchPage (E:\Projects 2\Real-chatplatform-main\get-phd\src\workers\playwrightCrawler.js:20:44)
+    at SearchService.performSearch (E:\Projects 2\Real-chatplatform-main\get-phd\src\api\services\searchService.js:63:46)
+    at E:\Projects 2\Real-chatplatform-main\get-phd\src\api\routes\search.js:32:46
+    at Layer.handleRequest (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\layer.js:152:17)
+    at next (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\route.js:117:3)
+    at handle (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\layer.js:152:17)
+    at E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\index.js:295:15
+    at processParams (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\index.js:582:12)
+[SearchRoute] Error: TypeError: this.browserPool.acquire is not a function
+    at FindAPhDCrawler.crawlSearchPage (E:\Projects 2\Real-chatplatform-main\get-phd\src\workers\playwrightCrawler.js:20:44)
+    at SearchService.performSearch (E:\Projects 2\Real-chatplatform-main\get-phd\src\api\services\searchService.js:63:46)
+    at E:\Projects 2\Real-chatplatform-main\get-phd\src\api\routes\search.js:32:46
+    at Layer.handleRequest (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\layer.js:152:17)
+    at next (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\route.js:117:3)
+    at handle (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\lib\layer.js:152:17)
+    at E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\index.js:295:15
+    at processParams (E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\router\index.js:582:12)

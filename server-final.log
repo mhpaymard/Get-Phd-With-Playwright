@@ -1,0 +1,48 @@
+nohup: ignoring input
+
+> get-phd@1.0.0 start
+> node src/api/server.js
+
+Initializing browser pool...
+(node:15564) ExperimentalWarning: CommonJS module E:\Projects 2\Real-chatplatform-main\get-phd\src\api\server.js is loading ES Module E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\uuid\dist-node\index.js using require().
+Support for loading ES Module in require() is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+Browser pool initialized successfully
+
+============================================================
+✓ FindAPhD API Server running on port 3000
+✓ Browser pool initialized with max 100 tabs
+
+📚 Documentation URLs:
+   • Swagger UI:    http://localhost:3000/api-docs
+   • API Info:      http://localhost:3000/
+   • Health Check:  http://localhost:3000/api/health
+============================================================
+
+[2025-10-05T17:40:07.601Z] POST /api/search - Request ID: 86d42941-de6f-4f44-bd5d-f161b43e4157
+[SessionManager] Session created: 7b4732e5-1ad7-422f-9746-2ceb100e36ef for user test-user
+[SessionManager] Search state saved: 4f583f73-5c0b-4087-b561-96f31f08be2e for session 7b4732e5-1ad7-422f-9746-2ceb100e36ef
+[SearchService] Starting search for session 7b4732e5-1ad7-422f-9746-2ceb100e36ef
+🔍 Crawling FindAPhD: keywords="machine learning", page=1
+📄 URL: https://www.findaphd.com/phds/?Keywords=machine+learning
+✅ Extracted 15 results
+[2025-10-05T17:50:12.126Z] POST /api/search - Request ID: 8e2a84cb-a1fb-48e6-9be0-648c8d28c9ba
+[SessionManager] Session created: a429e38a-817d-405d-9344-0b09bb7fd0ca for user user-123-129312893891239821971237912312837219821738921
+[SessionManager] Search state saved: bcd6bef5-40fc-422b-969f-3795859a70fc for session a429e38a-817d-405d-9344-0b09bb7fd0ca
+[SearchService] Starting search for session a429e38a-817d-405d-9344-0b09bb7fd0ca
+🔍 Crawling FindAPhD: keywords="artificial intelligence", page=1
+📄 URL: https://www.findaphd.com/phds/?Keywords=artificial+intelligence
+✅ Extracted 11 results
+[2025-10-05T17:53:29.110Z] GET / - Request ID: 5b8066f6-d75f-4aa5-8e97-efdeedb8fc98
+[2025-10-05T17:53:29.115Z] GET /api-docs - Request ID: 3de65af4-eea4-427f-b543-799e04d0dd6f
+[2025-10-05T17:53:29.118Z] GET /api/health - Request ID: 920b406a-98f8-49dc-9c9d-f7030fff2a52
+[2025-10-05T18:01:13.039Z] GET / - Request ID: 6d7d3501-3f88-4c65-a988-558050279e0e
+[2025-10-05T18:01:13.045Z] GET /api-docs - Request ID: 13651d12-6692-4285-ac45-8752c06ec5b1
+[2025-10-05T18:01:13.047Z] GET /api/health - Request ID: 94a17a71-1cdd-4a58-83c9-7aa85fc7b9ce
+[2025-10-05T18:12:56.404Z] GET /api/health - Request ID: 9857b3c5-a0df-4974-98f2-e1d823cee8d8
+[2025-10-05T18:13:00.867Z] GET /api-docs/ - Request ID: 1b0386c2-a4b4-40e3-9a92-1de5a89efae8
+[2025-10-05T18:13:00.887Z] GET /api-docs/swagger-ui.css - Request ID: 54cf2499-1228-473f-babf-845e07b7076b
+[2025-10-05T18:13:00.888Z] GET /api-docs/swagger-ui-bundle.js - Request ID: eb12c22c-d36e-40a9-88b0-ac48ff3b5ba6
+[2025-10-05T18:13:00.891Z] GET /api-docs/swagger-ui-standalone-preset.js - Request ID: 6ac4eb79-1bcb-4359-98af-f34f2f22a6a8
+[2025-10-05T18:13:00.893Z] GET /api-docs/swagger-ui-init.js - Request ID: 677d051e-d7f7-492c-badb-f88c27674d1c
+[2025-10-05T18:17:14.309Z] GET /api-docs/swagger.json - Request ID: 9aaf95f0-8d16-400e-ba26-4be7a72ed566

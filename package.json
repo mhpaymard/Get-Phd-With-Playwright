@@ -1,0 +1,36 @@
+{
+  "name": "get-phd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/findaphd-url.test.js && node tests/orchestrator.test.js && node tests/filter-mapper.test.js && node tests/integration.test.js",
+    "spec": "node tests/findaphd-url.test.js",
+    "demo:crawl": "node src/demo/crawl.js",
+    "api": "node src/api/server.js",
+    "start": "node src/api/server.js",
+    "dev": "nodemon src/api/server.js",
+    "test:api": "node tests/api.test.js",
+    "test:full": "node test-runner.js",
+    "test:real": "node test-real-search.js",
+    "docs": "start http://localhost:3000/api-docs"
+  },
+  "keywords": [
+    "phd",
+    "search",
+    "api",
+    "findaphd",
+    "scraper"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "FindAPhD Search API - Complete REST API for searching PhD positions",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "playwright": "^1.55.1",
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^13.0.0",
+    "yamljs": "^0.3.0"
+  }
+}
