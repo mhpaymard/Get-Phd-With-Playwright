@@ -16,7 +16,7 @@ node test-api-simple.js
 ## 2️⃣ تست با curl
 
 ```bash
-curl -X POST http://localhost:3000/api/search \
+curl -X POST http://91.99.13.17:3000/api/search \
   -H "Content-Type: application/json" \
   -d '{"userId": "test-user", "keywords": "machine learning", "page": 1}'
 ```
@@ -28,10 +28,10 @@ curl -X POST http://localhost:3000/api/search \
 tail -f server-final.log
 
 # چک وضعیت سرور
-curl http://localhost:3000/api/health
+curl http://91.99.13.17:3000/api/health
 
 # دیدن swagger
-# باز کن: http://localhost:3000/api-docs
+# باز کن: http://91.99.13.17:3000/api-docs
 ```
 
 ## 4️⃣ Restart کردن سرور
@@ -158,7 +158,7 @@ const data = JSON.stringify({
 });
 
 const options = {
-  hostname: 'localhost',
+  hostname: '91.99.13.17',
   port: 3000,
   path: '/api/search',
   method: 'POST',
@@ -184,7 +184,7 @@ req.end();
 import requests
 
 response = requests.post(
-    'http://localhost:3000/api/search',
+    'http://91.99.13.17:3000/api/search',
     json={
         'userId': 'user-123',
         'keywords': 'machine learning',
@@ -204,7 +204,7 @@ final dio = Dio();
 
 Future<void> search() async {
   final response = await dio.post(
-    'http://localhost:3000/api/search',
+    'http://91.99.13.17:3000/api/search',
     data: {
       'userId': 'user-123',
       'keywords': 'machine learning',

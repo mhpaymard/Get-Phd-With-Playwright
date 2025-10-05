@@ -14,9 +14,9 @@ Browser pool initialized successfully
 ✓ Browser pool initialized with max 100 tabs
 
 📚 Documentation URLs:
-   • Swagger UI:    http://localhost:3000/api-docs
-   • API Info:      http://localhost:3000/
-   • Health Check:  http://localhost:3000/api/health
+   • Swagger UI:    http://91.99.13.17:3000/api-docs
+   • API Info:      http://91.99.13.17:3000/
+   • Health Check:  http://91.99.13.17:3000/api/health
 ============================================================
 
 [2025-10-05T17:40:07.601Z] POST /api/search - Request ID: 86d42941-de6f-4f44-bd5d-f161b43e4157

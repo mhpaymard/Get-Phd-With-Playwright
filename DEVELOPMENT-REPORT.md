@@ -384,11 +384,11 @@ npm run test:api
 ### مثال استفاده:
 ```javascript
 // ایجاد session
-POST http://localhost:3000/api/session
+POST http://91.99.13.17:3000/api/session
 Body: {"userId": "user-1"}
 
 // جستجو
-POST http://localhost:3000/api/search
+POST http://91.99.13.17:3000/api/search
 Body: {
   "userId": "user-1",
   "sessionId": "xxx",

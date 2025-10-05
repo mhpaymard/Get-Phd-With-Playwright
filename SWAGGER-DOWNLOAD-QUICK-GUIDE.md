@@ -5,7 +5,7 @@
 ### 1️⃣ با مرورگر
 باز کنید:
 ```
-http://localhost:3000/swagger.json
+http://91.99.13.17:3000/swagger.json
 ```
 
 فایل اتوماتیک دانلود می‌شه! 📥
@@ -15,7 +15,7 @@ http://localhost:3000/swagger.json
 ### 2️⃣ با یک دستور
 
 ```bash
-curl -o swagger.json http://localhost:3000/swagger.json
+curl -o swagger.json http://91.99.13.17:3000/swagger.json
 ```
 
 ---
@@ -40,7 +40,7 @@ e:\Projects 2\Real-chatplatform-main\get-phd\swagger.json
 ## 🔗 Endpoint اضافه شده
 
 ```javascript
-GET http://localhost:3000/swagger.json
+GET http://91.99.13.17:3000/swagger.json
 ```
 
 **ویژگی‌ها:**
@@ -66,7 +66,7 @@ GET http://localhost:3000/swagger.json
 
 ```dart
 // URL مستقیم
-final swaggerUrl = 'http://localhost:3000/swagger.json';
+final swaggerUrl = 'http://91.99.13.17:3000/swagger.json';
 
 // یا دانلود و استفاده با swagger_dart_code_generator
 ```
@@ -82,7 +82,7 @@ npm start
 
 چک کنید سرور کار می‌کنه:
 ```bash
-curl http://localhost:3000/api/health
+curl http://91.99.13.17:3000/api/health
 ```
 
 ---

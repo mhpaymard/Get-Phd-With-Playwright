@@ -232,7 +232,7 @@ await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 ```bash
 # تست با curl
-curl -X POST http://localhost:3000/api/search \
+curl -X POST http://91.99.13.17:3000/api/search \
   -H 'Content-Type: application/json' \
   -d '{
     "userId": "test-user",

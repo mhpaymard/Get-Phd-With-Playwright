@@ -4,7 +4,7 @@ const http = require('http');
 function makeRequest(method, path, body = null) {
   return new Promise((resolve, reject) => {
     const options = {
-      hostname: 'localhost',
+      hostname: '91.99.13.17',
       port: 3000,
       path: `/api${path}`,
       method,

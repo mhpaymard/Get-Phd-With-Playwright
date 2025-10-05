@@ -66,7 +66,7 @@ cp .env.example .env
 npm run api
 ```
 
-سرور روی پورت 3000 اجرا می‌شود: `http://localhost:3000`
+سرور روی پورت 3000 اجرا می‌شود: `http://91.99.13.17:3000`
 
 ---
 
@@ -132,7 +132,7 @@ npm run api
 
 ### Base URL
 ```
-http://localhost:3000/api
+http://91.99.13.17:3000/api
 ```
 
 ---
@@ -416,7 +416,7 @@ http://localhost:3000/api
 
 ```javascript
 // 1. ایجاد session
-const sessionResponse = await fetch('http://localhost:3000/api/session', {
+const sessionResponse = await fetch('http://91.99.13.17:3000/api/session', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ userId: 'user-123' })
@@ -424,7 +424,7 @@ const sessionResponse = await fetch('http://localhost:3000/api/session', {
 const { data: { sessionId } } = await sessionResponse.json();
 
 // 2. انجام جستجو
-const searchResponse = await fetch('http://localhost:3000/api/search', {
+const searchResponse = await fetch('http://91.99.13.17:3000/api/search', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -441,7 +441,7 @@ console.log('نتایج:', searchResult.data.results);
 ### Example 2: جستجو با فیلتر
 
 ```javascript
-const searchResponse = await fetch('http://localhost:3000/api/search', {
+const searchResponse = await fetch('http://91.99.13.17:3000/api/search', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -462,7 +462,7 @@ const searchResponse = await fetch('http://localhost:3000/api/search', {
 ```javascript
 // ادامه جستجوی قبلی
 const continueResponse = await fetch(
-  `http://localhost:3000/api/search/${searchId}/continue`,
+  `http://91.99.13.17:3000/api/search/${searchId}/continue`,
   {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -481,14 +481,14 @@ import requests
 
 # ایجاد session
 session_response = requests.post(
-    'http://localhost:3000/api/session',
+    'http://91.99.13.17:3000/api/session',
     json={'userId': 'python-user-1'}
 )
 session_id = session_response.json()['data']['sessionId']
 
 # جستجو
 search_response = requests.post(
-    'http://localhost:3000/api/search',
+    'http://91.99.13.17:3000/api/search',
     json={
         'userId': 'python-user-1',
         'sessionId': session_id,
@@ -509,15 +509,15 @@ for phd in results:
 
 ```bash
 # Health check
-curl http://localhost:3000/api/health
+curl http://91.99.13.17:3000/api/health
 
 # ایجاد session
-curl -X POST http://localhost:3000/api/session \
+curl -X POST http://91.99.13.17:3000/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId": "curl-user-1"}'
 
 # جستجو
-curl -X POST http://localhost:3000/api/search \
+curl -X POST http://91.99.13.17:3000/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "curl-user-1",

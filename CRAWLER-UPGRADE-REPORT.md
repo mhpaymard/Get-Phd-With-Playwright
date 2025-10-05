@@ -89,7 +89,7 @@ Test 3: "computer science" page 2 → 13 نتیجه
 ### API Endpoint
 
 ```bash
-curl -X POST http://localhost:3000/api/search \
+curl -X POST http://91.99.13.17:3000/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "user-123",

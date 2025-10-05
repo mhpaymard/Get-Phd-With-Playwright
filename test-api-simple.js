@@ -7,7 +7,7 @@ const searchData = JSON.stringify({
 });
 
 const options = {
-  hostname: 'localhost',
+  hostname: '91.99.13.17',
   port: 3000,
   path: '/api/search',
   method: 'POST',
@@ -84,7 +84,7 @@ const req = http.request(options, (res) => {
 
 req.on('error', (e) => {
   console.error(`❌ Request failed: ${e.message}`);
-  console.log('\nMake sure the server is running on http://localhost:3000\n');
+  console.log('\nMake sure the server is running on http://91.99.13.17:3000\n');
 });
 
 req.write(searchData);

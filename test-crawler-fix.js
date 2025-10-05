@@ -8,7 +8,7 @@ function testSearch() {
   });
 
   const options = {
-    hostname: 'localhost',
+    hostname: '91.99.13.17',
     port: 3000,
     path: '/api/search',
     method: 'POST',

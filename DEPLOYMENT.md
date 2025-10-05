@@ -34,7 +34,7 @@ nano .env  # ویرایش تنظیمات
 npm run api
 ```
 
-سرور روی `http://localhost:3000` اجرا می‌شود.
+سرور روی `http://91.99.13.17:3000` اجرا می‌شود.
 
 ---
 
@@ -152,7 +152,7 @@ server {
     server_name api.yourdomain.com;
 
     location / {
-        proxy_pass http://localhost:3000;
+        proxy_pass http://91.99.13.17:3000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -314,7 +314,7 @@ const logger = winston.createLogger({
 crontab -e
 
 # اضافه کردن این خط:
-*/5 * * * * curl -f http://localhost:3000/api/health || systemctl restart findaphd-api
+*/5 * * * * curl -f http://91.99.13.17:3000/api/health || systemctl restart findaphd-api
 ```
 
 ---
@@ -506,9 +506,9 @@ PORT=3003 pm2 start src/api/server.js --name api-3
 
 # Load balancing با Nginx
 upstream api_backend {
-    server localhost:3001;
-    server localhost:3002;
-    server localhost:3003;
+    server 91.99.13.17:3001;
+    server 91.99.13.17:3002;
+    server 91.99.13.17:3003;
 }
 
 server {

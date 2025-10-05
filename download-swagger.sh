@@ -15,7 +15,7 @@ NC='\033[0m' # No Color
 
 # چک کردن سرور
 echo -n "🔍 در حال بررسی سرور... "
-if curl -s http://localhost:3000/api/health > /dev/null 2>&1; then
+if curl -s http://91.99.13.17:3000/api/health > /dev/null 2>&1; then
     echo -e "${GREEN}✓${NC}"
 else
     echo -e "${RED}✗${NC}"
@@ -29,7 +29,7 @@ fi
 
 # دانلود فایل
 echo -n "⬇️  در حال دانلود... "
-if curl -s -o swagger.json http://localhost:3000/swagger.json; then
+if curl -s -o swagger.json http://91.99.13.17:3000/swagger.json; then
     echo -e "${GREEN}✓${NC}"
 else
     echo -e "${RED}✗${NC}"

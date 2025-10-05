@@ -14,7 +14,7 @@ const testEndpoints = [
 async function testEndpoint(method, path, name) {
   return new Promise((resolve) => {
     const options = {
-      hostname: 'localhost',
+      hostname: '91.99.13.17',
       port: 3000,
       path: path,
       method: method,
@@ -131,9 +131,9 @@ async function testSwaggerConfig() {
   if (failed === 0) {
     console.log('\n🎉 All tests passed! Swagger is configured correctly.\n');
     console.log('🔗 You can access:');
-    console.log('   • Swagger UI:  http://localhost:3000/api-docs');
-    console.log('   • API Info:    http://localhost:3000/');
-    console.log('   • Health:      http://localhost:3000/api/health');
+    console.log('   • Swagger UI:  http://91.99.13.17:3000/api-docs');
+    console.log('   • API Info:    http://91.99.13.17:3000/');
+    console.log('   • Health:      http://91.99.13.17:3000/api/health');
   } else {
     console.log('\n⚠️  Some tests failed. Check if server is running:');
     console.log('   npm start');

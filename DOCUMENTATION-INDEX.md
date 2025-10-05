@@ -93,7 +93,7 @@ get-phd/
 ### سناریو 1: می‌خوام اولین جستجومو انجام بدم
 ```
 1. QUICK-REFERENCE.md → بخش "3 قدم"
-2. Swagger UI → http://localhost:3000/api-docs
+2. Swagger UI → http://91.99.13.17:3000/api-docs
 3. تست کن!
 ```
 
@@ -202,9 +202,9 @@ get-phd/
 ## 🔗 لینک‌های سریع
 
 ### مستندات آنلاین (بعد از اجرا):
-- **Swagger UI**: http://localhost:3000/api-docs
-- **API Info**: http://localhost:3000/
-- **Health Check**: http://localhost:3000/api/health
+- **Swagger UI**: http://91.99.13.17:3000/api-docs
+- **API Info**: http://91.99.13.17:3000/
+- **Health Check**: http://91.99.13.17:3000/api/health
 
 ### فایل‌های کلیدی:
 - [README.md](./README.md) - نقطه شروع

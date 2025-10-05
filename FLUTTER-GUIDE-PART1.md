@@ -26,13 +26,13 @@ FindAPhD Search API یک سرویس RESTful است که موقعیت‌های د
 
 ###Base URL
 ```dart
-const String baseUrl = 'http://localhost:3000/api';  // Development
+const String baseUrl = 'http://91.99.13.17:3000/api';  // Development
 const String baseUrl = 'https://your-domain.com/api'; // Production
 ```
 
 ### Swagger Documentation
 ```
-http://localhost:3000/api-docs
+http://91.99.13.17:3000/api-docs
 ```
 
 ---
@@ -530,7 +530,7 @@ flutter pub get
 import 'package:dio/dio.dart';
 
 class ApiClient {
-  static const String baseUrl = 'http://localhost:3000/api';
+  static const String baseUrl = 'http://91.99.13.17:3000/api';
   
   late final Dio _dio;
   

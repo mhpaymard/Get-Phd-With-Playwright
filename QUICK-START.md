@@ -13,7 +13,7 @@ npx playwright install chromium
 npm run api
 ```
 
-سرور روی `http://localhost:3000` اجرا می‌شود.
+سرور روی `http://91.99.13.17:3000` اجرا می‌شود.
 
 ---
 
@@ -34,7 +34,7 @@ npm run api
 ## 💻 مثال کامل (JavaScript)
 
 ```javascript
-const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'http://91.99.13.17:3000/api';
 
 async function searchPhD() {
   // 1. ایجاد session
@@ -100,7 +100,7 @@ searchPhD();
 ```python
 import requests
 
-BASE_URL = 'http://localhost:3000/api'
+BASE_URL = 'http://91.99.13.17:3000/api'
 
 # 1. ایجاد session
 session_response = requests.post(
@@ -257,15 +257,15 @@ console.log('Funding Options:', filters.data.funding);
 
 ```bash
 # Health check
-curl http://localhost:3000/api/health
+curl http://91.99.13.17:3000/api/health
 
 # ایجاد session
-curl -X POST http://localhost:3000/api/session \
+curl -X POST http://91.99.13.17:3000/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId": "test-1"}'
 
 # جستجو (جایگزین SESSION_ID_HERE با session id دریافتی)
-curl -X POST http://localhost:3000/api/search \
+curl -X POST http://91.99.13.17:3000/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "test-1",

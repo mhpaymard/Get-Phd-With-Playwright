@@ -5,7 +5,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.1.0-blue.svg)](https://expressjs.com/)
 [![Playwright](https://img.shields.io/badge/Playwright-1.55.1-red.svg)](https://playwright.dev/)
-[![Swagger](https://img.shields.io/badge/API-Swagger-brightgreen.svg)](http://localhost:3000/api-docs)
+[![Swagger](https://img.shields.io/badge/API-Swagger-brightgreen.svg)](http://91.99.13.17:3000/api-docs)
 
 ## 🚀 Quick Start
 
@@ -17,7 +17,7 @@ npm install
 npm start
 
 # دسترسی به Swagger UI
-# باز کردن مرورگر: http://localhost:3000/api-docs
+# باز کردن مرورگر: http://91.99.13.17:3000/api-docs
 ```
 
 **تبریک! API شما در حال اجرا است! 🎉**
@@ -89,7 +89,7 @@ npm start
 - `GET /api/search/history/:sessionId` - تاریخچه جستجوها
 - `POST /api/search/filters/available` - دریافت فیلترهای موجود
 
-**مشاهده در Swagger**: http://localhost:3000/api-docs
+**مشاهده در Swagger**: http://91.99.13.17:3000/api-docs
 
 ---
 
@@ -271,7 +271,7 @@ SESSION_TIMEOUT=86400000     # timeout session (24h)
 
 4. **Swagger UI**: تست API در مرورگر
    ```
-   http://localhost:3000/api-docs
+   http://91.99.13.17:3000/api-docs
    ```
 
 5. **Commit & Push**: ارسال تغییرات
@@ -322,14 +322,14 @@ const fetch = require('node-fetch');
 
 async function searchPhD(keywords) {
   // ایجاد session
-  const session = await fetch('http://localhost:3000/api/session', {
+  const session = await fetch('http://91.99.13.17:3000/api/session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId: 'user-123' })
   }).then(r => r.json());
 
   // جستجو
-  const result = await fetch('http://localhost:3000/api/search', {
+  const result = await fetch('http://91.99.13.17:3000/api/search', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -354,11 +354,11 @@ import requests
 
 def search_phd(keywords):
     # ایجاد session
-    session = requests.post('http://localhost:3000/api/session', 
+    session = requests.post('http://91.99.13.17:3000/api/session', 
                            json={'userId': 'user-123'}).json()
     
     # جستجو
-    result = requests.post('http://localhost:3000/api/search', json={
+    result = requests.post('http://91.99.13.17:3000/api/search', json={
         'userId': 'user-123',
         'sessionId': session['data']['sessionId'],
         'keywords': keywords,
@@ -374,12 +374,12 @@ print(f"Found {len(results)} PhD positions")
 ### cURL
 ```bash
 # ایجاد session
-curl -X POST http://localhost:3000/api/session \
+curl -X POST http://91.99.13.17:3000/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId":"user-123"}'
 
 # جستجو
-curl -X POST http://localhost:3000/api/search \
+curl -X POST http://91.99.13.17:3000/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "user-123",
@@ -482,8 +482,8 @@ npx playwright install
 ```
 
 ### نتیجه‌ای برنمی‌گرده
-- چک کنید سرور در حال اجرا باشد: `curl http://localhost:3000/api/health`
-- Swagger UI رو چک کنید: http://localhost:3000/api-docs
+- چک کنید سرور در حال اجرا باشد: `curl http://91.99.13.17:3000/api/health`
+- Swagger UI رو چک کنید: http://91.99.13.17:3000/api-docs
 - لاگ‌های سرور رو بررسی کنید
 
 ### 503 Service Unavailable
@@ -530,7 +530,7 @@ ISC License - برای استفاده آزاد
 
 - **Documentation**: مستندات کامل در پوشه `docs/`
 - **Examples**: کدهای نمونه در `tests/`
-- **Swagger UI**: http://localhost:3000/api-docs
+- **Swagger UI**: http://91.99.13.17:3000/api-docs
 - **Issues**: GitHub Issues
 
 ---
@@ -542,7 +542,7 @@ ISC License - برای استفاده آزاد
 | [COMMANDS.md](./COMMANDS.md) | راهنمای کامل دستورات |
 | [SWAGGER-QUICKSTART.md](./SWAGGER-QUICKSTART.md) | شروع سریع 30 ثانیه‌ای |
 | [API Docs](./docs/API-DOCUMENTATION.md) | مستندات کامل API |
-| [Swagger UI](http://localhost:3000/api-docs) | مستندات تعاملی |
+| [Swagger UI](http://91.99.13.17:3000/api-docs) | مستندات تعاملی |
 | [Deployment](./DEPLOYMENT.md) | راهنمای استقرار |
 
 ---
