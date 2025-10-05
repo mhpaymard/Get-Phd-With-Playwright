@@ -1,17 +1,5 @@
 // Main API Server with Express
-const express = // Swagger JSON endpoint (برای دانلود مستقیم)
-app.get('/swagger.json', (req, res) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.setHeader('Content-Disposition', 'attachment; filename="swagger.json"');
-  res.json(swaggerDocument);
-});
-
-// Swagger Documentation (must be before 404 handler)
-app.use('/api-docs', swaggerUi.serve);
-app.get('/api-docs', swaggerUi.setup(swaggerDocument, {
-  customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: "FindAPhD API Documentation"
-}));e('express');
+const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const { v4: uuidv4 } = require('uuid');
@@ -57,6 +45,13 @@ app.get('/', (req, res) => {
       health: '/api/health'
     }
   });
+});
+
+// Swagger JSON endpoint (برای دانلود مستقیم)
+app.get('/swagger.json', (req, res) => {
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader('Content-Disposition', 'attachment; filename="swagger.json"');
+  res.json(swaggerDocument);
 });
 
 // Swagger Documentation (must be before 404 handler)

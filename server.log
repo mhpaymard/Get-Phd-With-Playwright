@@ -1,20 +1,16 @@
+E:\Projects 2\Real-chatplatform-main\get-phd\src\api\server.js:3
+app.get('/swagger.json', (req, res) => {
+^
 
-> get-phd@1.0.0 start
-> node src/api/server.js
+ReferenceError: Cannot access 'app' before initialization
+    at Object.<anonymous> (E:\Projects 2\Real-chatplatform-main\get-phd\src\api\server.js:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1565:14)
+    at Object..js (node:internal/modules/cjs/loader:1708:10)
+    at Module.load (node:internal/modules/cjs/loader:1318:32)
+    at Function._load (node:internal/modules/cjs/loader:1128:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)
+    at node:internal/main/run_main_module:36:49
 
-Initializing browser pool...
-(node:3308) ExperimentalWarning: CommonJS module E:\Projects 2\Real-chatplatform-main\get-phd\src\api\server.js is loading ES Module E:\Projects 2\Real-chatplatform-main\get-phd\node_modules\uuid\dist-node\index.js using require().
-Support for loading ES Module in require() is an experimental feature and might change at any time
-(Use `node --trace-warnings ...` to show where the warning was created)
-Browser pool initialized successfully
-
-============================================================
-✓ FindAPhD API Server running on port 3000
-✓ Browser pool initialized with max 100 tabs
-
-📚 Documentation URLs:
-   • Swagger UI:    http://localhost:3000/api-docs
-   • API Info:      http://localhost:3000/
-   • Health Check:  http://localhost:3000/api/health
-============================================================
-
+Node.js v22.12.0
