@@ -9,14 +9,9 @@
         }
     },
     "servers": [{
-            "url": "http://localhost:3000",
-            "description": "Development server"
-        },
-        {
-            "url": "http://91.99.13.17:3000",
-            "description": "Development server"
-        }
-    ],
+        "url": "http://91.99.13.17:3000",
+        "description": "Development server"
+    }],
     "tags": [{
             "name": "PhD",
             "description": "PhD positions search and retrieval"
