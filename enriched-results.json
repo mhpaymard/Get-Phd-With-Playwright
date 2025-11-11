@@ -1,0 +1,585 @@
+{
+  "stats": {
+    "supervisors": 20,
+    "deadlines": 6,
+    "locations": 4,
+    "contacts": 12,
+    "funding": 24
+  },
+  "results": [
+    {
+      "index": 1,
+      "name": "Physics Ph.D.",
+      "university": "Rochester Institute of Technology USA",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [],
+      "description": "RIT’s physics Ph.D. combines our interdisciplinary approach, renowned faculty, and cutting-edge facilities to empower you to excel in your research and shape the future of physics.OverviewPhysics play..."
+    },
+    {
+      "index": 2,
+      "name": "Real-time direct detection of Criegee intermediates formed by ozonolysis of alkenes in an atmospheric simulation chamber",
+      "university": "University of Leeds",
+      "supervisors": [
+        "Professor Daniel Stone and Professor Paul Seakins within the Atmospheric, Planetary, and Theoretical Chemistry group in the School of Chemistry at the University of Leeds",
+        "Professor"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Leeds"
+      ],
+      "contacts": [],
+      "funding": [
+        "funded"
+      ],
+      "description": "Atmospheric oxidation chemistry is central to understanding air quality and climate. Ozonolysis reactions, in which ozone initiates the oxidation of unsaturated volatile organic compounds (VOCs) throu..."
+    },
+    {
+      "index": 3,
+      "name": "Glasgow Interactive Systems (GIST)",
+      "university": "University of Glasgow",
+      "supervisors": [
+        "world leaders in their fields, with GIST hosting 4 prestigious ERC grants as well as the Social AI CDT, and projects funded by Responsible AI, AI Security Institute, EPSRC, UKRI and more"
+      ],
+      "deadlines": [
+        "January"
+      ],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Glasgow"
+      ],
+      "contacts": [],
+      "funding": [
+        "funded",
+        "scholarship",
+        "studentship",
+        "EPSRC",
+        "UKRI"
+      ],
+      "description": "Are you interested in pursuing a PhD in Human-Computer Interaction, Animal-Computer Interaction, Immersive and Ubiquitous Technologies, Wearables and Haptics, Social AI, or Robotics at the University ..."
+    },
+    {
+      "index": 4,
+      "name": "Arts and Humanities Postgraduate Research, University of Glasgow",
+      "university": "University of Glasgow",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Glasgow"
+      ],
+      "contacts": [],
+      "funding": [
+        "scholarship"
+      ],
+      "description": "Scholarship and funding opportunities&nbsp;Scholarships and funding opportunities are available for postgraduate research degrees and PhD study in Arts and Humanities at the University of Glasgow.&nbs..."
+    },
+    {
+      "index": 5,
+      "name": "P21 Development of novel tools for bioconjugation using cascade ring expansion reactions",
+      "university": "University of York",
+      "supervisors": [
+        "Dr",
+        "Prof"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of York"
+      ],
+      "contacts": [
+        "william.unsworth@york.ac.uk",
+        "chris.spicer@york.ac.uk",
+        "martin.fascione@york.ac.ukGeneral",
+        "cshp-cdt@chem.ox.ac.uk",
+        "chem-env-pgr@york.ac.uk"
+      ],
+      "funding": [
+        "funded",
+        "studentship",
+        "EPSRC"
+      ],
+      "description": "In this project we will establish novel chemical biology tools to explore post translational modification (PTM) of lysine residues, centred on the use of conjugation&nbsp;addition/ring expansion (CARE..."
+    },
+    {
+      "index": 6,
+      "name": "Classics and Ancient History - Postgraduate Research Opportunities",
+      "university": "University of Birmingham",
+      "supervisors": [
+        "A summary of our key research areas, and staff working within those, can be found below"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "scholarship"
+      ],
+      "description": "Take your research further in the field of Classics and Ancient History. Our expertise covers a huge range of areas, with a focus on Egyptian, Roman and Greek societies across all the periods of class..."
+    },
+    {
+      "index": 7,
+      "name": "Birmingham Law School - Postgraduate Research Opportunities",
+      "university": "University of Birmingham",
+      "supervisors": [
+        "a member of academic staff"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "scholarship"
+      ],
+      "description": "Law PhD / PhD by Distance Learning / MPhil / MJurConduct your own law research with the support of legal specialists from Birmingham Law School. Contribute to an established tradition of 85 years of w..."
+    },
+    {
+      "index": 8,
+      "name": "Climate impacts from water-rich large-magnitude volcanic eruptions",
+      "university": "University of Leeds",
+      "supervisors": [
+        "Dr",
+        "Dr Graham Mann, Prof"
+      ],
+      "deadlines": [],
+      "locations": [
+        "Exeter"
+      ],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "studentship"
+      ],
+      "description": "Climate impacts from water-rich large-magnitude volcanic eruptionsLeeds PhD supervisors: Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson (volcanic aero..."
+    },
+    {
+      "index": 9,
+      "name": "School of Computing Science",
+      "university": "University of Glasgow",
+      "supervisors": [],
+      "deadlines": [
+        "October",
+        "January"
+      ],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Glasgow"
+      ],
+      "contacts": [
+        "socs-pgr-enquiries@glasgow.ac.uk"
+      ],
+      "funding": [
+        "scholarship",
+        "studentship",
+        "UKRI"
+      ],
+      "description": "The School of Computing Science at the University of Glasgow is offering studentships to support PhD research for students starting in October&nbsp;2026 or shortly thereafter.&nbsp;Funding is availabl..."
+    },
+    {
+      "index": 10,
+      "name": "PhD projects in Computer Science (sponsored/self-funded)",
+      "university": "Newcastle University",
+      "supervisors": [
+        "Nick Chancellor and Jonte Hance&nbsp;COMPSF03: Applications of Graph Width Parameters to Computational Complexity - Supervisor: Konrad Dabrowski&nbsp;COMPSF04: Longitudinal brain imaging and modelling of ageing and disease processes - Supervisor: Yujiang Wang&nbsp;COMPSF05: Biomedical Explainable AI - Supervisor: Jaume Bacardit&nbsp;COMPSF06: Analysing and Visualizing Brain-Heart Interactions in Health and Disease - Supervisor:&nbsp;Alaa AlahmadiCOMPSF07: AI transparency - Supervisor: Pawel Widera&nbsp;COMPSF08: Advancing Edge AI: PhD Research Opportunities at the EPSRC National Edge Artificial Intelligence Hub - Supervisor:&nbsp;Ellis SolaimanCOMPSF09: Large Language Model for Robotics - Supervisor: Bo Wei&nbsp;COMPSF10: Adaptive and Trusted Execution in the Cloud-Edge Continuum - Supervisor:&nbsp;Devki Nandan JhaCOMPSF11: TinyML for the Internet of Things - Supervisor: Tomasz Szydlo&nbsp;COMPSF12: Interfacing Between the Smart Home and the Street - Supervisor: Nick Taylor&nbsp;COMPSF13: Advancing Human-Centred AI: PhD Research Opportunities in the Haii Lab – Supervisor: Lei Shi&nbsp;COMPSF14: Performance and security in VANETs – Supervisor: Nigel Thomas&nbsp;COMPSF15: Event-Based Visualization of Temporal Networks – Supervisor: Daniel Archambault&nbsp;COMPSF16: Data Visualization for Human-AI Collaboration - Supervisor: Xinhuan Shu&nbsp;COMPSF17: Data visualization for explainability and data-driven decision-making in health and life sciences – Supervisor: Sara Fernstad&nbsp;COMPSF18:&nbsp;Supervisor:&nbsp;Aydin AbadiProject 1: Dealing with Financial Fraud through Privacy-Enhancing TechnologiesProject 2: Incentivizing Participation in Privacy-Enhancing TechnologiesProject 3: Enhancing Federated Learning Efficiency and Scalability with Advanced Cryptographic ProtocolsProject 4: Mitigating Insider Threats in Financial Sectors through the Development and Use of Privacy-Enhancing TechnologiesProject 5: Improving Federated Learning Model Quality with Privacy-Preserving Data Cleaning TechniquesCOMPSF19: Privacy Enhancing Technologies for Cyber-Physical Systems – Supervisor: Shishir Nagaraja&nbsp;COMPSF20: AI and Cyber Security for Cyber Physical Systems – Supervisor: Mujeeb Ahmed&nbsp;COMPSF21: Supervisor: Phil Lord&nbsp;Project 1: Hyperscale Graphs Models of Life&nbsp;Project 2: A Computational representation of Gender&nbsp;COMPSF22: Operations intelligence for decarbonisation – Supervisor: Wanqing Zhao&nbsp;COMPSF23: Trustworthy and Secure Artificial Intelligence – Supervisor: Varun Ojha&nbsp;COMPSF24: Deep Learning Models for Predicting Microbial Protein Expression – Supervisor: Gizem Buldum&nbsp;COMPSF25: DNA Nanotechnology and Molecular Computing – Supervisor: Harold FellermannStudents are encouraged to contact project supervisors directly/visit our school webpage for information on specific projects"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "funded",
+        "studentship",
+        "EPSRC"
+      ],
+      "description": "The School of Computing, Newcastle University is advertising a number of PhD projects in the areas of data science and computer vision, cybersecurity, human computer interaction, internet of things, d..."
+    },
+    {
+      "index": 11,
+      "name": "Characterising molecular determinants of cell responses in melanoma using genome editing and single-cell technologies",
+      "university": "Queen Mary University of London",
+      "supervisors": [
+        "Dr Elena Torlai Triglia&nbsp;Co-supervisor(s):&nbsp;&nbsp;&nbsp;Studentship Funding: Awaiting CSC Funding DecisionApplication Deadline: 28th January 2026PhD Programme: PhD Biological Sciences&nbsp;Project Overview&nbsp;Cancer develops from the accumulation of alterations in the DNA sequence and structure, that ultimately determine the disease manifestations observed in patients",
+        "Dr"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of London"
+      ],
+      "contacts": [
+        "sbbs-pgadmissions@qmul.ac.uk"
+      ],
+      "funding": [
+        "scholarship",
+        "studentship"
+      ],
+      "description": "Primary Supervisor: Dr Elena Torlai Triglia&nbsp;Co-supervisor(s):&nbsp;&nbsp;&nbsp;Studentship Funding: Awaiting CSC Funding DecisionApplication Deadline: 28th January 2026PhD Programme: PhD Biologic..."
+    },
+    {
+      "index": 12,
+      "name": "Molecular Pathways of Viral Manipulation of Cellular Immunity",
+      "university": "Cardiff University",
+      "supervisors": [
+        "Prof"
+      ],
+      "deadlines": [
+        "December"
+      ],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [
+        "StantonRJ@cardiff.ac.uk"
+      ],
+      "funding": [
+        "funded",
+        "studentship"
+      ],
+      "description": "Project Description:Human cytomegalovirus (HCMV) is the leading cause of disease and death in immunosuppressed individuals, yet almost half of patients are protected from harm. Currently we do not kno..."
+    },
+    {
+      "index": 13,
+      "name": "Ysgoloriaethau Ymchwil Cyffredinol WGSSS ESRC wedi'u hariannu'n llawn trwy'r Llwybr Ieithyddiaeth a Dwyieithrwydd (Ysgol y Gymraeg)",
+      "university": "Cardiff University",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [
+        "ogradygn@caerdydd.ac.uk",
+        "maciollachriostd@caerdydd.ac.uk",
+        "encap-pgadmissions@cardiff.ac.uk"
+      ],
+      "funding": [
+        "UKRI"
+      ],
+      "description": "Mae Ysgol y Gymraeg a’r Ysgol Saesneg, Cyfathrebu ac Athroniaeth, Prifysgol Caerdydd, yn falch iawn o gynnig ysgoloriaethau ymchwil Ysgol Graddedigion Gwyddorau Cymdeithasol Cymru (YGGCC) (Partneriaet..."
+    },
+    {
+      "index": 14,
+      "name": "Astrophysical Sciences and Technology Ph.D.",
+      "university": "Rochester Institute of Technology USA",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [
+        "Hawaii"
+      ],
+      "universitiesInDesc": [
+        "University of Illinois"
+      ],
+      "contacts": [],
+      "funding": [],
+      "description": "An astrophysics Ph.D. centered on phenomena beyond the Earth and on the development of the technologies that will enable the next major strides in the field.Why Study Astrophysical Sciences at RITSTEM..."
+    },
+    {
+      "index": 15,
+      "name": "Artificial Intelligence for musculoskeletal global health (Botnar-2025-11)",
+      "university": "University of Oxford",
+      "supervisors": [
+        "Associate Professor Sara Khalid https://www",
+        "Professor",
+        "Dr"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Oxford"
+      ],
+      "contacts": [
+        "graduate.studies@ndorms.ox.ac.uk"
+      ],
+      "funding": [],
+      "description": "The World Health Organisation estimates musculoskeletal conditions to affect nearly a quarter of the global population. It impacts health outcomes and quality of life, and is in turn compounded by und..."
+    },
+    {
+      "index": 16,
+      "name": "Physics Ph.D.",
+      "university": "Rochester Institute of Technology USA",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [],
+      "description": "RIT’s physics Ph.D. combines our interdisciplinary approach, renowned faculty, and cutting-edge facilities to empower you to excel in your research and shape the future of physics.OverviewPhysics play..."
+    },
+    {
+      "index": 17,
+      "name": "Real-time direct detection of Criegee intermediates formed by ozonolysis of alkenes in an atmospheric simulation chamber",
+      "university": "University of Leeds",
+      "supervisors": [
+        "Professor Daniel Stone and Professor Paul Seakins within the Atmospheric, Planetary, and Theoretical Chemistry group in the School of Chemistry at the University of Leeds",
+        "Professor"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Leeds"
+      ],
+      "contacts": [],
+      "funding": [
+        "funded"
+      ],
+      "description": "Atmospheric oxidation chemistry is central to understanding air quality and climate. Ozonolysis reactions, in which ozone initiates the oxidation of unsaturated volatile organic compounds (VOCs) throu..."
+    },
+    {
+      "index": 18,
+      "name": "Glasgow Interactive Systems (GIST)",
+      "university": "University of Glasgow",
+      "supervisors": [
+        "world leaders in their fields, with GIST hosting 4 prestigious ERC grants as well as the Social AI CDT, and projects funded by Responsible AI, AI Security Institute, EPSRC, UKRI and more"
+      ],
+      "deadlines": [
+        "January"
+      ],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Glasgow"
+      ],
+      "contacts": [],
+      "funding": [
+        "funded",
+        "scholarship",
+        "studentship",
+        "EPSRC",
+        "UKRI"
+      ],
+      "description": "Are you interested in pursuing a PhD in Human-Computer Interaction, Animal-Computer Interaction, Immersive and Ubiquitous Technologies, Wearables and Haptics, Social AI, or Robotics at the University ..."
+    },
+    {
+      "index": 19,
+      "name": "Arts and Humanities Postgraduate Research, University of Glasgow",
+      "university": "University of Glasgow",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Glasgow"
+      ],
+      "contacts": [],
+      "funding": [
+        "scholarship"
+      ],
+      "description": "Scholarship and funding opportunities&nbsp;Scholarships and funding opportunities are available for postgraduate research degrees and PhD study in Arts and Humanities at the University of Glasgow.&nbs..."
+    },
+    {
+      "index": 20,
+      "name": "P21 Development of novel tools for bioconjugation using cascade ring expansion reactions",
+      "university": "University of York",
+      "supervisors": [
+        "Dr",
+        "Prof"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of York"
+      ],
+      "contacts": [
+        "william.unsworth@york.ac.uk",
+        "chris.spicer@york.ac.uk",
+        "martin.fascione@york.ac.ukGeneral",
+        "cshp-cdt@chem.ox.ac.uk",
+        "chem-env-pgr@york.ac.uk"
+      ],
+      "funding": [
+        "funded",
+        "studentship",
+        "EPSRC"
+      ],
+      "description": "In this project we will establish novel chemical biology tools to explore post translational modification (PTM) of lysine residues, centred on the use of conjugation&nbsp;addition/ring expansion (CARE..."
+    },
+    {
+      "index": 21,
+      "name": "Classics and Ancient History - Postgraduate Research Opportunities",
+      "university": "University of Birmingham",
+      "supervisors": [
+        "A summary of our key research areas, and staff working within those, can be found below"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "scholarship"
+      ],
+      "description": "Take your research further in the field of Classics and Ancient History. Our expertise covers a huge range of areas, with a focus on Egyptian, Roman and Greek societies across all the periods of class..."
+    },
+    {
+      "index": 22,
+      "name": "Birmingham Law School - Postgraduate Research Opportunities",
+      "university": "University of Birmingham",
+      "supervisors": [
+        "a member of academic staff"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "scholarship"
+      ],
+      "description": "Law PhD / PhD by Distance Learning / MPhil / MJurConduct your own law research with the support of legal specialists from Birmingham Law School. Contribute to an established tradition of 85 years of w..."
+    },
+    {
+      "index": 23,
+      "name": "Climate impacts from water-rich large-magnitude volcanic eruptions",
+      "university": "University of Leeds",
+      "supervisors": [
+        "Dr",
+        "Dr Graham Mann, Prof"
+      ],
+      "deadlines": [],
+      "locations": [
+        "Exeter"
+      ],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "studentship"
+      ],
+      "description": "Climate impacts from water-rich large-magnitude volcanic eruptionsLeeds PhD supervisors: Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson (volcanic aero..."
+    },
+    {
+      "index": 24,
+      "name": "School of Computing Science",
+      "university": "University of Glasgow",
+      "supervisors": [],
+      "deadlines": [
+        "October",
+        "January"
+      ],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Glasgow"
+      ],
+      "contacts": [
+        "socs-pgr-enquiries@glasgow.ac.uk"
+      ],
+      "funding": [
+        "scholarship",
+        "studentship",
+        "UKRI"
+      ],
+      "description": "The School of Computing Science at the University of Glasgow is offering studentships to support PhD research for students starting in October&nbsp;2026 or shortly thereafter.&nbsp;Funding is availabl..."
+    },
+    {
+      "index": 25,
+      "name": "PhD projects in Computer Science (sponsored/self-funded)",
+      "university": "Newcastle University",
+      "supervisors": [
+        "Nick Chancellor and Jonte Hance&nbsp;COMPSF03: Applications of Graph Width Parameters to Computational Complexity - Supervisor: Konrad Dabrowski&nbsp;COMPSF04: Longitudinal brain imaging and modelling of ageing and disease processes - Supervisor: Yujiang Wang&nbsp;COMPSF05: Biomedical Explainable AI - Supervisor: Jaume Bacardit&nbsp;COMPSF06: Analysing and Visualizing Brain-Heart Interactions in Health and Disease - Supervisor:&nbsp;Alaa AlahmadiCOMPSF07: AI transparency - Supervisor: Pawel Widera&nbsp;COMPSF08: Advancing Edge AI: PhD Research Opportunities at the EPSRC National Edge Artificial Intelligence Hub - Supervisor:&nbsp;Ellis SolaimanCOMPSF09: Large Language Model for Robotics - Supervisor: Bo Wei&nbsp;COMPSF10: Adaptive and Trusted Execution in the Cloud-Edge Continuum - Supervisor:&nbsp;Devki Nandan JhaCOMPSF11: TinyML for the Internet of Things - Supervisor: Tomasz Szydlo&nbsp;COMPSF12: Interfacing Between the Smart Home and the Street - Supervisor: Nick Taylor&nbsp;COMPSF13: Advancing Human-Centred AI: PhD Research Opportunities in the Haii Lab – Supervisor: Lei Shi&nbsp;COMPSF14: Performance and security in VANETs – Supervisor: Nigel Thomas&nbsp;COMPSF15: Event-Based Visualization of Temporal Networks – Supervisor: Daniel Archambault&nbsp;COMPSF16: Data Visualization for Human-AI Collaboration - Supervisor: Xinhuan Shu&nbsp;COMPSF17: Data visualization for explainability and data-driven decision-making in health and life sciences – Supervisor: Sara Fernstad&nbsp;COMPSF18:&nbsp;Supervisor:&nbsp;Aydin AbadiProject 1: Dealing with Financial Fraud through Privacy-Enhancing TechnologiesProject 2: Incentivizing Participation in Privacy-Enhancing TechnologiesProject 3: Enhancing Federated Learning Efficiency and Scalability with Advanced Cryptographic ProtocolsProject 4: Mitigating Insider Threats in Financial Sectors through the Development and Use of Privacy-Enhancing TechnologiesProject 5: Improving Federated Learning Model Quality with Privacy-Preserving Data Cleaning TechniquesCOMPSF19: Privacy Enhancing Technologies for Cyber-Physical Systems – Supervisor: Shishir Nagaraja&nbsp;COMPSF20: AI and Cyber Security for Cyber Physical Systems – Supervisor: Mujeeb Ahmed&nbsp;COMPSF21: Supervisor: Phil Lord&nbsp;Project 1: Hyperscale Graphs Models of Life&nbsp;Project 2: A Computational representation of Gender&nbsp;COMPSF22: Operations intelligence for decarbonisation – Supervisor: Wanqing Zhao&nbsp;COMPSF23: Trustworthy and Secure Artificial Intelligence – Supervisor: Varun Ojha&nbsp;COMPSF24: Deep Learning Models for Predicting Microbial Protein Expression – Supervisor: Gizem Buldum&nbsp;COMPSF25: DNA Nanotechnology and Molecular Computing – Supervisor: Harold FellermannStudents are encouraged to contact project supervisors directly/visit our school webpage for information on specific projects"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [],
+      "funding": [
+        "funded",
+        "studentship",
+        "EPSRC"
+      ],
+      "description": "The School of Computing, Newcastle University is advertising a number of PhD projects in the areas of data science and computer vision, cybersecurity, human computer interaction, internet of things, d..."
+    },
+    {
+      "index": 26,
+      "name": "Characterising molecular determinants of cell responses in melanoma using genome editing and single-cell technologies",
+      "university": "Queen Mary University of London",
+      "supervisors": [
+        "Dr Elena Torlai Triglia&nbsp;Co-supervisor(s):&nbsp;&nbsp;&nbsp;Studentship Funding: Awaiting CSC Funding DecisionApplication Deadline: 28th January 2026PhD Programme: PhD Biological Sciences&nbsp;Project Overview&nbsp;Cancer develops from the accumulation of alterations in the DNA sequence and structure, that ultimately determine the disease manifestations observed in patients",
+        "Dr"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of London"
+      ],
+      "contacts": [
+        "sbbs-pgadmissions@qmul.ac.uk"
+      ],
+      "funding": [
+        "scholarship",
+        "studentship"
+      ],
+      "description": "Primary Supervisor: Dr Elena Torlai Triglia&nbsp;Co-supervisor(s):&nbsp;&nbsp;&nbsp;Studentship Funding: Awaiting CSC Funding DecisionApplication Deadline: 28th January 2026PhD Programme: PhD Biologic..."
+    },
+    {
+      "index": 27,
+      "name": "Molecular Pathways of Viral Manipulation of Cellular Immunity",
+      "university": "Cardiff University",
+      "supervisors": [
+        "Prof"
+      ],
+      "deadlines": [
+        "December"
+      ],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [
+        "StantonRJ@cardiff.ac.uk"
+      ],
+      "funding": [
+        "funded",
+        "studentship"
+      ],
+      "description": "Project Description:Human cytomegalovirus (HCMV) is the leading cause of disease and death in immunosuppressed individuals, yet almost half of patients are protected from harm. Currently we do not kno..."
+    },
+    {
+      "index": 28,
+      "name": "Ysgoloriaethau Ymchwil Cyffredinol WGSSS ESRC wedi'u hariannu'n llawn trwy'r Llwybr Ieithyddiaeth a Dwyieithrwydd (Ysgol y Gymraeg)",
+      "university": "Cardiff University",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [],
+      "contacts": [
+        "ogradygn@caerdydd.ac.uk",
+        "maciollachriostd@caerdydd.ac.uk",
+        "encap-pgadmissions@cardiff.ac.uk"
+      ],
+      "funding": [
+        "UKRI"
+      ],
+      "description": "Mae Ysgol y Gymraeg a’r Ysgol Saesneg, Cyfathrebu ac Athroniaeth, Prifysgol Caerdydd, yn falch iawn o gynnig ysgoloriaethau ymchwil Ysgol Graddedigion Gwyddorau Cymdeithasol Cymru (YGGCC) (Partneriaet..."
+    },
+    {
+      "index": 29,
+      "name": "Astrophysical Sciences and Technology Ph.D.",
+      "university": "Rochester Institute of Technology USA",
+      "supervisors": [],
+      "deadlines": [],
+      "locations": [
+        "Hawaii"
+      ],
+      "universitiesInDesc": [
+        "University of Illinois"
+      ],
+      "contacts": [],
+      "funding": [],
+      "description": "An astrophysics Ph.D. centered on phenomena beyond the Earth and on the development of the technologies that will enable the next major strides in the field.Why Study Astrophysical Sciences at RITSTEM..."
+    },
+    {
+      "index": 30,
+      "name": "Artificial Intelligence for musculoskeletal global health (Botnar-2025-11)",
+      "university": "University of Oxford",
+      "supervisors": [
+        "Associate Professor Sara Khalid https://www",
+        "Professor",
+        "Dr"
+      ],
+      "deadlines": [],
+      "locations": [],
+      "universitiesInDesc": [
+        "University of Oxford"
+      ],
+      "contacts": [
+        "graduate.studies@ndorms.ox.ac.uk"
+      ],
+      "funding": [],
+      "description": "The World Health Organisation estimates musculoskeletal conditions to affect nearly a quarter of the global population. It impacts health outcomes and quality of life, and is in turn compounded by und..."
+    }
+  ]
+}

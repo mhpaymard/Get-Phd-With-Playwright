@@ -1,0 +1,409 @@
+
+========================================================================================================================
+🔍 آنالیز PhD های با Missing Data
+========================================================================================================================
+
+Total unique PhDs: 15
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #1: Physics Ph.D.
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: Rochester Institute of Technology USA
+📏 Description Length: 5285 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+RIT’s physics Ph.D. combines our interdisciplinary approach, renowned faculty, and cutting-edge facilities to empower you to excel in your research and shape the future of physics.OverviewPhysics plays a crucial role in advancing various scientific and technological fields. Through experimentation, observation, and mathematical analysis, physicists strive to unravel the mysteries of the universe and contribute to the advancement of scientific knowledge.The physics Ph.D. program fosters a creativ
+
+e and innovative approach to physics education and knowledge expertise. Graduates of the physics Ph.D. become leaders in their field, shaping and improving the world with the knowledge gained at RIT.Ph.D. Program in Physics at RITRIT's physics Ph.D. program offers various research areas, allowing students to pursue their passion and delve into cutting-edge scientific investigations. As a physics doctoral student, you will have the opportunity to work alongside world-class faculty members at the 
+
+forefront of their respective fields. Our distinguished professors are dedicated to mentorship, ensuring each student receives personalized guidance and support throughout their academic journey.The physics Ph.D. program offers a comprehensive and rigorous curriculum designed to provide you with a deep understanding of fundamental physics principles, advanced research skills, and specialized knowledge in your chosen areas of focus. The program combines core courses, electives, research work, and
+
+ professional development activities.ResearchA significant component of the physics doctorate involves conducting original research under the guidance of faculty advisors. You will work on research projects aligned with your interests, contributing to the advancement of scientific knowledge. This research culminates in completing a doctoral dissertation, which involves original findings and a written thesis.You will have abundant access to innovative and exciting research. We know that involveme
+
+nt in original research helps prepare our students for their future careers. The physics Ph.D. program offers a diverse range of research areas, allowing students to explore and specialize in various fields.Physics Research Areas:Atomic/molecular/optical (AMO) physics: Exploring the behavior of atoms, molecules, and optical phenomena. Faculty: Mishkat Bhattacharya, Edwin Hach III, Nicola Lanata, Stefan PrebleBiological and soft matter physics: Investigate the behavior of biomolecules, cellular p
+
+rocesses, and complex biological systems using physics-based approaches. Faculty: Jairo Diaz Amaya, Moumita Das, Scott Franklin, Michael Kotlarchyk, Lishibanya Mohapatra, Shima Parsa, Poornima Padmanabhan, George ThurstonCondensed matter physics: Investigating the properties and behavior of solid materials and complex systems at the atomic and subatomic levels.Faculty: Michael Cromer, Pratik Dholabhai, Nicola Lanata, Casey Miller, Michael Pierce, Steven Weinstein, Ke XuMulti-messenger astrophysi
+
+cs: Includes such areas as gravitational wave physics, special and general relativity, and cosmology.Faculty: Manuela Campanelli, Joshua Faber, Jeyhan Kartaltepe, Carlos Lousto, Richard O’Shaughnessy, John Whelan, Michael Zemcov, Yosef ZlochowerNanoscale materials and device physics: Study the unique characteristics of nanomaterials and their applications in electronic, magnetic, and optical devices.Faculty: Seth Hubbard, Santosh Kurinec, Parsian Mohseni, Michael Pierce, Patricia Taboada-Serrano
+
+, Ke XuPhotonics and the next quantum revolution: Focus on harnessing the properties of light and exploring the potential of quantum technologies to develop revolutionary technologies.Faculty: Donald Figer, Edwin Hach III, Seth Hubbard, Stefan PreblePhysics education research: Study how to enhance the teaching and learning of physics to enhance student engagement, conceptual understanding, and problem-solving skills in physics education, departmental and cultural change in physics undergraduate 
+
+and graduate programs, ultimately shaping the future of science education.Faculty: Scott Franklin, Benjamin Zwickl, Diana SachmpazidiPhysics for sustainable/renewable energy: Addresses the challenges of sustainable energy production and storage. Investigate innovative materials, devices, and systems for renewable energy generation to develop efficient and environmentally friendly solutions to meet the growing global energy demand and reduce dependence on fossil fuels.Faculty: Pratik Dholabhai, S
+
+eth Hubbard, Santosh Kurinec, Nishant MalikSpectroscopy and Microscopy: Focus on developing and applying advanced spectroscopic and microscopic techniques to probe and manipulate matter at atomic and molecular scales. Use state-of-the-art instruments and methodologies to study materials' structural, electronic, and optical properties, enabling insights into fundamental physics, materials science, and nanotechnology.Faculty: Charles Bachmann, Stefan Preble, Jie QiaoYou will have the opportunity t
+
+o collaborate with faculty members and engage in cutting-edge research projects aligned with your interests and career aspirations. The physics program encourages interdisciplinary research and the exploration of new frontiers in physics, fostering innovation and scientific discovery.
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+   [Prof] → "ont of their respective fields. Our distinguished professors are dedicated to mentorship, ensuring each student receives personalized guidance and support"
+   [Prof] → "bines core courses, electives, research work, and professional development activities.ResearchA significant component of the physics doctorate involves co"
+   [Professor] → "ont of their respective fields. Our distinguished professors are dedicated to mentorship, ensuring each student receives personalized guidance and support thro"
+   [Dr] → "pazidiPhysics for sustainable/renewable energy: Addresses the challenges of sustainable energy production and storage. Investigate innovative materials,"
+   [Doctor] → "ting-edge scientific investigations. As a physics doctoral student, you will have the opportunity to work alongside world-class faculty members at the foref"
+   [Doctor] → "es.ResearchA significant component of the physics doctorate involves conducting original research under the guidance of faculty advisors. You will work on r"
+   [Doctor] → "owledge. This research culminates in completing a doctoral dissertation, which involves original findings and a written thesis.You will have abundant access"
+   [advisor] → "g original research under the guidance of faculty advisors. You will work on research projects aligned with your interests, contributing to the advancement o"
+   [faculty] → "combines our interdisciplinary approach, renowned faculty, and cutting-edge facilities to empower you to excel in your research and shape the future of physi"
+   [faculty] → "ave the opportunity to work alongside world-class faculty members at the forefront of their respective fields. Our distinguished professors are dedicated to"
+   [faculty] → "onducting original research under the guidance of faculty advisors. You will work on research projects aligned with your interests, contributing to the advan"
+
+📅 Deadline-related text:
+   [application] → "cs of nanomaterials and their applications in electronic, magnetic, and optical devices.Fac"
+   [May] → "roaches. Faculty: Jairo Diaz Amaya, Moumita Das, Scott Franklin, Michael Kotlarchyk"
+
+📧 Email-related text:
+   ❌ No email found
+
+========================================================================================================================
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #4: Arts and Humanities Postgraduate Research, University of Glasgow
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: University of Glasgow
+📏 Description Length: 4356 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Scholarship and funding opportunities&nbsp;Scholarships and funding opportunities are available for postgraduate research degrees and PhD study in Arts and Humanities at the University of Glasgow.&nbsp;Scholarships World Changers Scholarships At Glasgow, we are dedicated to supporting our future World Changers. That’s why we have allocated over £15million in international scholarships. Our World Changers Glasgow Scholarships recognise academic excellence and aim to support international students
+
+ to join Team UofG. PhD Funding opportunities which are open to students based in the UK, Europe and internationally are updated throughout the year as they become available. For all up-to-date funding and scholarship information and how to apply, visit the easy to use scholarship database on our website.&nbsp;You can also sign up for information about new funding opportunities.&nbsp;Alumni Discount The University of Glasgow is offering a 20% discount on all Postgraduate Research and full Postgr
+
+aduate Taught Masters programmes to its alumni, commencing study in Academic session 2025/26. See details for alumni discount.&nbsp;Our research opportunities We offer research study across the arts and humanities including Creative Writing, English Language and Literature, Comparative Literature, Translation Studies, Modern Languages, Celtic and Gaelic, History, History of Art, Philosophy, Theology and Religious Studies, Film and TV, Media and Cultural Policy, Music and Theatre Studies. View ou
+
+r full list of research subject areas and programmes. Why Glasgow&nbsp;Join our dynamic researchers and study a postgraduate research degree in the College of Arts &amp; Humanities at the University of Glasgow, a World Top 60 university for Arts and Humanities (THE World University Rankings by subject 2024).&nbsp;Be part of a positive, inclusive and nurturing research culture, which has been recognised in our strong REF 2021 (Research Excellence Framework) results with two-thirds of environment 
+
+and impact being recognised as 'world-leading' or 'internationally excellent'.&nbsp;The College of Arts &amp; Humanities has been at the forefront of delivering world-leading teaching, learning and research in the arts and humanities since 1451.&nbsp;We welcome people from all backgrounds to join our community and engage with our high-quality programmes, world-leading research, and the broader opportunities we offer. &nbsp;World Changing Glasgow Our research brings fresh perspectives and new ins
+
+ights into all aspects of human experience and humanity’s place in the world, and we offer new ways of collaborating with other disciplines and with communities, industries and regional and global partners. Find out more about World Changing Glasgow.Support for researchersPostgraduate research students in the College of Arts &amp; Humanities are supported by the Graduate School, a hub that exists to foster Arts and Humanities postgraduate research and teaching of the highest standard, facilitati
+
+ng student productivity and development whilst promoting wellbeing.&nbsp;Our facilities&nbsp;Study with at the University of Glasgow and access our world class library, Archives &amp; Special Collections including 1.5million objects in the Hunterian Collection and The Hunterian Museum and Art Gallery, theatre, film and tv facilities, music facilities and Kelvinhall.&nbsp;About Glasgow&nbsp;The University of Glasgow is situated in the heart of the West End of Glasgow, a vibrant hub for the creati
+
+ve arts industry and one of Time Out’s coolest neighbourhoods in the world (2023). Glasgow is the UK's top cultural and creative city (European Commission, 2019), a UNESCO City of Music, and home to more than 100 cultural organisations and five of Scotland's internationally renowned performing arts companies.&nbsp;Meet our students and staff&nbsp;Meet our postgraduate research students and staff, watch our short films.&nbsp;Connect with us on social media&nbsp;Explore the impact of art, literatu
+
+re, culture, and history from world leading researchers in the University of Glasgow’s College of Arts &amp; Humanities through our Stories from Glasgow podcast.&nbsp;Find out more about us on our website.&nbsp;Ask questions with our online admissions enquiry form and online chat. You can also visit the Graduate School website and contact us.&nbsp;&nbsp;
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+
+📅 Deadline-related text:
+
+📧 Email-related text:
+   ❌ No email found
+
+========================================================================================================================
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #5: P21 Development of novel tools for bioconjugation using cascade ring expansion reactions
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: University of York
+📏 Description Length: 5885 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+In this project we will establish novel chemical biology tools to explore post translational modification (PTM) of lysine residues, centred on the use of conjugation&nbsp;addition/ring expansion (CARE) cascade reactions for selective peptide/protein&nbsp;bioconjugation. This project in underpinned by the ‘CARE’ method, developed by Unsworth&nbsp;and coworkers for use on small molecule systems [publication 1]. More recently, Unsworth,&nbsp;Spicer, Fascione and coworkers extended the CARE method f
+
+or application in protein&nbsp;modification, exploiting water as a solvent for sustainable production of potent bioconjugates&nbsp;[publication 2]. Post-translational modifications of lysines are pivotal regulators of many&nbsp;important biological processes, including regulation of expression. Lysines modification is&nbsp;important in peptide drugs, e.g. the anti-obesity medicine semaglutide, and are potential&nbsp;value in modifying antibodies with drugs, including antibiotics. In this CSHP CD
+
+T project, we&nbsp;will: (i) develop and screen CARE reagents for pH controlled selective modification of lysines residues within proteins; ii) develop CARE reagents for selective modification and reactivity&nbsp;profiling of lysine residues including in antibiotic targets, such as lactamases that enable&nbsp;resistance to carbapenems and other lactam antibiotics [publication 3], and iii) use the&nbsp;CARE bioconjugation to construct macrocycle-modified lysine containing peptides, with&nbsp;pote
+
+ntial application as novel therapeutics.Supervisory Team:&nbsp;Will Unsworth (York), Chris Spicer (York), Martin Fascione (York) and Chris Schofield&nbsp;(Oxford)Key publications:&nbsp;Publication 1, Publication 2 and Publication 3Useful links:Dr Will UnsworthDr Chris SpicerDr Martin FascioneProf Chris SchofieldFurther informationThe EPSRC Centre for Doctoral Training in Chemical Synthesis for a Healthy Planet (CSHP CDT) is a EPSRC-funded centre focused on training the next generation of synthet
+
+ic chemists, developing a sustainable, innovative chemistry culture that equips students to address major emerging and future global challenges in Human Health, Energy &amp; Materials, and Food Security.We offer a fully-funded four year PhD programme, delivered jointly by the Universities of Oxford and York, comprised of taught courses and a substantive research project. Student cohorts will work together in a 4-month training period at both Oxford and York, before embarking on their main PhD pr
+
+ojects. These substantive projects will be industry co-supervised, and based at either the Department of Chemistry in Oxford, or the Green Chemistry Centre of Excellence at York and the associated Department of Chemistry.This PhD project will primarily be based at the University of York.The first application deadline is 14th November 2025. We will continue to receive applications following this deadline, however some of the projects may be filled following the assessment of the first round of ap
+
+plications. We therefore encourage you to submit your application early to ensure that your first choice project is available.All project partners recognise the importance of equal participation, progression and success for all. We strive to provide a working, learning, social and living environment that will enable all our staff and students to contribute fully, to flourish and to excel - a place where we can ALL be ourselves.The Department of Chemistry in York holds an Athena SWAN Gold Award, 
+
+while the Department of Chemistry in Oxford holds a Silver Award. Both are committed to supporting equality and diversity for all staff and students.&nbsp;The Departments strive to provide a working environment which allows all staff and students to contribute fully, to flourish, and to excel; for more details, see: Equality and Diversity at York and Equality and Diversity at Oxford.&nbsp;In particular, we recognise the importance of the equal participation of women at all levels in a subject th
+
+at has traditionally been male-dominated. We also particularly encourage applications from people who identify as Black, Asian or from a Minority Ethnic background, who are underrepresented across the partnership.Eligibility CriteriaYou must have, or expect to gain, a minimum 2:1 Honours degree or international equivalent in a subject relevant to the proposed PhD project (usually chemistry or chemical engineering, but please get in touch if you think your qualification may be relevant). Enthusia
+
+sm for research, the ability to think and work independently, excellent analytical skills and strong verbal and written communication skills are also essential requirements.Check the entry requirements for your country.English language requirements.How to apply&nbsp;&nbsp;&nbsp;Submit an online PhD in Chemistry application.You will need to prepare the following information:&nbsp;&nbsp;1000-word personal statement, focusing on your interest and experience in your proposed field of researchClearly
+
+ state your&nbsp;1-2-3 choice&nbsp;of substantive research projects chosen from our&nbsp;list&nbsp;at the end of your personal statementTranscripts detailing your university-level qualifications and marks to dateTwo Academic/Professional References: you will be required to submit contact details for 2 refereesComplete the CSHP CDT Studentship: Equality, Diversity and Inclusion (EDI) Data Form (for York applicants only)For more details on the application and selection processes, and for answers t
+
+o general questions (i.e. funding eligibility, project allocation, etc.) please visit our how to apply and FAQs section or join us for our online open event.Contact DetailsProject-specific: Will Unsworth william.unsworth@york.ac.uk, Chris Spicer chris.spicer@york.ac.uk, Martin Fascione martin.fascione@york.ac.ukGeneral CDT enquiries: cshp-cdt@chem.ox.ac.uk or chem-env-pgr@york.ac.uk
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+   [supervisor] → "&nbsp;potential application as novel therapeutics.Supervisory Team:&nbsp;Will Unsworth (York), Chris Spicer (York), Martin Fascione (York) and Chris Schofield&n"
+   [supervised] → "s. These substantive projects will be industry co-supervised, and based at either the Department of Chemistry in Oxford, or the Green Chemistry Centre of Excell"
+   [Prof] → "ts for selective modification and reactivity&nbsp;profiling of lysine residues including in antibiotic targets, such as lactamases that enable&nbsp;resist"
+   [Prof] → ":Dr Will UnsworthDr Chris SpicerDr Martin FascioneProf Chris SchofieldFurther informationThe EPSRC Centre for Doctoral Training in Chemical Synthesis for"
+   [Prof] → "evel qualifications and marks to dateTwo Academic/Professional References: you will be required to submit contact details for 2 refereesComplete the CSHP"
+   [Dr] → "Lysines modification is&nbsp;important in peptide drugs, e.g. the anti-obesity medicine semaglutide, and are potential&nbsp;value in modifying antibodie"
+   [Dr] → "s with drugs, including antibiotics. In this CSHP CDT project, we&nbsp;will: (i) develop and screen CARE reag"
+   [Dr] → "on 1, Publication 2 and Publication 3Useful links:Dr Will UnsworthDr Chris SpicerDr Martin FascioneProf Chris SchofieldFurther informationThe EPSRC Cent"
+   [Doctor] → "SchofieldFurther informationThe EPSRC Centre for Doctoral Training in Chemical Synthesis for a Healthy Planet (CSHP CDT) is a EPSRC-funded centre focused o"
+
+📅 Deadline-related text:
+   [deadline] → "of York.The first application deadline is 14th November 2025. We will continue to receiv"
+   [deadline] → "e applications following this deadline, however some of the projects may be filled follo"
+   [application] → "extended the CARE method for application in protein&nbsp;modification, exploiting water as"
+   [application] → "peptides, with&nbsp;potential application as novel therapeutics.Supervisory Team:&nbsp;Will"
+   [May] → "however some of the projects may be filled following the assessment of the first r"
+   [May] → "you think your qualification may be relevant). Enthusiasm for research, the abilit"
+   [November] → "application deadline is 14th November 2025. We will continue to receive applications fo"
+
+📧 Email-related text:
+   📧 william.unsworth@york.ac.uk
+      Context: "nt.Contact DetailsProject-specific: Will Unsworth william.unsworth@york.ac.uk, Chris Spicer chris.spicer@york.ac.uk, Martin Fas"
+   📧 chris.spicer@york.ac.uk
+      Context: "nsworth william.unsworth@york.ac.uk, Chris Spicer chris.spicer@york.ac.uk, Martin Fascione martin.fascione@york.ac.ukGenera"
+   📧 martin.fascione@york.ac.ukGeneral
+      Context: "s Spicer chris.spicer@york.ac.uk, Martin Fascione martin.fascione@york.ac.ukGeneral CDT enquiries: cshp-cdt@chem.ox.ac.uk or chem-env"
+   📧 cshp-cdt@chem.ox.ac.uk
+      Context: "martin.fascione@york.ac.ukGeneral CDT enquiries: cshp-cdt@chem.ox.ac.uk or chem-env-pgr@york.ac.uk"
+   📧 chem-env-pgr@york.ac.uk
+      Context: "kGeneral CDT enquiries: cshp-cdt@chem.ox.ac.uk or chem-env-pgr@york.ac.uk"
+
+========================================================================================================================
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #8: Climate impacts from water-rich large-magnitude volcanic eruptions
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: University of Leeds
+📏 Description Length: 6021 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Climate impacts from water-rich large-magnitude volcanic eruptionsLeeds PhD supervisors: Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson (volcanic aerosol) and Dr. James Manners (water vapour) Other advisors: Prof. Anna Hogg (Leeds, Antarctic sea-ice impacts), Dr. Chris Smith (Brussels, future climate projections),1.    Introduction  The January 2022 Hunga eruption was the most explosive volcanic event in the satellite era (Wright et al., 2022) an
+
+d is providing a new paradigm for volcanic impacts on climate. The shallow underwater setting of the Hunga eruption caused its radiative forcing to have a substantial component also from emitted water vapour (Sellitto et al., 2022), with stratospheric enhancement projected to remain in the stratosphere for 5-10 years (Millan et al., 2022). The high altitude emission of the stratospheric water vapour (above 20km) is now known to have restricted to only a weak surface warming effect, much less tha
+
+n the solar dimming effect from the volcanic aerosol (Schoeberl et al., 2023; 2024). However, a follow-on study (Wang and Huang, 2024) has demonstrated how a future water-rich eruption emitting closer to the tropopause would cause a substantial volcanic H2O surface warming effect.Another model study (Jucker et al., 2024) finds the long-lived Hunga stratospheric water vapour causes later surface-warming effect and Wu et al. (2025) show how Hunga released 18.8Tg of SO2, the underwater setting remo
+
+ving 95% of the emitted sulphur, only 5% within the eruption plume reaching the stratosphere. Hunga's elevated stratospheric optical depth was the largest since 1991 Pinatubo, and the reduction to background levels represents a natural warming trend alongside the concurrent 2023 shift into El Nino. 2.    The unusual volcanic forcing from the January 2022 Hunga eruption The years after historical major volcanic eruptions such as 1991 Pinatubo and 1883 Krakatau have a substantial natural surface c
+
+ooling, a 2- or 3-year solar dimming caused by long-lived volcanic sulphate aerosol in the stratosphere. In the years after such major eruptions, decadal forcing trends become dominated by natural radiative forcings, with a sudden-onset into strong surface cooling. Time-varying global volcanic aerosol datasets for historical major eruptions are a key input dataset into for example IPCC 1850-present climate model integrations.The 2022 Hunga forcing is unusual compared to Pinatubo, a much smaller 
+
+increase in stratospheric water vapour occurring in the years after the June 1991 eruption. However, other historical major eruptions have entrained external water into the volcanic plume (e.g. Rowell et al., 2022) and Joshi and Jones (2009) found Krakatau’s aerosol cooling was partially offset by a substantial surface warming from emitted water vapour, with similarities to Hunga’s forcing. This PhD project will involve model experiments with the UK Earth System Model, to explore the climate inf
+
+luence from co-emitted water vapour in Krakatau-magnitude major eruption case studies. The PhD is approved as a CASE project, for this Oct 2026 YES-DTN round, the research to be in co-operation with Met Office scientists, within the Leeds-Met Office academic partnership. 3.    PhD aligns with new Hunga APARC activity & volcano-climate model experiments for CMIP7  The long-lived enhancement to stratospheric water vapour (Millan et al., 2022; Khaykin et al., 2022) has motivated a 2025 Hunga impact
+
+s report, aligned to the next WMO/UNEP Scientific Assessment of Ozone Depletion (see https://www.aparc-climate.org/activities/hunga-tonga/ ). The first study to assess the longevity of the Hunga stratospheric water vapour (Jucker et al., 2024) identifies the surface warming effect would be strongest during 2025-2026, after the aerosol cooling effect has receded. Although the climate impacts are only weak, the event has highlighted the potential for stratospheric water vapour forcing within volca
+
+nic impacts on climate. The unusual water vapour volcanic forcing has also motivated new multi-model experiments within the next phase of the VolMIP volcano-climate sub-group of CMIP7 (Zanchettin et al., 2016; 2022). The World Climate Programme has a co-ordinating “Explaining and Predicting Earth System Change” lighthouse activity (Findell et al., 2023), the Leeds supervisors playing a leading role also in the APARC international activity, and the 2025 Hunga impacts report, to be released in Dec
+
+ember 2025, during AGU conference week. 4.    The PhD projectThis PhD project will involve simulations with the UK Earth System Model (Sellar et al., 2019a, 2019b), with new stratospheric water vapour volcanic forcing datasets to represent impacts from Hunga-like water-rich major eruptions.The Leeds team developed the interactive volcanic aerosol configuration of the UK composition-climate model UM-UKCA (Dhomse et al., 2020; Marshall et al., 2019; Dhomse et al., 2014) and the UKESM model experim
+
+ents in the PhD will be designed to understand the progression of a scaled-up Hunga case study in preparedness for future major water-rich eruption.The UKESM experiments will stem from satellite measurements of the Hunga aerosol and water vapour increase, and explore how volcano-climate impacts contrast with those from sulphur-dominated large-magnitude explosive eruptions such as 1991 Pinatubo. The model experiments to understand these new volcano-climate impacts gives the studentship potential 
+
+for ground-breaking paper presenting Hunga-like major eruption impacts within near-term decadal climate projections.  The project will be supervised by Dr Graham Mann, Prof. Amanda Maycock and Dr Alex Rap, with advice also from Prof. Anna Hogg (Antarctic sea-ice impacts) and Dr. Chris Smith (IPCC future climate projections). With the project a guaranteed CASE studentship, the PhD will include a placement at the UK Met Office, to work alongside Dr. Johnson and Dr. Manners and others in the UKESM 
+
+team based in Exeter.
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+   [supervisor] → "-rich large-magnitude volcanic eruptionsLeeds PhD supervisors: Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson"
+   [supervisor] → "thouse activity (Findell et al., 2023), the Leeds supervisors playing a leading role also in the APARC international activity, and the 2025 Hunga impacts report"
+   [supervised] → "decadal climate projections.  The project will be supervised by Dr Graham Mann, Prof. Amanda Maycock and Dr Alex Rap, with advice also from Prof. Anna Hogg (Ant"
+   [Prof] → "eruptionsLeeds PhD supervisors: Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson (volcanic aerosol) and D"
+   [Prof] → "r. James Manners (water vapour) Other advisors: Prof. Anna Hogg (Leeds, Antarctic sea-ice impacts), Dr. Chris Smith (Brussels, future climate projection"
+   [Prof] → "The project will be supervised by Dr Graham Mann, Prof. Amanda Maycock and Dr Alex Rap, with advice also from Prof. Anna Hogg (Antarctic sea-ice impacts)"
+   [Dr] → "agnitude volcanic eruptionsLeeds PhD supervisors: Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson (volc"
+   [Dr] → "anic aerosol) and Dr. James Manners (water vapour) Other advisors: Prof. Anna Hogg (Leeds, Antarctic sea-ice impacts), D"
+   [Dr] → "e projections.  The project will be supervised by Dr Graham Mann, Prof. Amanda Maycock and Dr Alex Rap, with advice also from Prof. Anna Hogg (Antarctic"
+   [advisor] → "rosol) and Dr. James Manners (water vapour) Other advisors: Prof. Anna Hogg (Leeds, Antarctic sea-ice impacts), Dr. Chris Smith (Brussels, future climate pro"
+
+📅 Deadline-related text:
+   [January] → "ions),1.    Introduction  The January 2022 Hunga eruption was the most explosive volcan"
+   [January] → "ual volcanic forcing from the January 2022 Hunga eruption The years after historical ma"
+   [May] → "Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr"
+   [May] → "Dr Graham Mann, Prof. Amanda Maycock and Dr Alex Rap, with advice also from Prof."
+   [June] → "urring in the years after the June 1991 eruption. However, other historical major er"
+   [December] → "cts report, to be released in December 2025, during AGU conference week. 4.    The PhD p"
+
+📧 Email-related text:
+   ❌ No email found
+
+========================================================================================================================
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #12: Molecular Pathways of Viral Manipulation of Cellular Immunity
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: Cardiff University
+📏 Description Length: 6724 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Project Description:Human cytomegalovirus (HCMV) is the leading cause of disease and death in immunosuppressed individuals, yet almost half of patients are protected from harm. Currently we do not know why this difference exists, but explaining why are some people are vulnerable while others are susceptible is key to targeting treatments appropriately. One explanation may be that HCMV proteins that ‘turn off’ cellular immunity by binding to NK and T-cells differ between different viral strains.T
+
+his PhD will develop cutting-edge organoid systems to model immunological control of infection in vitro. They will then determine the molecular details of how the different versions of these proteins bind to T-cells and NK cells and why they have different abilities to prevent immunological control. It will use single-cell technologies to investigate which signalling pathways are triggered within the immune cells by these interactions and what the impact of activating these pathways is on the lo
+
+ng-term function and activity of NK/T-cells. As well as improving our understanding of viral control, the project will inform on the fundamental mechanisms by which human immune cells can be activated and/or inhibited in different scenarios.This PhD will offer training in in vitro cellular, virological, molecular, and immunological assays, including organoid development and single-cell technologies, investigating key molecular mechanisms that control immune system function. The supervisory team 
+
+has over 20 years experience within viral immune-modulation and HCMV research, and run a successful team of PhD and post-doctoral researchers funded by the Wellcome trust and MRC amongst others. The PhD student will also be part of the ‘Wales Applied Virology Unit’ a new unit established by the Welsh Government and led by the main supervisor, which aims to promote cross-disciplinary research between Discovery science and Implementation/policy scientists, providing the applicant with a broad rang
+
+e of wider skills.For more details please contact Prof Richard Stanton (StantonRJ@cardiff.ac.uk). This PhD is part of the SWBio Doctoral Training Programme and applications should be made through that scheme (https://www.swbio.ac.uk/programme/how-to-apply/).Our aim as the SWBio DTP is to support students from a range of backgrounds and circumstances.&nbsp;Where needed, we will work with you to take into consideration reasonable project adaptations (for example to support caring responsibilities,
+
+ disabilities, other significant personal circumstances) as well as flexible working and part-time study requests, to enable greater access to a PhD.&nbsp;&nbsp;All our supervisors support us with this aim,&nbsp;so please feel comfortable in discussing further&nbsp;with the listed PhD project supervisor to see what is feasible.&nbsp;PhD studentships with the South West Biosciences Doctoral Training Partnership (SWBio DTP)Up to 34 fully-funded 4-year PhD studentships* available to start in Septem
+
+ber 2026, across a wide range of bioscience disciplines.To view projects available, and how to apply, visit the SWBio DTP website.*Subject to meeting eligibility requirements.&nbsp;About:The BBSRC-funded SWBio DTP involves a partnership of world-renown universities, research institutes and industry, based mainly across the South West and Wales.This partnership has established international, national and regional scientific networks, and widely recognised research excellence and facilities.We aim
+
+ to provide you with outstanding interdisciplinary bioscience research training, underpinned by transformative technologies.Programme Overview:You will be recruited directly to a broad, interdisciplinary project, supported by a multidisciplinary supervisory team, with many cross-institutional projects available. There are also opportunities to:apply your research in an industry setting (DTP CASE studentships).undertake research jointly with our core and associate partners (Standard DTP studentsh
+
+ips with an associate partner).work with other national/international researchers.undertake fieldwork.Our structured training programme will ensure you are well equipped as a bioscience researcher, supporting careers into academia, industry and beyond.First Year:We provide a broad awareness of the fundamental research approaches in biosciences and how they could be applied to real-life situations through:two rotation projects&nbsp;- both allied with but in different disciplinary areas related to
+
+ the PhD project.three taught units&nbsp;- training in Statistics, Bioinformatics, coding, experimental design, innovation and understanding the impact of your research.Note: You will need to complete the first year to progress into your second year of studies.&nbsp;Also, if you are unable to continue your PhD, an MRes exit route is available upon completion of the first year.Further information &gt;&gt;Second to Fourth Years:The remaining years will be more like a conventional PhD, where you wi
+
+ll focus on your PhD project.Note: The PhD thesis must be submitted within 4 years (full-time equivalent) of starting the programme.Placements:To help broaden your career horizons, you will undertake:·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a 3-month placement of your choice, outside of an academic research environment - examples include working within policy, science communication, industry and scientific publishing.·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;or a 3-18 month industry placement with your CASE partner 
+
+– CASE studentships only.These are to provide you with highly desirable skills, experience and knowledge that can be applied to many career sectors.About our placement schemes &gt;&gt;Cohort Activities:You will have the opportunity to join many partnership cohort activities, such as student conferences, workshops and outreach events. Here you will meet students across the partnership, giving you access to a thriving multidisciplinary and supportive student network.About our cohort activities &gt
+
+;&gt;Funding and Eligibility:Information about funding and eligibility &gt;&gt;A limited number of funded-studentships are available for international students.Supporting Equality, Diversity and Inclusion (EDI):We support inclusive and flexible work environments, and welcome applications from all backgrounds and communities.Our SWBio DTP EDI statement &gt;&gt;How we support our diverse student cohort &gt;&gt;PhD study adjustments and support &gt;&gt;DTP Virtual Support Events:We have events avai
+
+lable to help you with deciding on a bioscience PhD, and support with applications and interviews.Further information &gt;&gt;Application Deadline:Midday, Wednesday 3 December 2025How to apply and projects available &gt;&gt;
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+   [supervisor] → "chanisms that control immune system function. The supervisory team has over 20 years experience within viral immune-modulation and HCMV research, and run a succ"
+   [supervisor] → "ished by the Welsh Government and led by the main supervisor, which aims to promote cross-disciplinary research between Discovery science and Implementation/pol"
+   [supervisor] → "nable greater access to a PhD.&nbsp;&nbsp;All our supervisors support us with this aim,&nbsp;so please feel comfortable in discussing further&nbsp;with the list"
+   [Prof] → "e of wider skills.For more details please contact Prof Richard Stanton (StantonRJ@cardiff.ac.uk). This PhD is part of the SWBio Doctoral Training Programm"
+   [Doctor] → "search, and run a successful team of PhD and post-doctoral researchers funded by the Wellcome trust and MRC amongst others. The PhD student will also be par"
+   [Doctor] → "nRJ@cardiff.ac.uk). This PhD is part of the SWBio Doctoral Training Programme and applications should be made through that scheme (https://www.swbio.ac.uk/p"
+   [Doctor] → ";PhD studentships with the South West Biosciences Doctoral Training Partnership (SWBio DTP)Up to 34 fully-funded 4-year PhD studentships* available to start"
+
+📅 Deadline-related text:
+   [deadline] → "formation &gt;&gt;Application Deadline:Midday, Wednesday 3 December 2025How to apply and"
+   [application] → "ctoral Training Programme and applications should be made through that scheme (https://www."
+   [application] → "ork environments, and welcome applications from all backgrounds and communities.Our SWBio D"
+   [May] → "ppropriately. One explanation may be that HCMV proteins that ‘turn off’ cellular im"
+   [September] → "tships* available to start in September 2026, across a wide range of bioscience disciplin"
+   [December] → "Deadline:Midday, Wednesday 3 December 2025How to apply and projects available &gt;&gt;"
+
+📧 Email-related text:
+   📧 StantonRJ@cardiff.ac.uk
+      Context: "more details please contact Prof Richard Stanton (StantonRJ@cardiff.ac.uk). This PhD is part of the SWBio Doctoral Training"
+
+========================================================================================================================
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #13: Ysgoloriaethau Ymchwil Cyffredinol WGSSS ESRC wedi'u hariannu'n llawn trwy'r Llwybr Ieithyddiaeth a Dwyieithrwydd (Ysgol y Gymraeg)
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: Cardiff University
+📏 Description Length: 6614 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Mae Ysgol y Gymraeg a’r Ysgol Saesneg, Cyfathrebu ac Athroniaeth, Prifysgol Caerdydd, yn falch iawn o gynnig ysgoloriaethau ymchwil Ysgol Graddedigion Gwyddorau Cymdeithasol Cymru (YGGCC) (Partneriaeth Hyfforddiant Doethurol yr ESRC) a ariennir yn llawn gan ddechrau ym mis Hydref 2025.Gall darpar fyfyrwyr fod wedi'u lleoli yn unrhyw un o unedau cyfansoddol y llwybr:Ysgol Saesneg, Cyfathrebu ac Athroniaeth, Prifysgol Caerdydd Ysgol y Gymraeg, Prifysgol Caerdyddac fe'u gwahoddir i gynnig pwnc ymch
+
+wil ar gyfer astudiaeth ddoethurol ym meysydd arbenigedd staff yn yr unedau academaidd uchod sy'n gysylltiedig ag iaith. Yn fras, mae'r meysydd hyn yn cynnwys ymchwil sy'n mynd i'r afael â dwyieithrwydd/amlieithrwydd a/neu strwythur, ystyr a defnydd iaith mewn ieithyddiaeth, seico- a sosioieithyddiaeth, seicoleg, cymdeithaseg, technoleg iaith ac addysg. Rhestrir diddordebau ymchwil staff goruchwylio yn y cyfeirlyfrau staff:https://www.cardiff.ac.uk/cy/english-communication-philosophy/people/acad
+
+emic-staff/english-language-and-linguisticshttps://www.cardiff.ac.uk/cy/welsh/people/academic-staffAm gyngor ar ba mor addas yw pwnc, ysgrifennwch at y cysylltiadau isod. Argymhellir yn gryf bod ymgeiswyr yn cysylltu â darpar oruchwyliwr a/neu un o'r cysylltiadau isod cyn cyflwyno eu cais i gadarnhau bod gallu goruchwylio priodol o fewn y brifysgol ar y pwnc a ddewiswyd ac i drafod eu cais drafft. Am ymholiadau a chyngor cychwynnol cysylltwch â:Yr Athro Gerard O’Grady (ogradygn@caerdydd.ac.uk) n
+
+eu Yr Athro Diarmait Mac Giolla Chríost (maciollachriostd@caerdydd.ac.uk)Meini Prawf Mynediad:&nbsp;I dderbyn cyllid un o ysgoloriaethau ymchwil yr WGSSS, mae’n rhaid bod gennych chi gymwysterau neu brofiad sy'n cyfateb i radd anrhydedd yn y DU ar lefel dosbarth cyntaf neu ail ddosbarth uwch, neu radd meistr. Mae croeso i fyfyrwyr sydd â chefndir academaidd anhraddodiadol hefyd wneud cais.&nbsp;Hyd yr astudiaeth:&nbsp;Mae hyd yr astudiaeth yn amrywio o 3.5 i 4.5 blynedd amser llawn (neu’r hyn sy
+
+’n gyfwerth iddi yn rhan-amser).&nbsp;Mae hyd yr astudiaeth yn dibynnu ar brofiad ymchwilio blaenorol ac anghenion hyfforddi'r myfyriwr a asesir drwy gwblhau Dadansoddiad o’r Anghenion Datblygu. Rydyn ni’n croesawu ceisiadau am astudio’n amser llawn ac yn rhan-amser.&nbsp;Lleoliad ymarfer wrth ymchwilio:&nbsp; Bydd gofyn i bob myfyriwr a ariennir gan yr WGSSS gwblhau lleoliad Ymarfer wrth Ymchwilio a ariennir am gyfanswm o 3 mis (neu’r hyn sy’n gyfwerth iddo yn rhan-amser). Bydd pob myfyriwr yn 
+
+cael y cyfle i gwblhau lleoliad mewn sefydliad academaidd, polisi, busnes neu gymdeithas sifil.&nbsp;Gofynion rhyngwladol ynghylch bod yn gymwys:&nbsp;Mae ysgoloriaethau ymchwil yr WGSSS ar gael i fyfyrwyr y DU a myfyrwyr rhyngwladol. Caiff hyd at 30% o'n carfan gynnwys myfyrwyr rhyngwladol. Ni chodir y gwahaniaeth rhwng ffi y DU a'r ffi ryngwladol ar fyfyrwyr rhyngwladol. Dylai ymgeiswyr fodloni gofynion UKRI o ran bod yn gymwys.&nbsp;Cydraddoldeb, Amrywiaeth a Chynhwysiant: Mae’r WGSSS wedi ym
+
+rwymo i gefnogi a hyrwyddo cydraddoldeb ac amrywiaeth a chreu diwylliant sy’n cynnwys pawb. Rydyn ni’n croesawu ceisiadau gan bob aelod o'r gymuned fyd-eang waeth beth fo'u hoedran, anabledd, rhyw, hunaniaeth rhywedd, ailbennu rhywedd, statws priodasol neu bartneriaeth sifil, beichiogrwydd neu famolaeth, hil, crefydd neu gred a chyfeiriadedd rhywiol.&nbsp;Asesu:&nbsp;Bydd yr ymgeiswyr sy’n cyrraedd y rhestr fer yn cael eu gwahodd am gyfweliad. Yn rhan o'r broses gyfweld, bydd gofyn i ymgeiswyr r
+
+oi cyflwyniad byr ac ateb cyfres o gwestiynau gan y panel Sut i wneud cais:&nbsp;Dylai ceisiadau ddod i law heb fod yn hwyrach na 04/12/2024 gan gynnwys yr holl ddogfennau gofynnol. Dylid cyflwyno pob cais drwy un o'r dolenni canlynol yn dibynnu ar leoliad arfaethedig yr astudiaeth:Ysgol y Gymraeg, Prifysgol Caerdydd: https://www.cardiff.ac.uk/cy/study/postgraduate/research/programmes/programme/welsh Ysgol Saesneg, Cyfathrebu ac Athroniaeth, Prifysgol Caerdydd: https://www.cardiff.ac.uk/cy/study
+
+/postgraduate/research/programmes/programme/language-and-communicationUnwaith y byddwch wedi gwneud cais Caerdydd, bydd angen i chi gyflwyno Ffurflen Gais YGGCC ac atodi'r ddogfennaeth ategol a restrir isod i'r cais hwnnw, gan ei hanfon at encap-pgadmissions@cardiff.ac.uk erbyn y dyddiad cau, gan nodi 'Cais Am Ysgoloriaeth YGGCC' ym mhennawd pwnc eich e-bost.Nodwch yn glir eich bod yn gwneud cais am ysgoloriaeth ymchwil YGGCC ESRC a chofiwch gynnwys y dogfennau canlynol (naill ai yn Gymraeg neu 
+
+Saesneg) gyda'ch cais:1) Llythyr eglurhaol (dim mwy na dwy dudalen)Rhaid i'r llythyr eglurhaol gynnwys y pwyntiau bwled canlynol fel is-benawdau:Nodwch eich rhesymau a'ch cymhelliant dros wneud cais i astudio yn y Brifysgol a ddewiswyd, a Llwybr Ieithyddiaeth a Dwyieithrwydd YGGCC.Nodwch eich dealltwriaeth a'ch disgwyliadau o astudio doethuriaeth.Rhowch fanylion am eich diddordebau academaidd cyffredinol, yn enwedig y rhai sy'n ymwneud â'ch ymchwil arfaethedig.Gan sôn am eich cefndir eich hun (g
+
+an gynnwys eich profiadau bywyd, taith i/drwy brifysgol, profiadau gwaith neu wirfoddoli) rhowch grynodeb o pam eich bod yn barod i ymgymryd â PhD nawr a sut byddwch yn ffynnu o ganlyniad i gyllid PhD. Efallai y byddwch am gynnwys, er enghraifft, heriau personol rydych wedi'u goresgyn neu gyflawniadau rydych yn falch ohonynt yn eich gwaith, eich astudiaethau neu brofiadau bywyd a sut mae'r rhain yn cyd-fynd â’r sgiliau sydd eu hangen i ffynnu mewn rhaglen PhD. Gallai heriau gynnwys, ymhlith erai
+
+ll, nodweddion gwarchodedig, statws economaidd-gymdeithasol a bod yn ddarpar fyfyriwr cenhedlaeth gyntaf, neu brofiad o ofal.Gan fyfyrio ar eich cefndir a/neu ddull arfaethedig o astudio PhD a'r cyfleoedd y bydd yn eu cyflwyno, sut byddwch yn cefnogi amrywiaeth a chynhwysiant yn y gymuned PhD?2) CV academaidd (dim mwy na dwy dudalen)3) Cynnig ymchwilDdylai’r cynnig ddim bod yn fwy na 1000 o eiriau, heb gynnwys cyfeiriadau llyfryddiaethol. Awgrymwn eich bod yn defnyddio’r pum pennawd canlynol yn 
+
+eich cynnig ymchwil:Teitl, amcanion a phwrpas yr ymchwil;Trosolwg byr o'r llenyddiaeth academaidd sy’n berthnasol i’ch maes;Dyluniad/dulliau arfaethedig a chwestiynau ymchwil;Cyfraniadau academaidd eich ymchwil.Cyfeiriadau Llyfryddiaethol4) Dau gyfeiriad academaidd neu broffesiynolRhaid i’r ymgeiswyr ofyn i’r canolwyr eu hunain, a chynnwys y geirdaon yn eu cais. Rhaid i'r geirdaon fanylu ar gryfderau ymchwil yr ymgeisydd.5) Trawsgrifiadau a Thystysgrifau Gradd (gan gynnwys cyfieithiadau os yw'n 
+
+berthnasol)6) Os yw'n berthnasol, prawf o Gymhwysedd Iaith Saesneg (gweler gofynion sefydliadol ar gyfer mynediad)
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+   [Prof] → "an sôn am eich cefndir eich hun (gan gynnwys eich profiadau bywyd, taith i/drwy brifysgol, profiadau gwaith neu wirfoddoli) rhowch grynodeb o pam eich bod"
+   [Dr] → "r ESRC) a ariennir yn llawn gan ddechrau ym mis Hydref 2025.Gall darpar fyfyrwyr fod wedi'u lleoli yn unrhyw un o unedau cyfansoddol y llwybr:Ysgol Saes"
+   [Dr] → "dol o fewn y brifysgol ar y pwnc a ddewiswyd ac i drafod eu cais drafft. Am ymholiadau a chyngor cychwynnol cysylltwch â:Yr Athro Gerard O’Grady (ogrady"
+   [Dr] → "enorol ac anghenion hyfforddi'r myfyriwr a asesir drwy gwblhau Dadansoddiad o’r Anghenion Datblygu. Rydyn ni’n croesawu ceisiadau am astudio’n amser lla"
+
+📅 Deadline-related text:
+
+📧 Email-related text:
+   📧 ogradygn@caerdydd.ac.uk
+      Context: "cychwynnol cysylltwch â:Yr Athro Gerard O’Grady (ogradygn@caerdydd.ac.uk) neu Yr Athro Diarmait Mac Giolla Chríost (maciol"
+   📧 maciollachriostd@caerdydd.ac.uk
+      Context: ".ac.uk) neu Yr Athro Diarmait Mac Giolla Chríost (maciollachriostd@caerdydd.ac.uk)Meini Prawf Mynediad:&nbsp;I dderbyn cyllid un o"
+   📧 encap-pgadmissions@cardiff.ac.uk
+      Context: "l a restrir isod i'r cais hwnnw, gan ei hanfon at encap-pgadmissions@cardiff.ac.uk erbyn y dyddiad cau, gan nodi 'Cais Am Ysgoloriae"
+
+========================================================================================================================
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+PhD #14: Astrophysical Sciences and Technology Ph.D.
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+🏛️  University: Rochester Institute of Technology USA
+📏 Description Length: 5067 characters
+
+📝 Full Description:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+An astrophysics Ph.D. centered on phenomena beyond the Earth and on the development of the technologies that will enable the next major strides in the field.Why Study Astrophysical Sciences at RITSTEM-OPT Visa Eligible: The STEM Optional Practical Training (OPT) program allows full-time, on-campus international students on an F-1 student visa to stay and work in the U.S. for up to three years after graduation.Unique Interdisciplinary Approach: This multidisciplinary program is administered by th
+
+e School of Physics and Astronomy, in collaboration with the School of Mathematics and Statistics and the Chester F. Carlson Center for Imaging Science, setting it apart from conventional astrophysics graduate programs at traditional research universities.Tailored to your Interests: The program offers tracks in astrophysics (including observational and theoretical astrophysics), computational and gravitational astrophysics (including numerical relativity, gravitational wave astronomy), and astro
+
+nomical technology (including detector and instrumentation research and development).Participate in Research: Students may participate in one of three research centers associated with the School of Physics and Astronomy: the Center for Computational Relativity and Gravitation, the Center for Detectors or the Laboratory for Multi-wavelength Astrophysics.Industry Opportunities: Graduates of the program have secured roles at the Dudley Observatory at the Museum of Innovation & Science, the National
+
+ Radio Astronomy Observatory, in higher education institutions, among others.There has never been a more exciting time to study the universe beyond the confines of the Earth. A new generation of advanced ground-based and space-borne telescopes and enormous increases in computing power are enabling a golden age of astrophysics. The doctoral program in astrophysical sciences and technology focuses on the underlying physics of phenomena beyond the Earth and on the development of the technologies, i
+
+nstruments, data analysis, and modeling techniques that will enable the next major strides in the field.The program offers tracks in astrophysics (including observational and theoretical astrophysics), computational and gravitational astrophysics (including numerical relativity, gravitational wave astronomy), and astronomical technology (including detector and instrumentation research and development). Students can pursue research interests in a wide range of topics, including design and develop
+
+ment of novel detectors, multiwavelength studies of proto-stars, active galactic nuclei and galaxy clusters, gravitational wave data analysis, and theoretical and computational modeling of astrophysical systems including galaxies and compact objects such as binary black holes. Depending on research interests, students may participate in one of three research centers: the Center for Computational Relativity and Gravitation (Video), the Center for Detectors, or the Laboratory for Multi-wavelength 
+
+Astrophysics.ResearchThe astrophysical sciences and technology program offers students a wide range of research opportunities spanning observational and theoretical astrophysics, computational astrophysics, general relativity and gravitational wave astronomy, and the design and development of advanced detectors and instrumentation for astronomy. RIT hosts a vibrant astronomy and astrophysics research community of more than 60 faculty, post-docs, research fellows, and graduate students who partic
+
+ipate in three designated research centers:The Center for Computational Relativity and GravitationThe Center for DetectorsLaboratory for Multiwavelength AstrophysicsFaculty and students frequently obtain data from space observatories including the Hubble Space Telescope, the Spitzer Space Telescope, the Chandra X-ray Observatory, the Herschel Space Observatory, and various ground-based observatories such as the Gemini Observatory, twin 8.1-meter diameter optical/infrared telescopes located in Ha
+
+waii and Chile, the W. M. Keck Observatory on Hawaii, and the Very Large Array radio telescope facility in New Mexico. RIT is a member of the LIGO Scientific Collaboration, which analyzes the data taken by the Laser Interferometer Gravitational-Wave Observatory, and a member of the Legacy Survey of Space Time Corporation, which will operate an 8.4 m telescope at the Vera C. Rubin Observatory in Chile, to conduct a 10-year survey of the Southern skies.Computing facilities include the GravitySimul
+
+ator supercomputer, dedicated to N-body simulations of galactic nuclei and stellar clusters and the NewHorizons computer cluster, for numerical relativity and relativistic hydrodynamics simulations. Funding has recently been obtained to acquire an even more powerful 600-core cluster (BlueSky). Researchers at RIT's Center for Computational Relativity and Gravitation also have access to national supercomputing facilities, such as the Blue Waters supercomputer at the National Center for Supercomput
+
+ing Applications at the University of Illinois at Urbana-Champaign.
+
+🔍 Pattern Search:
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+👨‍🏫 Supervisor-related text:
+   [Dr] → "e Telescope, the Spitzer Space Telescope, the Chandra X-ray Observatory, the Herschel Space Observatory, and various ground-based observatories such as"
+   [Dr] → "ster, for numerical relativity and relativistic hydrodynamics simulations. Funding has recently been obtained to acquire an even more powerful 600-core"
+   [Doctor] → "er are enabling a golden age of astrophysics. The doctoral program in astrophysical sciences and technology focuses on the underlying physics of phenomena b"
+   [faculty] → "d astrophysics research community of more than 60 faculty, post-docs, research fellows, and graduate students who participate in three designated research ce"
+   [faculty] → "tectorsLaboratory for Multiwavelength AstrophysicsFaculty and students frequently obtain data from space observatories including the Hubble Space Telescope,"
+
+📅 Deadline-related text:
+   [application] → "nal Center for Supercomputing Applications at the University of Illinois at Urbana-Champaig"
+   [May] → "icipate in Research: Students may participate in one of three research centers asso"
+   [May] → "research interests, students may participate in one of three research centers: the"
+
+📧 Email-related text:
+   ❌ No email found
+
+========================================================================================================================
+
+
+✅ Analysis complete!
+

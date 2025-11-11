@@ -1,0 +1,299 @@
+{
+  "metadata": {
+    "parsedAt": "2025-11-11T20:28:47.455Z",
+    "method": "Improved Pattern Matching",
+    "version": "2.0"
+  },
+  "statistics": {
+    "total": 15,
+    "university": 15,
+    "location": 11,
+    "supervisor": 8,
+    "deadline": 4,
+    "email": 6,
+    "funding": 11
+  },
+  "improvements": {
+    "supervisors": "+0 (0% improvement)",
+    "deadlines": "+-1 (-7% improvement)",
+    "emails": "+0 (0% improvement)"
+  },
+  "results": [
+    {
+      "index": 1,
+      "title": "Physics Ph.D.",
+      "university": "Rochester Institute of Technology USA",
+      "location": null,
+      "supervisors": [],
+      "deadline": null,
+      "emails": [],
+      "funding": "Unknown",
+      "descriptionLength": 5285,
+      "hasSupervisor": false,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": false
+    },
+    {
+      "index": 2,
+      "title": "Real-time direct detection of Criegee intermediates formed by ozonolysis of alkenes in an atmospheric simulation chamber",
+      "university": "University of Leeds",
+      "location": "Leeds",
+      "supervisors": [
+        "Professor Daniel Stone and Professor Paul Seakins within the Atmospheric, Planetary, and Theoretical Chemistry group in the School of Chemistry at the University of Leeds",
+        "Professor Daniel Stone",
+        "Professor Paul Seakins"
+      ],
+      "deadline": null,
+      "emails": [],
+      "funding": "Funded",
+      "descriptionLength": 6730,
+      "hasSupervisor": true,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 3,
+      "title": "Glasgow Interactive Systems (GIST)",
+      "university": "University of Glasgow",
+      "location": "Glasgow",
+      "supervisors": [],
+      "deadline": "31 January 2026",
+      "emails": [],
+      "funding": "Studentship",
+      "descriptionLength": 2756,
+      "hasSupervisor": false,
+      "hasDeadline": true,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 4,
+      "title": "Arts and Humanities Postgraduate Research, University of Glasgow",
+      "university": "University of Glasgow",
+      "location": "Glasgow",
+      "supervisors": [],
+      "deadline": null,
+      "emails": [],
+      "funding": "Scholarship",
+      "descriptionLength": 4356,
+      "hasSupervisor": false,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 5,
+      "title": "P21 Development of novel tools for bioconjugation using cascade ring expansion reactions",
+      "university": "University of York",
+      "location": "York",
+      "supervisors": [
+        " Will Unsworth (York), Chris Spicer (York), Martin Fascione (York) and Chris Schofield (Oxford)Key publications: Publication 1, Publication 2 and Publication 3Useful links:Dr Will UnsworthDr Chris SpicerDr Martin FascioneProf Chris SchofieldFurther informationThe EPSRC Centre for Doct",
+        "y Team: Will Unsworth (York), Chris Spicer (York), Martin Fascione (York) and Chris Schofield (Oxford)Key publications: Publication 1, Publication 2 and Publication 3Useful links:Dr Will UnsworthDr Chris SpicerDr Martin FascioneProf Chris SchofieldFurther informationThe EPSRC Centre f",
+        "Dr Will Unsworth",
+        "Dr Chris Spicer",
+        "Dr Martin Fascione"
+      ],
+      "deadline": "14th November 2025",
+      "emails": [
+        "william.unsworth@york.ac.uk",
+        "chris.spicer@york.ac.uk",
+        "martin.fascione@york.ac.ukgeneral",
+        "cshp-cdt@chem.ox.ac.uk",
+        "chem-env-pgr@york.ac.uk"
+      ],
+      "funding": "Fully Funded",
+      "descriptionLength": 5885,
+      "hasSupervisor": true,
+      "hasDeadline": true,
+      "hasEmail": true,
+      "hasLocation": true
+    },
+    {
+      "index": 6,
+      "title": "Classics and Ancient History - Postgraduate Research Opportunities",
+      "university": "University of Birmingham",
+      "location": "Birmingham",
+      "supervisors": [
+        "before you submit your application and contact them in the first instance to discuss your research proposal.If there is a good fit between your proposed research and our research strengths, we’ll be able to give you advice on a draft of your research proposal before you make a formal application.Whe"
+      ],
+      "deadline": null,
+      "emails": [],
+      "funding": "Scholarship",
+      "descriptionLength": 3764,
+      "hasSupervisor": true,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 7,
+      "title": "Birmingham Law School - Postgraduate Research Opportunities",
+      "university": "University of Birmingham",
+      "location": "Birmingham",
+      "supervisors": [],
+      "deadline": null,
+      "emails": [],
+      "funding": "Scholarship",
+      "descriptionLength": 3845,
+      "hasSupervisor": false,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 8,
+      "title": "Climate impacts from water-rich large-magnitude volcanic eruptions",
+      "university": "University of Leeds",
+      "location": "Leeds",
+      "supervisors": [
+        "Dr. Graham Mann, Prof. Amanda Maycock and Dr. Alex RapUK Met Office supervisors: Dr. Ben Johnson (volcanic aerosol) and Dr. James Manners (water vapour) Other advisors: Prof. Anna Hogg (Leeds, Antarctic sea-ice impacts), Dr. Chris Smith (Brussels, future climate projections),1. Introduction The",
+        "Dr Graham Mann, Prof",
+        "Dr Graham Mann",
+        "Dr Alex Rap"
+      ],
+      "deadline": null,
+      "emails": [],
+      "funding": "Studentship",
+      "descriptionLength": 6021,
+      "hasSupervisor": true,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 9,
+      "title": "School of Computing Science",
+      "university": "University of Glasgow",
+      "location": "Glasgow",
+      "supervisors": [],
+      "deadline": "29 October 2025",
+      "emails": [
+        "socs-pgr-enquiries@glasgow.ac.uk"
+      ],
+      "funding": "Studentship",
+      "descriptionLength": 4667,
+      "hasSupervisor": false,
+      "hasDeadline": true,
+      "hasEmail": true,
+      "hasLocation": true
+    },
+    {
+      "index": 10,
+      "title": "PhD projects in Computer Science (sponsored/self-funded)",
+      "university": "Newcastle University",
+      "location": null,
+      "supervisors": [
+        "Xinhuan Shu COMPSF17: Data visualization for explainability and data-driven decision-making in health and life sciences – Supervisor: Sara Fernstad COMPSF18: Supervisor: Aydin AbadiProject 1: Dealing with Financial Fraud through Privacy-Enhancing TechnologiesProject 2: Incentiviz",
+        "directly/visit our school webpage for information on specific projects.Start dates are January, April or September, we recommend allowing 2-3 months for the application process.No formal deadlines to apply, projects will be withdrawn once a suitable student has been accepted.EligibilityPle"
+      ],
+      "deadline": null,
+      "emails": [],
+      "funding": "Studentship",
+      "descriptionLength": 5306,
+      "hasSupervisor": true,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": false
+    },
+    {
+      "index": 11,
+      "title": "Characterising molecular determinants of cell responses in melanoma using genome editing and single-cell technologies",
+      "university": "Queen Mary University of London",
+      "location": "London",
+      "supervisors": [
+        "Dr Elena Torlai Triglia Co-supervisor(s): Studentship Funding: Awaiting CSC Funding DecisionApplication Deadline: 28th January 2026PhD Programme: PhD Biological Sciences Project Overview Cancer develops from the accumulation of alterations in the DNA sequence and stru",
+        "Dr Elena Torlai Triglia Co-supervisor(s): Studentship Funding: Awaiting CSC Funding DecisionApplication Deadline: 28th January 2026PhD Programme: PhD Biological Sciences Pro",
+        "Dr Elena Torlai"
+      ],
+      "deadline": "1st March 2026",
+      "emails": [
+        "sbbs-pgadmissions@qmul.ac.uk"
+      ],
+      "funding": "Studentship",
+      "descriptionLength": 6620,
+      "hasSupervisor": true,
+      "hasDeadline": true,
+      "hasEmail": true,
+      "hasLocation": true
+    },
+    {
+      "index": 12,
+      "title": "Molecular Pathways of Viral Manipulation of Cellular Immunity",
+      "university": "Cardiff University",
+      "location": null,
+      "supervisors": [
+        ", which aims to promote cross-disciplinary research between Discovery science and Implementation/policy scientists, providing the applicant with a broad range of wider skills.For more details please contact Prof Richard Stanton (StantonRJ@cardiff.ac.uk). This PhD is part of the SWBio Doctoral Traini",
+        "Prof Richard Stanton"
+      ],
+      "deadline": null,
+      "emails": [
+        "stantonrj@cardiff.ac.uk"
+      ],
+      "funding": "Fully Funded",
+      "descriptionLength": 6724,
+      "hasSupervisor": true,
+      "hasDeadline": false,
+      "hasEmail": true,
+      "hasLocation": false
+    },
+    {
+      "index": 13,
+      "title": "Ysgoloriaethau Ymchwil Cyffredinol WGSSS ESRC wedi'u hariannu'n llawn trwy'r Llwybr Ieithyddiaeth a Dwyieithrwydd (Ysgol y Gymraeg)",
+      "university": "Cardiff University",
+      "location": null,
+      "supervisors": [],
+      "deadline": null,
+      "emails": [
+        "ogradygn@caerdydd.ac.uk",
+        "maciollachriostd@caerdydd.ac.uk",
+        "encap-pgadmissions@cardiff.ac.uk"
+      ],
+      "funding": "Unknown",
+      "descriptionLength": 6614,
+      "hasSupervisor": false,
+      "hasDeadline": false,
+      "hasEmail": true,
+      "hasLocation": false
+    },
+    {
+      "index": 14,
+      "title": "Astrophysical Sciences and Technology Ph.D.",
+      "university": "Rochester Institute of Technology USA",
+      "location": "Hawaii",
+      "supervisors": [],
+      "deadline": null,
+      "emails": [],
+      "funding": "Unknown",
+      "descriptionLength": 5067,
+      "hasSupervisor": false,
+      "hasDeadline": false,
+      "hasEmail": false,
+      "hasLocation": true
+    },
+    {
+      "index": 15,
+      "title": "Artificial Intelligence for musculoskeletal global health (Botnar-2025-11)",
+      "university": "University of Oxford",
+      "location": "Oxford",
+      "supervisors": [
+        "Associate Professor Sara Khalid https://www.ndorms.ox.ac.uk/team/sara-khalidDr Marta Pineda-Moncusí https://www.ndorms.ox.ac.uk/team/marta-pineda Dr Danielle Newby https://www.ndorms.ox.ac.uk/team/danielle-newbyProfessor Laura Coates https://www.ndorms.ox.ac.uk/team/laura-coatesProfessor Dominic Fur",
+        "Professor Sara Khalid",
+        "Dr Marta Pineda",
+        "Dr Danielle Newby",
+        "Professor Laura Coates"
+      ],
+      "deadline": null,
+      "emails": [
+        "graduate.studies@ndorms.ox.ac.uk"
+      ],
+      "funding": "Unknown",
+      "descriptionLength": 6636,
+      "hasSupervisor": true,
+      "hasDeadline": false,
+      "hasEmail": true,
+      "hasLocation": true
+    }
+  ]
+}

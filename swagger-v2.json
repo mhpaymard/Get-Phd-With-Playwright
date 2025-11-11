@@ -1,0 +1,591 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "FindAPhD Search API",
+    "version": "2.0.0",
+    "description": "RESTful API for searching PhD positions from FindAPhD.com with Background Crawler Architecture",
+    "contact": {
+      "name": "API Support"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "PhD",
+      "description": "PhD positions search and retrieval"
+    },
+    {
+      "name": "Crawler",
+      "description": "Crawler monitoring and administration"
+    },
+    {
+      "name": "Health",
+      "description": "Health check endpoints"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "API Root",
+        "description": "Get API information and status",
+        "responses": {
+          "200": {
+            "description": "API information"
+          }
+        }
+      }
+    },
+    "/api/phd/search": {
+      "get": {
+        "tags": ["PhD"],
+        "summary": "Search PhD positions",
+        "description": "Search PhD positions with filters and pagination (from database)",
+        "parameters": [
+          {
+            "name": "keywords",
+            "in": "query",
+            "description": "Search keywords (searches in title, description, university)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "discipline",
+            "in": "query",
+            "description": "Filter by discipline",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subject",
+            "in": "query",
+            "description": "Filter by subject",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "country",
+            "in": "query",
+            "description": "Filter by country",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "university",
+            "in": "query",
+            "description": "Filter by university name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "funding_type",
+            "in": "query",
+            "description": "Filter by funding type",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number (default: 1)",
+            "schema": {
+              "type": "integer",
+              "default": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Results per page (default: 20, max: 100)",
+            "schema": {
+              "type": "integer",
+              "default": 20,
+              "maximum": 100
+            }
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "description": "Sort field (default: last_seen_at)",
+            "schema": {
+              "type": "string",
+              "enum": ["last_seen_at", "first_seen_at", "title", "deadline"],
+              "default": "last_seen_at"
+            }
+          },
+          {
+            "name": "sortOrder",
+            "in": "query",
+            "description": "Sort order (default: DESC)",
+            "schema": {
+              "type": "string",
+              "enum": ["ASC", "DESC"],
+              "default": "DESC"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "results": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/PhD"
+                          }
+                        },
+                        "pagination": {
+                          "$ref": "#/components/schemas/Pagination"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["PhD"],
+        "summary": "Search PhD positions (POST)",
+        "description": "Search with complex filters using POST body",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "keywords": {
+                    "type": "string"
+                  },
+                  "discipline": {
+                    "type": "string"
+                  },
+                  "subject": {
+                    "type": "string"
+                  },
+                  "country": {
+                    "type": "string"
+                  },
+                  "university": {
+                    "type": "string"
+                  },
+                  "funding_type": {
+                    "type": "string"
+                  },
+                  "page": {
+                    "type": "integer",
+                    "default": 1
+                  },
+                  "limit": {
+                    "type": "integer",
+                    "default": 20
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Search results"
+          }
+        }
+      }
+    },
+    "/api/phd/{id}": {
+      "get": {
+        "tags": ["PhD"],
+        "summary": "Get PhD details",
+        "description": "Get detailed information about a specific PhD position",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "PhD ID",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "PhD details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "$ref": "#/components/schemas/PhD"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "PhD not found"
+          }
+        }
+      }
+    },
+    "/api/phd/stats/summary": {
+      "get": {
+        "tags": ["PhD"],
+        "summary": "Get PhD statistics",
+        "description": "Get overall statistics about PhD positions",
+        "responses": {
+          "200": {
+            "description": "Statistics"
+          }
+        }
+      }
+    },
+    "/api/phd/filters/available": {
+      "get": {
+        "tags": ["PhD"],
+        "summary": "Get available filters",
+        "description": "Get list of all available filter values (disciplines, countries, funding types, etc.)",
+        "responses": {
+          "200": {
+            "description": "Available filters"
+          }
+        }
+      }
+    },
+    "/api/crawler/status": {
+      "get": {
+        "tags": ["Crawler"],
+        "summary": "Get crawler status",
+        "description": "Get current status of the background crawler",
+        "responses": {
+          "200": {
+            "description": "Crawler status"
+          }
+        }
+      }
+    },
+    "/api/crawler/trigger": {
+      "post": {
+        "tags": ["Crawler"],
+        "summary": "Trigger manual crawl",
+        "description": "Start a manual crawl of FindAPhD.com (admin only)",
+        "responses": {
+          "200": {
+            "description": "Crawl started"
+          },
+          "409": {
+            "description": "Crawler is already running"
+          }
+        }
+      }
+    },
+    "/api/crawler/logs": {
+      "get": {
+        "tags": ["Crawler"],
+        "summary": "Get crawler logs",
+        "description": "Get history of crawler runs",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of logs to return (default: 50)",
+            "schema": {
+              "type": "integer",
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Crawler logs"
+          }
+        }
+      }
+    },
+    "/api/crawler/logs/{id}": {
+      "get": {
+        "tags": ["Crawler"],
+        "summary": "Get crawler log details",
+        "description": "Get detailed information about a specific crawler run",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Log ID",
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Log details"
+          },
+          "404": {
+            "description": "Log not found"
+          }
+        }
+      }
+    },
+    "/api/crawler/stats": {
+      "get": {
+        "tags": ["Crawler"],
+        "summary": "Get crawler statistics",
+        "description": "Get overall statistics about crawler runs",
+        "responses": {
+          "200": {
+            "description": "Crawler statistics"
+          }
+        }
+      }
+    },
+    "/api/crawler/events": {
+      "get": {
+        "tags": ["Crawler"],
+        "summary": "Get crawler events",
+        "description": "Get real-time events from crawler observer",
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Number of events to return (default: 100)",
+            "schema": {
+              "type": "integer",
+              "default": 100
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Crawler events"
+          }
+        }
+      }
+    },
+    "/api/crawler/settings/interval": {
+      "put": {
+        "tags": ["Crawler"],
+        "summary": "Set crawler interval",
+        "description": "Set how often the crawler runs (in hours)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["hours"],
+                "properties": {
+                  "hours": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 24,
+                    "description": "Hours between crawler runs"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Interval updated"
+          },
+          "400": {
+            "description": "Invalid interval"
+          }
+        }
+      }
+    },
+    "/api/crawler/settings/toggle": {
+      "put": {
+        "tags": ["Crawler"],
+        "summary": "Enable/disable crawler",
+        "description": "Enable or disable the background crawler",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["enabled"],
+                "properties": {
+                  "enabled": {
+                    "type": "boolean",
+                    "description": "Enable or disable crawler"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Crawler toggled"
+          }
+        }
+      }
+    },
+    "/api/health": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Health check",
+        "description": "Check if the API is healthy",
+        "responses": {
+          "200": {
+            "description": "API is healthy"
+          }
+        }
+      }
+    },
+    "/api/health/ready": {
+      "get": {
+        "tags": ["Health"],
+        "summary": "Readiness check",
+        "description": "Check if the API is ready to serve requests",
+        "responses": {
+          "200": {
+            "description": "API is ready"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "PhD": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Internal database ID"
+          },
+          "external_id": {
+            "type": "string",
+            "description": "External ID from FindAPhD"
+          },
+          "url": {
+            "type": "string",
+            "description": "URL to PhD listing"
+          },
+          "title": {
+            "type": "string",
+            "description": "PhD title"
+          },
+          "description": {
+            "type": "string",
+            "description": "PhD description"
+          },
+          "university": {
+            "type": "string",
+            "description": "University name"
+          },
+          "location": {
+            "type": "string",
+            "description": "Location"
+          },
+          "country": {
+            "type": "string",
+            "description": "Country"
+          },
+          "discipline": {
+            "type": "string",
+            "description": "Academic discipline"
+          },
+          "subject": {
+            "type": "string",
+            "description": "Subject area"
+          },
+          "funding_type": {
+            "type": "string",
+            "description": "Type of funding"
+          },
+          "funding_amount": {
+            "type": "string",
+            "description": "Funding amount"
+          },
+          "deadline": {
+            "type": "string",
+            "description": "Application deadline"
+          },
+          "start_date": {
+            "type": "string",
+            "description": "Start date"
+          },
+          "is_active": {
+            "type": "boolean",
+            "description": "Is currently active"
+          },
+          "first_seen_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "First time seen by crawler"
+          },
+          "last_seen_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Last time seen by crawler"
+          }
+        }
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "description": "Current page number"
+          },
+          "limit": {
+            "type": "integer",
+            "description": "Results per page"
+          },
+          "total": {
+            "type": "integer",
+            "description": "Total number of results"
+          },
+          "totalPages": {
+            "type": "integer",
+            "description": "Total number of pages"
+          },
+          "hasNextPage": {
+            "type": "boolean",
+            "description": "Has next page"
+          },
+          "hasPrevPage": {
+            "type": "boolean",
+            "description": "Has previous page"
+          }
+        }
+      }
+    }
+  }
+}
+

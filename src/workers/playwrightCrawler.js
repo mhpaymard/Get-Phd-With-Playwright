@@ -1,129 +1,383 @@
 /**
- * 🚀 FindAPhD.com Crawler - Version 2.0
- * Completely rewritten from scratch based on actual site structure
+ * 🚀 FindAPhD.com Crawler - Version 3.0 (Fixed)
+ * Hybrid Method: HTML + DataLayerManager + JSON-LD
+ * - همه searchResultImpression* رو می‌گیره (حتی اگه داده ناقص باشه)
+ * - Match با JSON-LD و merge اطلاعات
+ * - فیلدهای از script با suffix "Script"
  * Author: AI Assistant
- * Date: October 2025
+ * Date: November 2025
  */
 
 const playwright = require('playwright');
 
 class FindAPhDCrawler {
-  constructor(browserPool) {
-    this.browserPool = browserPool;
+  constructor() {
     this.baseUrl = 'https://www.findaphd.com';
+    this.browser = null;
+  }
+
+  async _ensureBrowser() {
+    if (!this.browser) {
+      console.log('  → Launching Chromium browser...');
+      this.browser = await playwright.chromium.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      });
+    }
+    return this.browser;
+  }
+
+  async closeBrowser() {
+    if (this.browser) {
+      await this.browser.close();
+      this.browser = null;
+    }
   }
 
   /**
-   * Main crawl method - searches FindAPhD and extracts results
+   * Extract external_id from URL
+   * Example: https://www.findaphd.com/phds/project/.../?p180868 -> 180868
+   */
+  _extractExternalId(url) {
+    if (!url) return null;
+    const match = url.match(/[?&]p(\d+)/);
+    return match ? match[1] : null;
+  }
+
+  /**
+   * Main crawl method
    */
   async crawlSearchPage(keywords, filters = {}, page = 1) {
-    const browser = await this.browserPool.acquire();
+    const browser = await this._ensureBrowser();
+    
+    let context = null;
+    let pageInstance = null;
     
     try {
       console.log(`🔍 Crawling FindAPhD: keywords="${keywords}", page=${page}`);
       
-      const context = await browser.newContext({
+      context = await browser.newContext({
         userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
         viewport: { width: 1920, height: 1080 },
         ignoreHTTPSErrors: true,
       });
 
-      const pageInstance = await context.newPage();
+      pageInstance = await context.newPage();
       
-      // Build search URL
       const searchUrl = this._buildSearchUrl(keywords, filters, page);
       console.log(`📄 URL: ${searchUrl}`);
       
-      // Navigate to search page
       await pageInstance.goto(searchUrl, {
         waitUntil: 'networkidle',
         timeout: 60000
       });
 
-      // Handle cookie consent
       await this._handleCookieConsent(pageInstance);
-      
-      // Wait for content to load
       await pageInstance.waitForTimeout(3000);
       
-      // Scroll to trigger lazy loading
+      // Scroll برای lazy loading
       await pageInstance.evaluate(() => {
         window.scrollTo(0, document.body.scrollHeight / 2);
       });
       await pageInstance.waitForTimeout(2000);
 
-      // Extract results
-      const results = await this._extractResults(pageInstance);
+      const results = await this._extractHybrid(pageInstance);
       
-      // Get pagination info
+      // اضافه کردن external_id به هر result
+      results.forEach(phd => {
+        phd.external_id = this._extractExternalId(phd.url);
+      });
+      
       const paginationInfo = await this._getPaginationInfo(pageInstance);
       
       console.log(`✅ Extracted ${results.length} results`);
-      
-      await context.close();
       
       return {
         results,
         currentPage: page,
         totalPages: paginationInfo.totalPages,
         totalResults: paginationInfo.totalResults,
+        pagination: {
+          currentPage: page,
+          totalPages: paginationInfo.totalPages,
+          totalResults: paginationInfo.totalResults,
+          hasNextPage: page < paginationInfo.totalPages
+        }
       };
       
     } catch (error) {
       console.error('❌ Crawl error:', error.message);
       throw error;
     } finally {
-      await this.browserPool.release(browser);
+      try {
+        if (pageInstance) await pageInstance.close();
+        if (context) await context.close();
+      } catch (e) {
+        console.warn('Warning closing context:', e.message);
+      }
     }
   }
 
   /**
-   * Build search URL with keywords and filters
+   * Hybrid Extraction: همه searchResultImpression* رو می‌گیره
    */
-  _buildSearchUrl(keywords, filters, page) {
-    const params = new URLSearchParams();
-    
-    // Keywords
-    if (keywords) {
-      params.append('Keywords', keywords);
-    }
-    
-    // Filters
-    if (filters.discipline) {
-      params.append('discipline', filters.discipline);
-    }
-    if (filters.country) {
-      params.append('country', filters.country);
-    }
-    if (filters.location) {
-      params.append('location', filters.location);
-    }
-    if (filters.institution) {
-      params.append('institution', filters.institution);
-    }
-    if (filters.fundingType) {
-      // FindAPhD funding filters:
-      // 0100 = UK students
-      // 01M0 = Self-funded
-      // 01w0 = Non-EU students
-      // 01g0 = EU students
-      params.append('funding', filters.fundingType);
-    }
-    if (filters.studyType) {
-      params.append('studyType', filters.studyType);
-    }
-    
-    // Pagination
-    if (page > 1) {
-      params.append('PG', page);
-    }
-    
-    return `${this.baseUrl}/phds/?${params.toString()}`;
+  async _extractHybrid(page) {
+    return await page.evaluate(() => {
+      const results = [];
+      
+      // 1. پیدا کردن همه searchResultImpression* (حتی اگه داده ناقص باشه)
+      const allContainers = document.querySelectorAll('[id^="searchResultImpression"]');
+      console.log(`Found ${allContainers.length} searchResultImpression containers`);
+
+      // 2. Extract JSON-LD اول (برای match بعدی)
+      const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      const jsonLdItems = [];
+
+      scripts.forEach((script, scriptIdx) => {
+        try {
+          const data = JSON.parse(script.textContent);
+          if (Array.isArray(data)) {
+            data.forEach(item => {
+              if (item['@type'] === 'Course') {
+                jsonLdItems.push({
+                  scriptIndex: scriptIdx + 1,
+                  title: item.name,
+                  description: item.description,
+                  university: item.provider?.name,
+                  raw: item
+                });
+              }
+            });
+          } else if (data['@type'] === 'Course') {
+            jsonLdItems.push({
+              scriptIndex: scriptIdx + 1,
+              title: data.name,
+              description: data.description,
+              university: data.provider?.name,
+              raw: data
+            });
+          }
+        } catch (e) {
+          console.warn(`Error parsing JSON-LD script ${scriptIdx + 1}:`, e.message);
+        }
+      });
+
+      console.log(`Found ${jsonLdItems.length} Course items in JSON-LD`);
+
+      // 3. Extract از هر container (حتی اگه ناقص باشه)
+      allContainers.forEach((container, index) => {
+        const phd = {
+          index: index + 1,
+          containerId: container.id,
+          title: null,
+          url: null,
+          university: null,
+          department: null,
+          location: null,
+          country: null,
+          disciplines: [],
+          subjects: [],
+          supervisor: null,
+          deadline: null,
+          deadlineText: null,
+          programType: null,
+          funding: null,
+          description: null,
+          // فیلدهای از script (با suffix Script)
+          titleScript: null,
+          descriptionScript: null,
+          universityScript: null,
+          jsonLdMatched: false
+        };
+
+        // Title - چند selector مختلف
+        const titleSelectors = [
+          'span.h4',
+          '.h4',
+          'h3 .h4',
+          'h3 span.h4',
+          'a[href*="/phds/project/"] .h4',
+          'a[href*="/phds/project/"] span.h4'
+        ];
+
+        for (const selector of titleSelectors) {
+          const el = container.querySelector(selector);
+          if (el) {
+            phd.title = el.textContent.trim();
+            break;
+          }
+        }
+
+        // URL
+        const urlSelectors = [
+          'a[href*="/phds/project/"]',
+          'a.card',
+          'a[href*="?p"]'
+        ];
+
+        for (const selector of urlSelectors) {
+          const el = container.querySelector(selector);
+          if (el && el.href) {
+            phd.url = el.href;
+            break;
+          }
+        }
+
+        // University
+        const instTitle = container.querySelector('.phd-result__dept-inst--inst .phd-result__dept-inst--title');
+        if (instTitle) {
+          phd.university = instTitle.textContent.trim();
+        }
+
+        // Department
+        const deptLink = container.querySelector('.phd-result__dept-inst--dept');
+        if (deptLink) {
+          phd.department = deptLink.textContent.trim();
+        }
+
+        // Deadline
+        const calendarIcon = container.querySelector('.fa-calendar');
+        if (calendarIcon) {
+          const parent = calendarIcon.closest('.badge, .subButton, span');
+          if (parent) {
+            let text = parent.textContent.trim();
+            text = text.replace(/^\s*<i[^>]*>.*?<\/i>\s*/i, '');
+            phd.deadlineText = text;
+          }
+        }
+
+        // Supervisor
+        const supervisorDiv = container.querySelector('.phd-result__key-info.super');
+        if (supervisorDiv) {
+          const iconText = supervisorDiv.querySelector('.icon-text');
+          if (iconText) {
+            let text = iconText.textContent.trim();
+            text = text.replace(/^\s*Supervisors?:\s*/i, '');
+            phd.supervisor = text;
+          }
+        }
+
+        // Program Type
+        const graduationIcon = container.querySelector('.fa-graduation-cap');
+        if (graduationIcon) {
+          const parent = graduationIcon.closest('.badge, span');
+          if (parent) {
+            let text = parent.textContent.trim();
+            phd.programType = text;
+          }
+        }
+
+        // Funding
+        const walletIcon = container.querySelector('.fa-wallet');
+        if (walletIcon) {
+          const parent = walletIcon.closest('.badge, span');
+          if (parent) {
+            let text = parent.textContent.trim();
+            phd.funding = text;
+          }
+        }
+
+        // Description (short)
+        const descDiv = container.querySelector('.phd-result__description .descFrag');
+        if (descDiv) {
+          let text = descDiv.textContent.trim();
+          text = text.replace(/Read more.*$/i, '').trim();
+          phd.description = text;
+        }
+
+        // DataLayerManager از script
+        const scriptTag = container.querySelector('script');
+        if (scriptTag) {
+          const scriptText = scriptTag.textContent;
+
+          const extractVar = (varName) => {
+            const regex = new RegExp(`DataLayerManager\\.${varName}\\s*=\\s*"([^"]+)"`, 'i');
+            const match = scriptText.match(regex);
+            return match ? match[1] : null;
+          };
+
+          if (!phd.university) phd.university = extractVar('dynamicInstitutionName');
+          if (!phd.department) phd.department = extractVar('dynamicDepartmentName');
+          phd.country = extractVar('dynamicLocationCountryName');
+          phd.location = extractVar('dynamicLocationCityName');
+          
+          const disciplineNames = extractVar('dynamicDisciplineNames');
+          if (disciplineNames) {
+            phd.disciplines = disciplineNames.split(',').map(s => s.trim()).filter(Boolean);
+          }
+          
+          const subjectNames = extractVar('dynamicSubjectNames');
+          if (subjectNames) {
+            phd.subjects = subjectNames.split(',').map(s => s.trim()).filter(Boolean);
+          }
+
+          if (!phd.programType) phd.programType = extractVar('dynamicProgrammeTypes');
+          
+          const fundingTypes = extractVar('dynamicFundingTypes');
+          if (fundingTypes && !phd.funding) {
+            phd.funding = fundingTypes;
+          }
+        }
+
+        // 4. Match با JSON-LD و merge
+        if (phd.title || phd.url) {
+          // Normalize title برای matching
+          const normalizeTitle = (t) => {
+            if (!t) return '';
+            return t.toLowerCase()
+              .replace(/[^\w\s]/g, '')
+              .replace(/\s+/g, ' ')
+              .trim()
+              .substring(0, 50);
+          };
+
+          const htmlTitleNorm = normalizeTitle(phd.title);
+          let bestMatch = null;
+          let bestScore = 0;
+
+          jsonLdItems.forEach(jsonItem => {
+            const jsonTitleNorm = normalizeTitle(jsonItem.title);
+            
+            // Similarity check
+            if (jsonTitleNorm.includes(htmlTitleNorm) || htmlTitleNorm.includes(jsonTitleNorm)) {
+              const score = Math.min(jsonTitleNorm.length, htmlTitleNorm.length);
+              if (score > bestScore && score > 10) {
+                bestScore = score;
+                bestMatch = jsonItem;
+              }
+            }
+          });
+
+          // Merge اطلاعات از JSON-LD (با suffix Script)
+          if (bestMatch) {
+            phd.jsonLdMatched = true;
+            
+            // Description کامل از script
+            if (bestMatch.description && bestMatch.description.length > (phd.description || '').length) {
+              phd.descriptionScript = bestMatch.description;
+            }
+
+            // Title از script (اگه در HTML نبود)
+            if (!phd.title && bestMatch.title) {
+              phd.titleScript = bestMatch.title;
+            }
+
+            // University از script (اگه در HTML نبود)
+            if (!phd.university && bestMatch.university) {
+              phd.universityScript = bestMatch.university;
+            }
+          }
+        }
+
+        // اضافه کردن به results (حتی اگه ناقص باشه)
+        results.push(phd);
+      });
+
+      console.log(`Extracted ${results.length} PhDs (including incomplete ones)`);
+      return results;
+    });
   }
 
-  /**
-   * Handle cookie consent popup
-   */
   async _handleCookieConsent(page) {
     try {
       const acceptButton = page.locator('button:has-text("Accept all")').first();
@@ -132,227 +386,9 @@ class FindAPhDCrawler {
         console.log('✅ Cookie consent accepted');
         await page.waitForTimeout(1000);
       }
-    } catch (e) {
-      // No cookie consent or already accepted
-    }
+    } catch (e) {}
   }
 
-  /**
-   * Extract PhD results from the page
-   */
-  async _extractResults(page) {
-    return await page.evaluate(() => {
-      const results = [];
-      
-      // FindAPhD uses this class structure for result rows
-      const resultContainers = document.querySelectorAll('.phd-result');
-      
-      console.log(`Found ${resultContainers.length} result containers`);
-      
-      resultContainers.forEach((container, index) => {
-        try {
-          const result = {
-            title: 'No title',
-            url: '',
-            institution: '',
-            location: '',
-            discipline: '',
-            funding: '',
-            studyType: '',
-            publishedDate: '',
-            deadline: '',
-            description: '',
-            supervisor: '',
-            index: index + 1
-          };
-          
-          // ─────────────────────────────────────────────────────────
-          // TITLE & URL
-          // ─────────────────────────────────────────────────────────
-          const titleLink = container.querySelector('a[href*="/phds/project/"]');
-          if (titleLink) {
-            result.url = titleLink.href;
-            
-            // Title is inside the link, but clean it up
-            let titleText = titleLink.textContent || '';
-            
-            // Remove "More details" prefix
-            titleText = titleText.replace(/^\s*More details\s*/i, '');
-            
-            // Get the main title (usually after a lot of whitespace)
-            const lines = titleText.split('\n').map(line => line.trim()).filter(line => line.length > 0);
-            
-            // Find the longest meaningful line as title
-            let bestTitle = lines.find(line => line.length > 20 && line.length < 200) || lines[0] || 'No title';
-            result.title = bestTitle.trim();
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // INSTITUTION & DEPARTMENT
-          // ─────────────────────────────────────────────────────────
-          // FindAPhD structure typically has:
-          // <h4>University Name</h4>
-          // Followed by department or faculty text
-          
-          const h4Elements = container.querySelectorAll('h4');
-          let institution = '';
-          let department = '';
-          
-          if (h4Elements.length > 0) {
-            // First h4 is usually the university
-            institution = h4Elements[0].textContent.trim();
-            
-            // Second h4 or following text might be department
-            if (h4Elements.length > 1) {
-              department = h4Elements[1].textContent.trim();
-            } else {
-              // Look for department in following siblings
-              let sibling = h4Elements[0].nextElementSibling;
-              while (sibling && !department) {
-                const text = sibling.textContent.trim();
-                if (text.length > 5 && text.length < 200 && 
-                    (text.includes('Department') || text.includes('Faculty') || text.includes('School'))) {
-                  department = text;
-                  break;
-                }
-                sibling = sibling.nextElementSibling;
-              }
-            }
-          }
-          
-          // Fallback: try other selectors
-          if (!institution) {
-            const fallbackSelectors = [
-              'strong',
-              '.inst',
-              '[class*="institution"]'
-            ];
-            
-            for (const selector of fallbackSelectors) {
-              const el = container.querySelector(selector);
-              if (el) {
-                const text = el.textContent.trim();
-                if (text.length > 3 && text.length < 200 && 
-                    !text.includes('More details') && !text.includes('Read more')) {
-                  institution = text;
-                  break;
-                }
-              }
-            }
-          }
-          
-          // Combine institution and department
-          if (institution && department) {
-            result.institution = `${institution} - ${department}`;
-          } else if (institution) {
-            result.institution = institution;
-          } else if (department) {
-            result.institution = department;
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // DESCRIPTION
-          // ─────────────────────────────────────────────────────────
-          const descSelectors = [
-            '.desc',
-            '.description',
-            'p',
-            '[class*="desc"]',
-            '.details'
-          ];
-          
-          for (const selector of descSelectors) {
-            const descEl = container.querySelector(selector);
-            if (descEl) {
-              const text = descEl.textContent.trim();
-              if (text.length > 30 && text.length < 1000 && text.includes(' ')) {
-                result.description = text.replace(/\s+/g, ' ').substring(0, 500);
-                break;
-              }
-            }
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // SUPERVISOR
-          // ─────────────────────────────────────────────────────────
-          const supervisorMatch = container.textContent.match(/Supervisors?:\s*([^\n]+)/i);
-          if (supervisorMatch) {
-            result.supervisor = supervisorMatch[1].trim();
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // DEADLINE/DATE
-          // ─────────────────────────────────────────────────────────
-          const datePatterns = [
-            /(\d{1,2}\s+\w+\s+\d{4})/i,  // "20 October 2025"
-            /(\w+\s+\d{4})/i,             // "October 2025"
-            /Year round applications/i
-          ];
-          
-          const containerText = container.textContent;
-          for (const pattern of datePatterns) {
-            const match = containerText.match(pattern);
-            if (match) {
-              result.deadline = match[0].trim();
-              break;
-            }
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // FUNDING TYPE
-          // ─────────────────────────────────────────────────────────
-          const fundingPatterns = [
-            'Self-Funded',
-            'Funded',
-            'Scholarship',
-            'Studentship',
-            'Competition Funded',
-            'Fully Funded'
-          ];
-          
-          for (const pattern of fundingPatterns) {
-            if (containerText.includes(pattern)) {
-              result.funding = pattern;
-              break;
-            }
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // STUDY TYPE
-          // ─────────────────────────────────────────────────────────
-          if (containerText.includes('PhD Research Project')) {
-            result.studyType = 'PhD Research Project';
-          } else if (containerText.includes('PhD Programme')) {
-            result.studyType = 'PhD Programme';
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // PUBLISHED DATE (for sorting)
-          // ─────────────────────────────────────────────────────────
-          const publishedMatch = containerText.match(/Added\s+(.+?)(?:\n|$)/i);
-          if (publishedMatch) {
-            result.publishedDate = publishedMatch[1].trim();
-          }
-          
-          // ─────────────────────────────────────────────────────────
-          // VALIDATION: Only add if we have at least title and URL
-          // ─────────────────────────────────────────────────────────
-          if (result.url && result.title !== 'No title') {
-            results.push(result);
-          }
-          
-        } catch (error) {
-          console.error(`Error extracting result ${index + 1}:`, error.message);
-        }
-      });
-      
-      return results;
-    });
-  }
-
-  /**
-   * Get pagination information
-   */
   async _getPaginationInfo(page) {
     return await page.evaluate(() => {
       const paginationInfo = {
@@ -361,48 +397,45 @@ class FindAPhDCrawler {
         hasNext: false,
         hasPrev: false
       };
-      
-      // Look for result count
-      const resultText = document.body.textContent;
-      const countMatch = resultText.match(/We have (\d+)/i);
-      if (countMatch) {
-        paginationInfo.totalResults = parseInt(countMatch[1]);
-        // Assuming 15 results per page
-        paginationInfo.totalPages = Math.ceil(paginationInfo.totalResults / 15);
-      }
-      
-      // Check for pagination links
-      const pageLinks = document.querySelectorAll('a[href*="PG="]');
-      if (pageLinks.length > 0) {
-        // Find highest page number
-        let maxPage = 1;
-        pageLinks.forEach(link => {
-          const match = link.href.match(/PG=(\d+)/);
-          if (match) {
-            const pageNum = parseInt(match[1]);
-            if (pageNum > maxPage) maxPage = pageNum;
-          }
-        });
-        if (maxPage > paginationInfo.totalPages) {
-          paginationInfo.totalPages = maxPage;
+
+      const totalText = document.querySelector('.showing-count, .results-count');
+      if (totalText) {
+        const match = totalText.textContent.match(/(\d+)/);
+        if (match) {
+          paginationInfo.totalResults = parseInt(match[1]);
         }
       }
-      
-      // Also check for "39" style pagination display
-      const paginationText = document.querySelector('.pagination, [class*="page"]');
-      if (paginationText) {
-        const text = paginationText.textContent;
-        const lastPageMatch = text.match(/(\d+)\s*$/);
-        if (lastPageMatch) {
-          const lastPage = parseInt(lastPageMatch[1]);
-          if (lastPage > paginationInfo.totalPages) {
-            paginationInfo.totalPages = lastPage;
-          }
+
+      const paginationLinks = document.querySelectorAll('.pagination a, .pager a');
+      let maxPage = 1;
+      paginationLinks.forEach(link => {
+        const pageMatch = link.href.match(/[?&]PG=(\d+)/);
+        if (pageMatch) {
+          maxPage = Math.max(maxPage, parseInt(pageMatch[1]));
         }
-      }
-      
+      });
+      paginationInfo.totalPages = maxPage;
+
       return paginationInfo;
     });
+  }
+
+  _buildSearchUrl(keywords, filters, page) {
+    const params = new URLSearchParams();
+    
+    if (keywords) {
+      params.append('Keywords', keywords);
+    }
+    
+    if (filters.discipline) {
+      params.append('discipline', filters.discipline);
+    }
+    
+    if (page > 1) {
+      params.append('PG', page);
+    }
+    
+    return `${this.baseUrl}/phds/?${params.toString()}`;
   }
 }
 

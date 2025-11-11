@@ -1,0 +1,26 @@
+{
+  "metadata": {
+    "extractedAt": "2025-11-11T21:08:49.138Z",
+    "keyword": "a",
+    "page": 1,
+    "method": "Hybrid: JSON-LD + HTML + DataLayerManager",
+    "totalFound": 0
+  },
+  "statistics": {
+    "total": 0,
+    "hasTitle": 0,
+    "hasUrl": 0,
+    "hasUniversity": 0,
+    "hasDepartment": 0,
+    "hasLocation": 0,
+    "hasCountry": 0,
+    "hasDisciplines": 0,
+    "hasSubjects": 0,
+    "hasSupervisor": 0,
+    "hasDeadline": 0,
+    "hasProgramType": 0,
+    "hasFunding": 0,
+    "hasDescription": 0
+  },
+  "results": []
+}
