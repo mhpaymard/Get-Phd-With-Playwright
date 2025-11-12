@@ -9,7 +9,7 @@
         }
     },
     "servers": [{
-        "url": "http://91.99.13.17:3000",
+        "url": "http://lion.4doone.net:3000",
         "description": "Development server"
     }],
     "tags": [{
