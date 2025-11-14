@@ -268,7 +268,7 @@ await this._delay(3001); // 3s → 2s برای سریعتر شدن
 وضعیت crawler رو می‌تونید ببینید:
 
 ```bash
-curl http://localhost:3001/api/crawler/status
+curl https://applycore.ca:3001/api/crawler/status
 
 {
   "crawler": {

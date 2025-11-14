@@ -68,10 +68,10 @@ npm start
 
 ### دسترسی به API:
 ```
-http://localhost:3001/              → API Info
-http://localhost:3001/api-docs      → Swagger UI
-http://localhost:3001/api/phd/search → جستجو
-http://localhost:3001/api/crawler/status → وضعیت Crawler
+https://applycore.ca:3001/              → API Info
+https://applycore.ca:3001/api-docs      → Swagger UI
+https://applycore.ca:3001/api/phd/search → جستجو
+https://applycore.ca:3001/api/crawler/status → وضعیت Crawler
 ```
 
 ---
@@ -144,8 +144,8 @@ npm run test:db          # تست database
 npm run test             # تست‌های unit
 
 # Monitoring
-curl http://localhost:3001/api/crawler/status
-curl http://localhost:3001/api/phd/stats/summary
+curl https://applycore.ca:3001/api/crawler/status
+curl https://applycore.ca:3001/api/phd/stats/summary
 ```
 
 ---

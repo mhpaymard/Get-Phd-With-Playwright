@@ -49,7 +49,7 @@ app.get('/', async(req, res) => {
         version: '2.0.0',
         architecture: 'Background Crawler + Database',
         status: 'running',
-        documentation: `http://localhost:${PORT}/api-docs`,
+        documentation: `https://applycore.ca:${PORT}/api-docs`,
         database: {
             type: dbStats.type,
             totalPhDs: dbStats.totalPhDs,
@@ -107,7 +107,7 @@ app.use('/api/search', (req, res) => {
     res.status(301).json({
         message: 'This endpoint has moved',
         newEndpoint: '/api/phd/search',
-        documentation: `http://localhost:${PORT}/api-docs`
+        documentation: `https://applycore.ca:${PORT}/api-docs`
     });
 });
 
@@ -123,7 +123,7 @@ app.use('/api/session', (req, res) => {
 app.use((req, res) => {
     res.status(404).json({
         error: 'Endpoint not found',
-        documentation: `http://localhost:${PORT}/api-docs`
+        documentation: `https://applycore.ca:${PORT}/api-docs`
     });
 });
 
@@ -197,11 +197,11 @@ async function start() {
             console.log(`   ✓ Server listening on port ${PORT}`);
             console.log('\n' + '='.repeat(80));
             console.log('📚 API Documentation:');
-            console.log(`   • Swagger UI:    http://localhost:${PORT}/api-docs`);
-            console.log(`   • API Root:      http://localhost:${PORT}/`);
-            console.log(`   • Health Check:  http://localhost:${PORT}/api/health`);
-            console.log(`   • Search PhDs:   http://localhost:${PORT}/api/phd/search`);
-            console.log(`   • Crawler Status: http://localhost:${PORT}/api/crawler/status`);
+            console.log(`   • Swagger UI:    https://applycore.ca:${PORT}/api-docs`);
+            console.log(`   • API Root:      https://applycore.ca:${PORT}/`);
+            console.log(`   • Health Check:  https://applycore.ca:${PORT}/api/health`);
+            console.log(`   • Search PhDs:   https://applycore.ca:${PORT}/api/phd/search`);
+            console.log(`   • Crawler Status: https://applycore.ca:${PORT}/api/crawler/status`);
             console.log('='.repeat(80));
             console.log('\n✅ Server is ready to accept requests!\n');
         });

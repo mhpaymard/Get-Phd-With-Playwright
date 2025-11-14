@@ -9,7 +9,7 @@
         "test": "node tests/findaphd-url.test.js && node tests/orchestrator.test.js && node tests/filter-mapper.test.js && node tests/integration.test.js",
         "test:db": "node tests/database.test.js",
         "test:crawler": "node tests/crawler.test.js",
-        "docs": "start http://localhost:3001/api-docs",
+        "docs": "start https://applycore.ca:3001/api-docs",
         "demo:crawl": "node src/demo/crawl.js"
     },
     "keywords": [
