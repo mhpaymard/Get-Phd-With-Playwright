@@ -329,7 +329,7 @@ POST /api/phd/search
 ### 📞 Support
 
 - **Documentation:** `docs/`
-- **Swagger UI:** https://applycore.ca/api-docs
+- **Swagger UI:** https://applycore.ca/phd/api-docs
 - **Migration Guide:** `docs/MIGRATION-GUIDE-V2.md`
 - **GitHub:** [Issues](https://github.com/your-repo/issues)
 

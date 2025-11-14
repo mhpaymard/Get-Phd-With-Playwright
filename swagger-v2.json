@@ -9,7 +9,7 @@
         }
     },
     "servers": [{
-        "url": "https://applycore.ca/phd",
+        "url": "https://applycore.ca/phd/phd",
         "description": "Development server"
     }],
     "tags": [{

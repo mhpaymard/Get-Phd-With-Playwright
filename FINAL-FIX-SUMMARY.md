@@ -68,10 +68,10 @@ npm start
 
 ### دسترسی به API:
 ```
-https://applycore.ca/              → API Info
-https://applycore.ca/api-docs      → Swagger UI
-https://applycore.ca/api/phd/search → جستجو
-https://applycore.ca/api/crawler/status → وضعیت Crawler
+https://applycore.ca/phd/              → API Info
+https://applycore.ca/phd/api-docs      → Swagger UI
+https://applycore.ca/phd/api/phd/search → جستجو
+https://applycore.ca/phd/api/crawler/status → وضعیت Crawler
 ```
 
 ---
@@ -144,8 +144,8 @@ npm run test:db          # تست database
 npm run test             # تست‌های unit
 
 # Monitoring
-curl https://applycore.ca/api/crawler/status
-curl https://applycore.ca/api/phd/stats/summary
+curl https://applycore.ca/phd/api/crawler/status
+curl https://applycore.ca/phd/api/phd/stats/summary
 ```
 
 ---

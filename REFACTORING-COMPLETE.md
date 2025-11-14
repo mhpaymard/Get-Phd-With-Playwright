@@ -149,7 +149,7 @@ crawl_started → progress → progress → ... → crawl_completed
 
 **دسترسی:**
 ```
-https://applycore.ca/api-docs
+https://applycore.ca/phd/api-docs
 ```
 
 ---
@@ -253,11 +253,11 @@ npm start
 
 ### دسترسی:
 ```
-https://applycore.ca/              → API Info
-https://applycore.ca/api-docs      → Swagger UI
-https://applycore.ca/api/health    → Health Check
-https://applycore.ca/api/phd/search → Search PhDs
-https://applycore.ca/api/crawler/status → Crawler Status
+https://applycore.ca/phd/              → API Info
+https://applycore.ca/phd/api-docs      → Swagger UI
+https://applycore.ca/phd/api/health    → Health Check
+https://applycore.ca/phd/api/phd/search → Search PhDs
+https://applycore.ca/phd/api/crawler/status → Crawler Status
 ```
 
 ---
@@ -372,7 +372,7 @@ npm run test           # تست‌های قبلی (unit tests)
 
 اگه سوالی دارید:
 1. **مستندات:** پوشه `docs/`
-2. **Swagger UI:** https://applycore.ca/api-docs
+2. **Swagger UI:** https://applycore.ca/phd/api-docs
 3. **README:** README.md
 4. **Migration Guide:** docs/MIGRATION-GUIDE-V2.md
 

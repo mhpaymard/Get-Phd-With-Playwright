@@ -5,7 +5,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.1.0-blue.svg)](https://expressjs.com/)
 [![Database](https://img.shields.io/badge/Database-SQLite%2FPostgreSQL-orange.svg)](https://www.sqlite.org/)
-[![Swagger](https://img.shields.io/badge/API-Swagger-brightgreen.svg)](https://applycore.ca/api-docs)
+[![Swagger](https://img.shields.io/badge/API-Swagger-brightgreen.svg)](https://applycore.ca/phd/api-docs)
 
 ## 🆕 تغییرات اساسی در نسخه 2.0
 
@@ -39,7 +39,7 @@ npx playwright install chromium
 npm start
 
 # 4. باز کردن Swagger UI
-https://applycore.ca/api-docs
+https://applycore.ca/phd/api-docs
 ```
 
 **سرور شما در حال اجرا است! 🎉**
@@ -99,7 +99,7 @@ GET /api/health                   # بررسی سلامت سرویس
 GET /api/health/ready             # آماده بودن برای دریافت درخواست
 ```
 
-**مشاهده در Swagger**: https://applycore.ca/api-docs
+**مشاهده در Swagger**: https://applycore.ca/phd/api-docs
 
 ---
 
@@ -107,27 +107,27 @@ GET /api/health/ready             # آماده بودن برای دریافت د
 
 ### 1️⃣ جستجوی ساده
 ```bash
-curl "https://applycore.ca/api/phd/search?keywords=machine+learning&page=1&limit=20"
+curl "https://applycore.ca/phd/api/phd/search?keywords=machine+learning&page=1&limit=20"
 ```
 
 ### 2️⃣ جستجو با فیلتر
 ```bash
-curl "https://applycore.ca/api/phd/search?keywords=AI&country=United+Kingdom&funding_type=Funded+PhD+Project"
+curl "https://applycore.ca/phd/api/phd/search?keywords=AI&country=United+Kingdom&funding_type=Funded+PhD+Project"
 ```
 
 ### 3️⃣ دریافت آمار
 ```bash
-curl "https://applycore.ca/api/phd/stats/summary"
+curl "https://applycore.ca/phd/api/phd/stats/summary"
 ```
 
 ### 4️⃣ وضعیت Crawler
 ```bash
-curl "https://applycore.ca/api/crawler/status"
+curl "https://applycore.ca/phd/api/crawler/status"
 ```
 
 ### 5️⃣ اجرای دستی Crawler
 ```bash
-curl -X POST "https://applycore.ca/api/crawler/trigger"
+curl -X POST "https://applycore.ca/phd/api/crawler/trigger"
 ```
 
 ---
@@ -264,12 +264,12 @@ NODE_ENV=development
 ### تنظیمات Crawler
 ```bash
 # از طریق API
-curl -X PUT https://applycore.ca/api/crawler/settings/interval \
+curl -X PUT https://applycore.ca/phd/api/crawler/settings/interval \
   -H "Content-Type: application/json" \
   -d '{"hours": 2}'
 
 # فعال/غیرفعال کردن
-curl -X PUT https://applycore.ca/api/crawler/settings/toggle \
+curl -X PUT https://applycore.ca/phd/api/crawler/settings/toggle \
   -H "Content-Type: application/json" \
   -d '{"enabled": false}'
 ```
@@ -313,9 +313,9 @@ npm run test:crawler
 npm start
 
 # تست endpoints
-curl https://applycore.ca/api/health
-curl https://applycore.ca/api/phd/search
-curl https://applycore.ca/api/crawler/status
+curl https://applycore.ca/phd/api/health
+curl https://applycore.ca/phd/api/phd/search
+curl https://applycore.ca/phd/api/crawler/status
 ```
 
 ---
@@ -425,7 +425,7 @@ const results = await fetch('/api/phd/search?keywords=AI');
 ## 📚 مستندات
 
 - **[NEW-ARCHITECTURE.md](./docs/architecture/NEW-ARCHITECTURE.md)** - معماری کامل v2.0
-- **[Swagger UI](https://applycore.ca/api-docs)** - مستندات تعاملی API
+- **[Swagger UI](https://applycore.ca/phd/api-docs)** - مستندات تعاملی API
 - **[MIGRATION-GUIDE.md](./docs/MIGRATION-GUIDE.md)** - راهنمای migrate از v1
 
 ---
@@ -469,7 +469,7 @@ ISC License - استفاده آزاد
 
 ## 📞 Support
 
-- **Swagger UI**: https://applycore.ca/api-docs
+- **Swagger UI**: https://applycore.ca/phd/api-docs
 - **GitHub Issues**: برای گزارش باگ و feature request
 - **Docs**: مستندات کامل در پوشه `docs/`
 

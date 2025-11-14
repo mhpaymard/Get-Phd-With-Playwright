@@ -532,13 +532,13 @@ npm start
 ### مرحله 4: تست API ها
 ```bash
 # تست health
-curl https://applycore.ca/api/health
+curl https://applycore.ca/phd/api/health
 
 # تست search
-curl "https://applycore.ca/api/phd/search?keywords=AI"
+curl "https://applycore.ca/phd/api/phd/search?keywords=AI"
 
 # تست crawler status
-curl https://applycore.ca/api/crawler/status
+curl https://applycore.ca/phd/api/crawler/status
 ```
 
 ### مرحله 5: آپدیت کد Client
@@ -584,7 +584,7 @@ curl https://applycore.ca/api/crawler/status
 **راه‌حل**: 
 ```bash
 # اجرای دستی crawler
-curl -X POST https://applycore.ca/api/crawler/trigger
+curl -X POST https://applycore.ca/phd/api/crawler/trigger
 ```
 
 ### مشکل: Database خالی است
@@ -596,7 +596,7 @@ curl -X POST https://applycore.ca/api/crawler/trigger
 
 - [README-V2.md](../README-V2.md) - راهنمای کامل v2.0
 - [NEW-ARCHITECTURE.md](./architecture/NEW-ARCHITECTURE.md) - جزئیات معماری
-- [Swagger UI](https://applycore.ca/api-docs) - مستندات API
+- [Swagger UI](https://applycore.ca/phd/api-docs) - مستندات API
 
 ---
 
