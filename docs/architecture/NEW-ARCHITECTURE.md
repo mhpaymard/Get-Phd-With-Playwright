@@ -12,7 +12,7 @@ User Request → API → Playwright Crawler → FindAPhD.com → Return Results
 ```
 ┌─────────────────────────────────────────────────────────┐
 │         Background Crawler (Every 1 Hour)               │
-│  • Crawls ALL PhD positions (3000+)                     │
+│  • Crawls ALL PhD positions (3001+)                     │
 │  • Updates existing records                             │
 │  • Marks deleted positions                              │
 └─────────────────┬───────────────────────────────────────┘
@@ -297,7 +297,7 @@ src/
 1. Database.initialize()
 2. BackgroundCrawler.startFullCrawl()
    ├── Crawl page 1, 2, 3, ... (تا آخر)
-   ├── Extract 3000+ PhD positions
+   ├── Extract 3001+ PhD positions
    ├── Save to database
    └── Complete (~ 30-60 minutes)
 3. CrawlerScheduler.start()

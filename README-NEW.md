@@ -30,7 +30,7 @@ npx playwright install chromium
 npm run api
 ```
 
-سرور روی `http://91.99.13.17:3000` اجرا می‌شود.
+سرور روی `http://91.99.13.17:3001` اجرا می‌شود.
 
 ---
 
@@ -46,7 +46,7 @@ npm run api
 ## 💡 مثال سریع استفاده
 
 ```javascript
-const BASE_URL = 'http://91.99.13.17:3000/api';
+const BASE_URL = 'http://91.99.13.17:3001/api';
 
 // 1. ایجاد session
 const sessionRes = await fetch(`${BASE_URL}/session`, {
@@ -138,10 +138,10 @@ npm run demo:crawl
 فایل `.env`:
 
 ```bash
-PORT=3000
+PORT=3001
 MAX_BROWSER_TABS=100
 FAPHD_CACHE_TTL=900
-FAPHD_TIMEOUT_MS=30000
+FAPHD_TIMEOUT_MS=30010
 ```
 
 برای توضیحات کامل به [مستندات API](docs/API-DOCUMENTATION.md#پیکربندی--configuration) مراجعه کنید.

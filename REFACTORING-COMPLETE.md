@@ -72,7 +72,7 @@ Background Crawler (هر 1 ساعت) → Database → API → User (<50ms)
 - ✅ Statistics و logging کامل
 
 **عملکرد:**
-- ⏱️ Crawl time: ~30-60 دقیقه برای 3000+ PhDs
+- ⏱️ Crawl time: ~30-60 دقیقه برای 3001+ PhDs
 - 💾 Memory: ~128MB در حین crawl
 - 📊 Progress: Real-time updates هر صفحه
 
@@ -149,7 +149,7 @@ crawl_started → progress → progress → ... → crawl_completed
 
 **دسترسی:**
 ```
-http://localhost:3000/api-docs
+http://localhost:3001/api-docs
 ```
 
 ---
@@ -253,11 +253,11 @@ npm start
 
 ### دسترسی:
 ```
-http://localhost:3000/              → API Info
-http://localhost:3000/api-docs      → Swagger UI
-http://localhost:3000/api/health    → Health Check
-http://localhost:3000/api/phd/search → Search PhDs
-http://localhost:3000/api/crawler/status → Crawler Status
+http://localhost:3001/              → API Info
+http://localhost:3001/api-docs      → Swagger UI
+http://localhost:3001/api/health    → Health Check
+http://localhost:3001/api/phd/search → Search PhDs
+http://localhost:3001/api/crawler/status → Crawler Status
 ```
 
 ---
@@ -372,7 +372,7 @@ npm run test           # تست‌های قبلی (unit tests)
 
 اگه سوالی دارید:
 1. **مستندات:** پوشه `docs/`
-2. **Swagger UI:** http://localhost:3000/api-docs
+2. **Swagger UI:** http://localhost:3001/api-docs
 3. **README:** README.md
 4. **Migration Guide:** docs/MIGRATION-GUIDE-V2.md
 

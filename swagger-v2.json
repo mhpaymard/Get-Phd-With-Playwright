@@ -9,7 +9,7 @@
         }
     },
     "servers": [{
-        "url": "http://lion.4doone.net:3000",
+        "url": "https://applycore.ca/phd",
         "description": "Development server"
     }],
     "tags": [{

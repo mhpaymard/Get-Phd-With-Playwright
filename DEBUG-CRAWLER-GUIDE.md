@@ -112,7 +112,7 @@ if (titles.length > 0) {
 
 async _extractDetailedResults(page) {
   // منتظر بمانید تا محتوا لود شود
-  await page.waitForTimeout(3000); // ✅ افزایش تاخیر
+  await page.waitForTimeout(3001); // ✅ افزایش تاخیر
   
   return await page.evaluate(() => {
     const results = [];
@@ -232,7 +232,7 @@ await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 
 ```bash
 # تست با curl
-curl -X POST http://91.99.13.17:3000/api/search \
+curl -X POST http://91.99.13.17:3001/api/search \
   -H 'Content-Type: application/json' \
   -d '{
     "userId": "test-user",

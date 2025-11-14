@@ -14,18 +14,18 @@ node src/api/server.js
 **خروجی:**
 ```
 ============================================================
-✓ FindAPhD API Server running on port 3000
+✓ FindAPhD API Server running on port 3001
 ✓ Browser pool initialized with max 100 tabs
 
 📚 Documentation URLs:
-   • Swagger UI:    http://91.99.13.17:3000/api-docs
-   • API Info:      http://91.99.13.17:3000/
-   • Health Check:  http://91.99.13.17:3000/api/health
+   • Swagger UI:    http://91.99.13.17:3001/api-docs
+   • API Info:      http://91.99.13.17:3001/
+   • Health Check:  http://91.99.13.17:3001/api/health
 ============================================================
 ```
 
 **بعد از اجرا:**
-- برو به `http://91.99.13.17:3000/api-docs` برای Swagger UI
+- برو به `http://91.99.13.17:3001/api-docs` برای Swagger UI
 - API آماده دریافت درخواست است
 
 ---
@@ -176,19 +176,19 @@ node src/demo/crawl.js
 ### از Terminal:
 ```bash
 # Health check
-curl http://91.99.13.17:3000/api/health
+curl http://91.99.13.17:3001/api/health
 
 # Ready check
-curl http://91.99.13.17:3000/api/health/ready
+curl http://91.99.13.17:3001/api/health/ready
 
 # API info
-curl http://91.99.13.17:3000/
+curl http://91.99.13.17:3001/
 ```
 
 ### از مرورگر:
-- `http://91.99.13.17:3000/` - اطلاعات API
-- `http://91.99.13.17:3000/api/health` - وضعیت سلامت
-- `http://91.99.13.17:3000/api-docs` - مستندات Swagger
+- `http://91.99.13.17:3001/` - اطلاعات API
+- `http://91.99.13.17:3001/api/health` - وضعیت سلامت
+- `http://91.99.13.17:3001/api-docs` - مستندات Swagger
 
 ---
 
@@ -231,10 +231,10 @@ Shutting down gracefully...
 
 ## مشکلات رایج و راه‌حل
 
-### Port 3000 قبلاً استفاده شده
+### Port 3001 قبلاً استفاده شده
 ```bash
 # پیدا کردن Process
-netstat -ano | findstr :3000
+netstat -ano | findstr :3001
 
 # Kill کردن Process (Windows)
 taskkill /PID <PID_NUMBER> /F
@@ -279,7 +279,7 @@ npm install
 2. # باز کردن Terminal جدید
 3. npm run test:full        # تست خودکار
 4. npm run test:real        # تست واقعی
-5. # مرورگر: http://91.99.13.17:3000/api-docs
+5. # مرورگر: http://91.99.13.17:3001/api-docs
 ```
 
 ### برای Production:
@@ -307,10 +307,10 @@ npm install
 
 ## لینک‌های مفید بعد از اجرا
 
-- **API Root**: http://91.99.13.17:3000/
-- **Swagger UI**: http://91.99.13.17:3000/api-docs
-- **Health Check**: http://91.99.13.17:3000/api/health
-- **Ready Check**: http://91.99.13.17:3000/api/health/ready
+- **API Root**: http://91.99.13.17:3001/
+- **Swagger UI**: http://91.99.13.17:3001/api-docs
+- **Health Check**: http://91.99.13.17:3001/api/health
+- **Ready Check**: http://91.99.13.17:3001/api/health/ready
 
 ---
 

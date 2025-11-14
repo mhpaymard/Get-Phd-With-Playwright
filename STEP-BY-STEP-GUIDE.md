@@ -32,7 +32,7 @@
 
 #### درخواست:
 ```http
-GET http://91.99.13.17:3000/api/health
+GET http://91.99.13.17:3001/api/health
 ```
 
 #### پاسخ موفق:
@@ -66,7 +66,7 @@ GET http://91.99.13.17:3000/api/health
 
 **JavaScript:**
 ```javascript
-const response = await fetch('http://91.99.13.17:3000/api/health');
+const response = await fetch('http://91.99.13.17:3001/api/health');
 const health = await response.json();
 
 if (health.status !== 'healthy') {
@@ -86,7 +86,7 @@ console.log('✓ Service is ready!');
 ```python
 import requests
 
-response = requests.get('http://91.99.13.17:3000/api/health')
+response = requests.get('http://91.99.13.17:3001/api/health')
 health = response.json()
 
 if health['status'] != 'healthy':
@@ -102,7 +102,7 @@ print('✓ Service is ready!')
 
 **cURL:**
 ```bash
-curl http://91.99.13.17:3000/api/health
+curl http://91.99.13.17:3001/api/health
 ```
 
 ---
@@ -116,7 +116,7 @@ curl http://91.99.13.17:3000/api/health
 
 #### درخواست:
 ```http
-POST http://91.99.13.17:3000/api/session
+POST http://91.99.13.17:3001/api/session
 Content-Type: application/json
 
 {
@@ -147,7 +147,7 @@ Content-Type: application/json
 **JavaScript:**
 ```javascript
 async function createSession(userId) {
-  const response = await fetch('http://91.99.13.17:3000/api/session', {
+  const response = await fetch('http://91.99.13.17:3001/api/session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId })
@@ -174,7 +174,7 @@ import requests
 
 def create_session(user_id):
     response = requests.post(
-        'http://91.99.13.17:3000/api/session',
+        'http://91.99.13.17:3001/api/session',
         json={'userId': user_id}
     )
     
@@ -193,7 +193,7 @@ session_id = create_session('user-123')
 
 **cURL:**
 ```bash
-curl -X POST http://91.99.13.17:3000/api/session \
+curl -X POST http://91.99.13.17:3001/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId":"user-123"}'
 ```
@@ -206,7 +206,7 @@ curl -X POST http://91.99.13.17:3000/api/session \
 
 #### درخواست:
 ```http
-POST http://91.99.13.17:3000/api/search
+POST http://91.99.13.17:3001/api/search
 Content-Type: application/json
 
 {
@@ -350,7 +350,7 @@ Content-Type: application/json
 **JavaScript (ساده):**
 ```javascript
 async function performSearch(sessionId, keywords, filters = {}) {
-  const response = await fetch('http://91.99.13.17:3000/api/search', {
+  const response = await fetch('http://91.99.13.17:3001/api/search', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -405,7 +405,7 @@ async function searchPhD(sessionId, options) {
   if (funding.length > 0) filters.funding = funding;
   if (subject) filters.subject = subject;
 
-  const response = await fetch('http://91.99.13.17:3000/api/search', {
+  const response = await fetch('http://91.99.13.17:3001/api/search', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -472,7 +472,7 @@ def perform_search(session_id, keywords, filters=None, page=1):
         payload['filters'] = filters
     
     response = requests.post(
-        'http://91.99.13.17:3000/api/search',
+        'http://91.99.13.17:3001/api/search',
         json=payload
     )
     
@@ -501,7 +501,7 @@ print('First result:', search_result['data']['results'][0]['title'])
 
 **cURL:**
 ```bash
-curl -X POST http://91.99.13.17:3000/api/search \
+curl -X POST http://91.99.13.17:3001/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "user-123",
@@ -525,12 +525,12 @@ curl -X POST http://91.99.13.17:3000/api/search \
 
 #### درخواست:
 ```http
-GET http://91.99.13.17:3000/api/search/{searchId}?sessionId={sessionId}
+GET http://91.99.13.17:3001/api/search/{searchId}?sessionId={sessionId}
 ```
 
 #### مثال:
 ```http
-GET http://91.99.13.17:3000/api/search/search-xyz-789?sessionId=a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6
+GET http://91.99.13.17:3001/api/search/search-xyz-789?sessionId=a1b2c3d4-e5f6-7g8h-9i0j-k1l2m3n4o5p6
 ```
 
 #### پاسخ:
@@ -542,7 +542,7 @@ GET http://91.99.13.17:3000/api/search/search-xyz-789?sessionId=a1b2c3d4-e5f6-7g
 ```javascript
 async function getSearchResults(searchId, sessionId) {
   const response = await fetch(
-    `http://91.99.13.17:3000/api/search/${searchId}?sessionId=${sessionId}`
+    `http://91.99.13.17:3001/api/search/${searchId}?sessionId=${sessionId}`
   );
   
   const result = await response.json();
@@ -563,7 +563,7 @@ console.log(`Page ${results.currentPage} of ${results.totalPages}`);
 ```python
 def get_search_results(search_id, session_id):
     response = requests.get(
-        f'http://91.99.13.17:3000/api/search/{search_id}',
+        f'http://91.99.13.17:3001/api/search/{search_id}',
         params={'sessionId': session_id}
     )
     
@@ -587,7 +587,7 @@ print(f"Page {results['currentPage']} of {results['totalPages']}")
 
 #### درخواست:
 ```http
-POST http://91.99.13.17:3000/api/search/{searchId}/continue
+POST http://91.99.13.17:3001/api/search/{searchId}/continue
 Content-Type: application/json
 
 {
@@ -609,7 +609,7 @@ Content-Type: application/json
 ```javascript
 async function getNextPage(searchId, sessionId, page) {
   const response = await fetch(
-    `http://91.99.13.17:3000/api/search/${searchId}/continue`,
+    `http://91.99.13.17:3001/api/search/${searchId}/continue`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -674,7 +674,7 @@ console.log(`Found ${allPhDs.length} PhD positions in total`);
 ```python
 def get_next_page(search_id, session_id, page):
     response = requests.post(
-        f'http://91.99.13.17:3000/api/search/{search_id}/continue',
+        f'http://91.99.13.17:3001/api/search/{search_id}/continue',
         json={'sessionId': session_id, 'page': page}
     )
     
@@ -733,7 +733,7 @@ print(f'Found {len(all_phds)} PhD positions in total')
 
 #### درخواست:
 ```http
-GET http://91.99.13.17:3000/api/search/history/{sessionId}
+GET http://91.99.13.17:3001/api/search/history/{sessionId}
 ```
 
 #### پاسخ:
@@ -767,7 +767,7 @@ GET http://91.99.13.17:3000/api/search/history/{sessionId}
 ```javascript
 async function getSearchHistory(sessionId) {
   const response = await fetch(
-    `http://91.99.13.17:3000/api/search/history/${sessionId}`
+    `http://91.99.13.17:3001/api/search/history/${sessionId}`
   );
   
   const result = await response.json();
@@ -791,7 +791,7 @@ history.forEach(search => {
 ```python
 def get_search_history(session_id):
     response = requests.get(
-        f'http://91.99.13.17:3000/api/search/history/{session_id}'
+        f'http://91.99.13.17:3001/api/search/history/{session_id}'
     )
     
     result = response.json()
@@ -816,7 +816,7 @@ for search in history:
 
 #### درخواست:
 ```http
-POST http://91.99.13.17:3000/api/search/filters/available
+POST http://91.99.13.17:3001/api/search/filters/available
 ```
 
 #### پاسخ:
@@ -871,7 +871,7 @@ POST http://91.99.13.17:3000/api/search/filters/available
 ```javascript
 async function getAvailableFilters() {
   const response = await fetch(
-    'http://91.99.13.17:3000/api/search/filters/available',
+    'http://91.99.13.17:3001/api/search/filters/available',
     { method: 'POST' }
   );
   
@@ -900,7 +900,7 @@ console.log('First discipline:', filters.disciplines[0]);
 
 #### درخواست:
 ```http
-DELETE http://91.99.13.17:3000/api/session/{sessionId}
+DELETE http://91.99.13.17:3001/api/session/{sessionId}
 ```
 
 #### پاسخ:
@@ -917,7 +917,7 @@ DELETE http://91.99.13.17:3000/api/session/{sessionId}
 ```javascript
 async function deleteSession(sessionId) {
   const response = await fetch(
-    `http://91.99.13.17:3000/api/session/${sessionId}`,
+    `http://91.99.13.17:3001/api/session/${sessionId}`,
     { method: 'DELETE' }
   );
   
@@ -936,7 +936,7 @@ await deleteSession(sessionId);
 ```python
 def delete_session(session_id):
     response = requests.delete(
-        f'http://91.99.13.17:3000/api/session/{session_id}'
+        f'http://91.99.13.17:3001/api/session/{session_id}'
     )
     
     result = response.json()
@@ -958,7 +958,7 @@ delete_session(session_id)
 const fetch = require('node-fetch');
 
 class PhDSearchClient {
-  constructor(baseUrl = 'http://91.99.13.17:3000/api') {
+  constructor(baseUrl = 'http://91.99.13.17:3001/api') {
     this.baseUrl = baseUrl;
     this.userId = `user-${Date.now()}`;
     this.sessionId = null;
@@ -1175,7 +1175,7 @@ import requests
 import time
 
 class PhDSearchClient:
-    def __init__(self, base_url='http://91.99.13.17:3000/api'):
+    def __init__(self, base_url='http://91.99.13.17:3001/api'):
         self.base_url = base_url
         self.user_id = f'user-{int(time.time())}'
         self.session_id = None
@@ -1382,7 +1382,7 @@ if __name__ == '__main__':
 
 ```javascript
 // 1. Session بساز
-const session = await fetch('http://91.99.13.17:3000/api/session', {
+const session = await fetch('http://91.99.13.17:3001/api/session', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ userId: 'my-user' })
@@ -1391,7 +1391,7 @@ const session = await fetch('http://91.99.13.17:3000/api/session', {
 const sessionId = session.data.sessionId;
 
 // 2. جستجو کن
-const search = await fetch('http://91.99.13.17:3000/api/search', {
+const search = await fetch('http://91.99.13.17:3001/api/search', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -1417,4 +1417,4 @@ console.log(search.data.results);
 - ✅ صفحات بعدی رو بخونی
 - ✅ تاریخچه رو ببینی
 
-**برای مثال‌های بیشتر:** Swagger UI رو باز کن → http://91.99.13.17:3000/api-docs
+**برای مثال‌های بیشتر:** Swagger UI رو باز کن → http://91.99.13.17:3001/api-docs

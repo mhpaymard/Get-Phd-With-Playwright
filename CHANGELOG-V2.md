@@ -329,7 +329,7 @@ POST /api/phd/search
 ### 📞 Support
 
 - **Documentation:** `docs/`
-- **Swagger UI:** http://localhost:3000/api-docs
+- **Swagger UI:** http://localhost:3001/api-docs
 - **Migration Guide:** `docs/MIGRATION-GUIDE-V2.md`
 - **GitHub:** [Issues](https://github.com/your-repo/issues)
 

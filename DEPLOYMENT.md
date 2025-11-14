@@ -34,7 +34,7 @@ nano .env  # ویرایش تنظیمات
 npm run api
 ```
 
-سرور روی `http://91.99.13.17:3000` اجرا می‌شود.
+سرور روی `http://91.99.13.17:3001` اجرا می‌شود.
 
 ---
 
@@ -87,11 +87,11 @@ npx playwright install chromium --with-deps
 # ایجاد فایل .env
 cat > .env << EOF
 NODE_ENV=production
-PORT=3000
+PORT=3001
 MAX_BROWSER_TABS=50
 
 FAPHD_UA=FindAPhDBot/1.0 (+https://yoursite.com)
-FAPHD_TIMEOUT_MS=30000
+FAPHD_TIMEOUT_MS=30010
 FAPHD_MAX_RPS=1
 FAPHD_CACHE_TTL=900
 EOF
@@ -110,7 +110,7 @@ module.exports = {
     exec_mode: 'cluster',
     env_production: {
       NODE_ENV: 'production',
-      PORT: 3000
+      PORT: 3001
     },
     max_memory_restart: '2G',
     error_file: './logs/error.log',
@@ -152,7 +152,7 @@ server {
     server_name api.yourdomain.com;
 
     location / {
-        proxy_pass http://91.99.13.17:3000;
+        proxy_pass http://91.99.13.17:3001;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
@@ -220,7 +220,7 @@ RUN npm ci --only=production
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD ["node", "src/api/server.js"]
 ```
@@ -234,11 +234,11 @@ services:
   api:
     build: .
     ports:
-      - "3000:3000"
+      - "3001:3001"
     environment:
       - NODE_ENV=production
       - MAX_BROWSER_TABS=50
-      - PORT=3000
+      - PORT=3001
     volumes:
       - ./logs:/app/logs
     restart: unless-stopped
@@ -314,7 +314,7 @@ const logger = winston.createLogger({
 crontab -e
 
 # اضافه کردن این خط:
-*/5 * * * * curl -f http://91.99.13.17:3000/api/health || systemctl restart findaphd-api
+*/5 * * * * curl -f http://91.99.13.17:3001/api/health || systemctl restart findaphd-api
 ```
 
 ---
@@ -332,8 +332,8 @@ sudo ufw allow 22/tcp    # SSH
 sudo ufw allow 80/tcp    # HTTP
 sudo ufw allow 443/tcp   # HTTPS
 
-# بستن پورت 3000 (فقط از طریق Nginx)
-sudo ufw deny 3000/tcp
+# بستن پورت 3001 (فقط از طریق Nginx)
+sudo ufw deny 3001/tcp
 ```
 
 ### 2. Rate Limiting (Nginx)

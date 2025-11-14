@@ -102,7 +102,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD ["npm", "start"]
 ```
@@ -116,7 +116,7 @@ services:
   app:
     build: .
     ports:
-      - "3000:3000"
+      - "3001:3001"
     environment:
       - DB_TYPE=sqlite
       - SQLITE_PATH=/app/data/findaphd.db
@@ -148,7 +148,7 @@ docker-compose up -d
 - [ ] یا PostgreSQL setup شده
 - [ ] Environment variables تنظیم شده
 - [ ] Playwright browsers نصب شده: `npx playwright install chromium`
-- [ ] Port 3000 باز است
+- [ ] Port 3001 باز است
 - [ ] Firewall تنظیم شده
 
 ---

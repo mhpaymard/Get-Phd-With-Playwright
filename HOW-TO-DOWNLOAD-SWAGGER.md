@@ -10,12 +10,12 @@
 
 ```bash
 # دانلود با curl
-curl -o swagger.json http://91.99.13.17:3000/swagger.json
+curl -o swagger.json http://91.99.13.17:3001/swagger.json
 ```
 
 یا با مرورگر:
 ```
-http://91.99.13.17:3000/swagger.json
+http://91.99.13.17:3001/swagger.json
 ```
 
 **مزایا:**
@@ -50,7 +50,7 @@ cp swagger.json ~/Desktop/
 
 ### ✅ روش 3: دانلود از Swagger UI
 
-1. باز کنید: http://91.99.13.17:3000/api-docs
+1. باز کنید: http://91.99.13.17:3001/api-docs
 2. کلیک کنید روی `/swagger.json` endpoint
 3. فایل اتوماتیک دانلود می‌شه
 
@@ -59,7 +59,7 @@ cp swagger.json ~/Desktop/
 ### ✅ روش 4: دانلود با wget
 
 ```bash
-wget http://91.99.13.17:3000/swagger.json -O swagger-api.json
+wget http://91.99.13.17:3001/swagger.json -O swagger-api.json
 ```
 
 ---
@@ -67,7 +67,7 @@ wget http://91.99.13.17:3000/swagger.json -O swagger-api.json
 ### ✅ روش 5: دانلود با PowerShell
 
 ```powershell
-Invoke-WebRequest -Uri http://91.99.13.17:3000/swagger.json -OutFile swagger.json
+Invoke-WebRequest -Uri http://91.99.13.17:3001/swagger.json -OutFile swagger.json
 ```
 
 ---
@@ -79,7 +79,7 @@ const fs = require('fs');
 const https = require('http');
 
 const file = fs.createWriteStream('swagger.json');
-https.get('http://91.99.13.17:3000/swagger.json', (response) => {
+https.get('http://91.99.13.17:3001/swagger.json', (response) => {
   response.pipe(file);
   file.on('finish', () => {
     file.close();
@@ -95,7 +95,7 @@ https.get('http://91.99.13.17:3000/swagger.json', (response) => {
 ```python
 import requests
 
-response = requests.get('http://91.99.13.17:3000/swagger.json')
+response = requests.get('http://91.99.13.17:3001/swagger.json')
 with open('swagger.json', 'w', encoding='utf-8') as f:
     f.write(response.text)
 print('✅ Downloaded!')
@@ -109,7 +109,7 @@ print('✅ Downloaded!')
 # شروع سرور + دانلود
 npm start &
 sleep 3
-curl -o swagger.json http://91.99.13.17:3000/swagger.json
+curl -o swagger.json http://91.99.13.17:3001/swagger.json
 echo "✅ Downloaded to: $(pwd)/swagger.json"
 ```
 
@@ -121,7 +121,7 @@ echo "✅ Downloaded to: $(pwd)/swagger.json"
 
 ```bash
 # دانلود
-curl -o swagger.json http://91.99.13.17:3000/swagger.json
+curl -o swagger.json http://91.99.13.17:3001/swagger.json
 
 # استفاده در Flutter (با swagger_dart_code_generator)
 flutter pub add swagger_dart_code_generator
@@ -132,7 +132,7 @@ flutter pub run build_runner build
 
 ```dart
 // در Flutter
-final swaggerUrl = 'http://91.99.13.17:3000/swagger.json';
+final swaggerUrl = 'http://91.99.13.17:3001/swagger.json';
 ```
 
 ---
@@ -184,10 +184,10 @@ cat swagger.json | jq '.components.schemas | length'
 
 ```bash
 # تست اینکه سرور در حال اجراست
-curl http://91.99.13.17:3000/api/health
+curl http://91.99.13.17:3001/api/health
 
 # دانلود
-curl -o test-swagger.json http://91.99.13.17:3000/swagger.json
+curl -o test-swagger.json http://91.99.13.17:3001/swagger.json
 
 # چک کردن موفقیت
 if [ -f test-swagger.json ]; then
@@ -210,14 +210,14 @@ fi
 echo "📥 Downloading Swagger JSON..."
 
 # چک کردن سرور
-if ! curl -s http://91.99.13.17:3000/api/health > /dev/null; then
+if ! curl -s http://91.99.13.17:3001/api/health > /dev/null; then
     echo "❌ Server is not running!"
     echo "💡 Start server with: npm start"
     exit 1
 fi
 
 # دانلود
-curl -s -o swagger.json http://91.99.13.17:3000/swagger.json
+curl -s -o swagger.json http://91.99.13.17:3001/swagger.json
 
 # تایید
 if [ -f swagger.json ]; then
@@ -251,9 +251,9 @@ chmod +x download-swagger.sh
    npm start
    ```
 
-2. چک کنید سرور روی port 3000 هست:
+2. چک کنید سرور روی port 3001 هست:
    ```bash
-   curl http://91.99.13.17:3000/api/health
+   curl http://91.99.13.17:3001/api/health
    ```
 
 ### ✅ بعد از دانلود:
@@ -271,10 +271,10 @@ chmod +x download-swagger.sh
 
 ## 🔗 لینک‌های مفید
 
-- **Swagger UI**: http://91.99.13.17:3000/api-docs
-- **Download Endpoint**: http://91.99.13.17:3000/swagger.json
-- **API Info**: http://91.99.13.17:3000/
-- **Health Check**: http://91.99.13.17:3000/api/health
+- **Swagger UI**: http://91.99.13.17:3001/api-docs
+- **Download Endpoint**: http://91.99.13.17:3001/swagger.json
+- **API Info**: http://91.99.13.17:3001/
+- **Health Check**: http://91.99.13.17:3001/api/health
 
 ---
 
@@ -297,12 +297,12 @@ npm start
 
 **راه حل:** از URL صحیح استفاده کنید:
 ```
-http://91.99.13.17:3000/swagger.json
+http://91.99.13.17:3001/swagger.json
 ```
 
 نه:
-- ❌ http://91.99.13.17:3000/api/swagger.json
-- ❌ http://91.99.13.17:3000/api-docs/swagger.json
+- ❌ http://91.99.13.17:3001/api/swagger.json
+- ❌ http://91.99.13.17:3001/api-docs/swagger.json
 
 ---
 
@@ -316,7 +316,7 @@ http://91.99.13.17:3000/swagger.json
 rm swagger.json
 
 # دانلود مجدد
-curl -o swagger.json http://91.99.13.17:3000/swagger.json
+curl -o swagger.json http://91.99.13.17:3001/swagger.json
 
 # چک کردن سایز
 ls -lh swagger.json
@@ -329,7 +329,7 @@ ls -lh swagger.json
 اگر مشکلی پیش اومد:
 1. ابتدا سرور رو restart کنید
 2. لاگ‌ها رو چک کنید: `tail -f server.log`
-3. Health check کنید: `curl http://91.99.13.17:3000/api/health`
+3. Health check کنید: `curl http://91.99.13.17:3001/api/health`
 
 ---
 

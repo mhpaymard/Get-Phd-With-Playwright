@@ -3,7 +3,7 @@
 ## گام 1: ایجاد Session
 
 ```bash
-curl -X POST http://91.99.13.17:3000/api/session \
+curl -X POST http://91.99.13.17:3001/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId":"my-user"}'
 ```
@@ -24,7 +24,7 @@ curl -X POST http://91.99.13.17:3000/api/session \
 ## گام 2: جستجو
 
 ```bash
-curl -X POST http://91.99.13.17:3000/api/search \
+curl -X POST http://91.99.13.17:3001/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "my-user",
@@ -63,7 +63,7 @@ curl -X POST http://91.99.13.17:3000/api/search \
 ## گام 3: صفحه بعدی (اختیاری)
 
 ```bash
-curl -X POST http://91.99.13.17:3000/api/search/search-456/continue \
+curl -X POST http://91.99.13.17:3001/api/search/search-456/continue \
   -H "Content-Type: application/json" \
   -d '{
     "sessionId": "abc-123-xyz",
@@ -77,7 +77,7 @@ curl -X POST http://91.99.13.17:3000/api/search/search-456/continue \
 
 ```javascript
 // گام 1: Session
-const session = await fetch('http://91.99.13.17:3000/api/session', {
+const session = await fetch('http://91.99.13.17:3001/api/session', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({ userId: 'my-user' })
@@ -86,7 +86,7 @@ const session = await fetch('http://91.99.13.17:3000/api/session', {
 const sessionId = session.data.sessionId;
 
 // گام 2: جستجو
-const search = await fetch('http://91.99.13.17:3000/api/search', {
+const search = await fetch('http://91.99.13.17:3001/api/search', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
@@ -105,7 +105,7 @@ search.data.results.forEach(phd => {
 // گام 3: صفحه 2
 if (search.data.totalPages > 1) {
   const page2 = await fetch(
-    `http://91.99.13.17:3000/api/search/${search.searchId}/continue`,
+    `http://91.99.13.17:3001/api/search/${search.searchId}/continue`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -126,7 +126,7 @@ import requests
 
 # گام 1: Session
 session = requests.post(
-    'http://91.99.13.17:3000/api/session',
+    'http://91.99.13.17:3001/api/session',
     json={'userId': 'my-user'}
 ).json()
 
@@ -134,7 +134,7 @@ session_id = session['data']['sessionId']
 
 # گام 2: جستجو
 search = requests.post(
-    'http://91.99.13.17:3000/api/search',
+    'http://91.99.13.17:3001/api/search',
     json={
         'userId': 'my-user',
         'sessionId': session_id,
@@ -153,7 +153,7 @@ for phd in search['data']['results']:
 # گام 3: صفحه 2
 if search['data']['totalPages'] > 1:
     page2 = requests.post(
-        f"http://91.99.13.17:3000/api/search/{search['searchId']}/continue",
+        f"http://91.99.13.17:3001/api/search/{search['searchId']}/continue",
         json={'sessionId': session_id, 'page': 2}
     ).json()
     
@@ -223,7 +223,7 @@ if search['data']['totalPages'] > 1:
 ## 📚 مستندات بیشتر
 
 - **راهنمای کامل**: [STEP-BY-STEP-GUIDE.md](./STEP-BY-STEP-GUIDE.md)
-- **Swagger UI**: http://91.99.13.17:3000/api-docs
+- **Swagger UI**: http://91.99.13.17:3001/api-docs
 - **تمام دستورات**: [COMMANDS.md](./COMMANDS.md)
 
 ---

@@ -26,13 +26,13 @@ FindAPhD Search API یک سرویس RESTful است که به شما اجازه �
 
 ### Base URL
 ```
-Development: http://91.99.13.17:3000/api
+Development: http://91.99.13.17:3001/api
 Production: https://your-domain.com/api
 ```
 
 ### مستندات تعاملی
 ```
-Swagger UI: http://91.99.13.17:3000/api-docs
+Swagger UI: http://91.99.13.17:3001/api-docs
 ```
 
 ---
@@ -206,14 +206,14 @@ npm install axios
 
 import axios from 'axios';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://91.99.13.17:3000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://91.99.13.17:3001/api';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 30000, // 30 seconds
+  timeout: 30010, // 30 seconds
 });
 
 // Interceptor برای لاگ کردن خطاها
@@ -232,7 +232,7 @@ export default apiClient;
 ```javascript
 // src/services/api.js
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://91.99.13.17:3000/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://91.99.13.17:3001/api';
 
 class APIClient {
   async request(endpoint, options = {}) {
@@ -1550,6 +1550,6 @@ onChange={(e) => debouncedSearch(e.target.value)}
 - [QUICK-REFERENCE.md](./QUICK-REFERENCE.md) - مثال‌های سریع
 - [STEP-BY-STEP-GUIDE.md](./STEP-BY-STEP-GUIDE.md) - راهنمای کامل API
 - [SESSION-MANAGEMENT-GUIDE.md](./SESSION-MANAGEMENT-GUIDE.md) - جزئیات Session
-- Swagger UI: http://91.99.13.17:3000/api-docs
+- Swagger UI: http://91.99.13.17:3001/api-docs
 
 **🎉 حالا آماده‌ای برای پیاده‌سازی Frontend!**

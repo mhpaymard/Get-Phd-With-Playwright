@@ -16,7 +16,7 @@ node test-api-simple.js
 ## 2️⃣ تست با curl
 
 ```bash
-curl -X POST http://91.99.13.17:3000/api/search \
+curl -X POST http://91.99.13.17:3001/api/search \
   -H "Content-Type: application/json" \
   -d '{"userId": "test-user", "keywords": "machine learning", "page": 1}'
 ```
@@ -28,10 +28,10 @@ curl -X POST http://91.99.13.17:3000/api/search \
 tail -f server-final.log
 
 # چک وضعیت سرور
-curl http://91.99.13.17:3000/api/health
+curl http://91.99.13.17:3001/api/health
 
 # دیدن swagger
-# باز کن: http://91.99.13.17:3000/api-docs
+# باز کن: http://91.99.13.17:3001/api-docs
 ```
 
 ## 4️⃣ Restart کردن سرور
@@ -132,10 +132,10 @@ cd "e:/Projects 2/Real-chatplatform-main/get-phd" && node test-api-simple.js
    tail -f server-final.log
    ```
 
-4. **Port 3000 آزاد باشد**:
+4. **Port 3001 آزاد باشد**:
    ```bash
    # چک کردن اگر پورت اشغاله
-   netstat -ano | grep 3000
+   netstat -ano | grep 3001
    ```
 
 ---
@@ -159,7 +159,7 @@ const data = JSON.stringify({
 
 const options = {
   hostname: '91.99.13.17',
-  port: 3000,
+  port: 3001,
   path: '/api/search',
   method: 'POST',
   headers: {
@@ -184,7 +184,7 @@ req.end();
 import requests
 
 response = requests.post(
-    'http://91.99.13.17:3000/api/search',
+    'http://91.99.13.17:3001/api/search',
     json={
         'userId': 'user-123',
         'keywords': 'machine learning',
@@ -204,7 +204,7 @@ final dio = Dio();
 
 Future<void> search() async {
   final response = await dio.post(
-    'http://91.99.13.17:3000/api/search',
+    'http://91.99.13.17:3001/api/search',
     data: {
       'userId': 'user-123',
       'keywords': 'machine learning',

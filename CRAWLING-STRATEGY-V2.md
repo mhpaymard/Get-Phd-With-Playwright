@@ -164,7 +164,7 @@ async _markDeletedPhDs() {
 ### بهینه‌سازی:
 ```javascript
 // تاخیر بین هر request
-await this._delay(3000); // 3 seconds
+await this._delay(3001); // 3 seconds
 
 // محدودیت صفحات per keyword
 if (currentPage > 200) {
@@ -258,7 +258,7 @@ if (currentPage > 200) {  // از 200 به 500 تغییر بدید
 
 ### تغییر تاخیر:
 ```javascript
-await this._delay(3000); // 3s → 2s برای سریعتر شدن
+await this._delay(3001); // 3s → 2s برای سریعتر شدن
 ```
 
 ---
@@ -268,7 +268,7 @@ await this._delay(3000); // 3s → 2s برای سریعتر شدن
 وضعیت crawler رو می‌تونید ببینید:
 
 ```bash
-curl http://localhost:3000/api/crawler/status
+curl http://localhost:3001/api/crawler/status
 
 {
   "crawler": {

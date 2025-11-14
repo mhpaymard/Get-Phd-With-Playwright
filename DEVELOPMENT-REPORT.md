@@ -283,10 +283,10 @@ npm run test:api
 
 #### 8.1 `.env.example`
 ```bash
-PORT=3000
+PORT=3001
 MAX_BROWSER_TABS=100
 FAPHD_CACHE_TTL=900
-FAPHD_TIMEOUT_MS=30000
+FAPHD_TIMEOUT_MS=30010
 ...
 ```
 
@@ -384,11 +384,11 @@ npm run test:api
 ### مثال استفاده:
 ```javascript
 // ایجاد session
-POST http://91.99.13.17:3000/api/session
+POST http://91.99.13.17:3001/api/session
 Body: {"userId": "user-1"}
 
 // جستجو
-POST http://91.99.13.17:3000/api/search
+POST http://91.99.13.17:3001/api/search
 Body: {
   "userId": "user-1",
   "sessionId": "xxx",
