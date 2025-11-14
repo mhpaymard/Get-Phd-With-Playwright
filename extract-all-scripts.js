@@ -110,9 +110,9 @@ async function extractAllScripts() {
                 allCoursesDetailed.push({
                     scriptIndex: script.scriptIndex,
                     title: course.name,
-                    university: course.provider ? .name,
-                    descriptionLength: course.description ? .length || 0,
-                    hasDeadlineInDesc: course.description ? .toLowerCase().includes('deadline'),
+                    university: course.provider?.name,
+                    descriptionLength: course.description?.length || 0,
+                    hasDeadlineInDesc: course.description?.toLowerCase().includes('deadline'),
                     description: course.description
                 });
             });

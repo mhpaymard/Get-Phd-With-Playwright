@@ -138,7 +138,7 @@ async function diagnose() {
                                     scriptIndex: idx + 1,
                                     title: item.name,
                                     description: item.description,
-                                    university: item.provider ? .name,
+                                    university: item.provider?.name,
                                     raw: item
                                 });
                             }
@@ -148,7 +148,7 @@ async function diagnose() {
                             scriptIndex: idx + 1,
                             title: data.name,
                             description: data.description,
-                            university: data.provider ? .name,
+                            university: data.provider?.name,
                             raw: data
                         });
                     }

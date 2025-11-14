@@ -194,7 +194,7 @@ async function deepTestJsonLd() {
             const links = document.querySelectorAll('a[href*="/phds/project/"]');
             return Array.from(links).map(link => ({
                 href: link.href,
-                text: link.textContent ? .trim().substring(0, 100)
+                text: link.textContent?.trim().substring(0, 100)
             }));
         });
 

@@ -246,13 +246,13 @@ class BackgroundCrawler {
                         this.currentLogId,
                         `Completed page ${currentPage}`,
                         currentPage,
-                        result.pagination ? .totalPages,
+                        result.pagination?.totalPages,
                         this.stats.total_found
                     );
 
                     this.notify('progress', {
                         page: currentPage,
-                        totalPages: result.pagination ? .totalPages,
+                        totalPages: result.pagination?.totalPages,
                         stats: this.stats
                     });
 

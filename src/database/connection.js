@@ -352,8 +352,8 @@ class Database {
         return {
             type: this.type,
             isInitialized: this.isInitialized,
-            totalPhDs: totalPhDs ? .count || 0,
-            activePhDs: activePhDs ? .count || 0,
+            totalPhDs: totalPhDs?.count || 0,
+            activePhDs: activePhDs?.count || 0,
             crawlerStats: crawlerStats || {}
         };
     }

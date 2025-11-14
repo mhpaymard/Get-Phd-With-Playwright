@@ -183,7 +183,7 @@ function analyzeOffline(html) {
                     courses.push({
                         scriptIndex: idx + 1,
                         title: item.name,
-                        university: item.provider ? .name
+                        university: item.provider?.name
                     });
                 }
             });
@@ -191,7 +191,7 @@ function analyzeOffline(html) {
             courses.push({
                 scriptIndex: idx + 1,
                 title: data.name,
-                university: data.provider ? .name
+                university: data.provider?.name
             });
         }
     });

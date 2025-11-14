@@ -222,7 +222,7 @@ async function testCrawler() {
         // تبدیل اولیه و parse description
         const prepared = allCourses.map(item => {
             const title = normalizeSpace(item.name || '');
-            const university = normalizeSpace(item.provider ? .name || '');
+            const university = normalizeSpace(item.provider?.name || '');
             const description = normalizeSpace(item.description || '');
             const parsed = parseFromDescription(description, university);
             return {

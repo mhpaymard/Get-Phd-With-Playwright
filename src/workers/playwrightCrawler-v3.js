@@ -324,7 +324,7 @@ class FindAPhDCrawlerV3 {
                     }
 
                     // اگر چیزی در HTML نبود، از JSON-LD بگیر
-                    if (!htmlPhd.university && bestMatch.provider ? .name) {
+                    if (!htmlPhd.university && bestMatch.provider?.name) {
                         htmlPhd.university = bestMatch.provider.name;
                     }
 

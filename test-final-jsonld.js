@@ -132,7 +132,7 @@ async function testFinalJsonLd() {
             const phdLinks = Array.from(document.querySelectorAll('a[href*="/phds/project/"]'));
             const urls = phdLinks.map(link => ({
                 href: link.href,
-                text: link.textContent ? .trim()
+                text: link.textContent?.trim()
             }));
 
             return { jsonLdData, urls };
@@ -174,8 +174,8 @@ async function testFinalJsonLd() {
                 index: index + 1,
                 title: phd.name,
                 url: phd.url,
-                university: phd.provider ? .name || null,
-                description: phd.description ? .substring(0, 300) + '...',
+                university: phd.provider?.name || null,
+                description: phd.description?.substring(0, 300) + '...',
                 descriptionFull: phd.description,
 
                 // Parsed from description
