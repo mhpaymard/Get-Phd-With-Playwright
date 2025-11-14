@@ -18,14 +18,14 @@ node src/api/server.js
 ✓ Browser pool initialized with max 100 tabs
 
 📚 Documentation URLs:
-   • Swagger UI:    http://91.99.13.17:3001/api-docs
-   • API Info:      http://91.99.13.17:3001/
-   • Health Check:  http://91.99.13.17:3001/api/health
+   • Swagger UI:    http://91.99.13.17/api-docs
+   • API Info:      http://91.99.13.17/
+   • Health Check:  http://91.99.13.17/api/health
 ============================================================
 ```
 
 **بعد از اجرا:**
-- برو به `http://91.99.13.17:3001/api-docs` برای Swagger UI
+- برو به `http://91.99.13.17/api-docs` برای Swagger UI
 - API آماده دریافت درخواست است
 
 ---
@@ -176,19 +176,19 @@ node src/demo/crawl.js
 ### از Terminal:
 ```bash
 # Health check
-curl http://91.99.13.17:3001/api/health
+curl http://91.99.13.17/api/health
 
 # Ready check
-curl http://91.99.13.17:3001/api/health/ready
+curl http://91.99.13.17/api/health/ready
 
 # API info
-curl http://91.99.13.17:3001/
+curl http://91.99.13.17/
 ```
 
 ### از مرورگر:
-- `http://91.99.13.17:3001/` - اطلاعات API
-- `http://91.99.13.17:3001/api/health` - وضعیت سلامت
-- `http://91.99.13.17:3001/api-docs` - مستندات Swagger
+- `http://91.99.13.17/` - اطلاعات API
+- `http://91.99.13.17/api/health` - وضعیت سلامت
+- `http://91.99.13.17/api-docs` - مستندات Swagger
 
 ---
 
@@ -234,7 +234,7 @@ Shutting down gracefully...
 ### Port 3001 قبلاً استفاده شده
 ```bash
 # پیدا کردن Process
-netstat -ano | findstr :3001
+netstat -ano | findstr 
 
 # Kill کردن Process (Windows)
 taskkill /PID <PID_NUMBER> /F
@@ -279,7 +279,7 @@ npm install
 2. # باز کردن Terminal جدید
 3. npm run test:full        # تست خودکار
 4. npm run test:real        # تست واقعی
-5. # مرورگر: http://91.99.13.17:3001/api-docs
+5. # مرورگر: http://91.99.13.17/api-docs
 ```
 
 ### برای Production:
@@ -307,10 +307,10 @@ npm install
 
 ## لینک‌های مفید بعد از اجرا
 
-- **API Root**: http://91.99.13.17:3001/
-- **Swagger UI**: http://91.99.13.17:3001/api-docs
-- **Health Check**: http://91.99.13.17:3001/api/health
-- **Ready Check**: http://91.99.13.17:3001/api/health/ready
+- **API Root**: http://91.99.13.17/
+- **Swagger UI**: http://91.99.13.17/api-docs
+- **Health Check**: http://91.99.13.17/api/health
+- **Ready Check**: http://91.99.13.17/api/health/ready
 
 ---
 

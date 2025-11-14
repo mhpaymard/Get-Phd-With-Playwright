@@ -186,7 +186,7 @@ npm test
 ### مثال استفاده
 ```javascript
 // 1. ایجاد session
-const sessionRes = await fetch('http://91.99.13.17:3001/api/session', {
+const sessionRes = await fetch('http://91.99.13.17/api/session', {
   method: 'POST',
   headers: {'Content-Type': 'application/json'},
   body: JSON.stringify({userId: 'user-1'})
@@ -194,7 +194,7 @@ const sessionRes = await fetch('http://91.99.13.17:3001/api/session', {
 const {data: {sessionId}} = await sessionRes.json();
 
 // 2. جستجو
-const searchRes = await fetch('http://91.99.13.17:3001/api/search', {
+const searchRes = await fetch('http://91.99.13.17/api/search', {
   method: 'POST',
   headers: {'Content-Type': 'application/json'},
   body: JSON.stringify({

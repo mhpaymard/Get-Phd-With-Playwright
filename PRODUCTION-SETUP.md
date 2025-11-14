@@ -116,7 +116,7 @@ services:
   app:
     build: .
     ports:
-      - "3001:3001"
+      - "3001"
     environment:
       - DB_TYPE=sqlite
       - SQLITE_PATH=/app/data/findaphd.db

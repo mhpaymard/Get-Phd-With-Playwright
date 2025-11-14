@@ -7,7 +7,7 @@
 node src/api/server.js
 
 # Open browser
-http://91.99.13.17:3001/api-docs
+http://91.99.13.17/api-docs
 ```
 
 Done! You now have interactive API documentation.
@@ -17,7 +17,7 @@ Done! You now have interactive API documentation.
 ## Your First API Call (60 seconds)
 
 ### Step 1: Open Swagger UI
-Go to: `http://91.99.13.17:3001/api-docs`
+Go to: `http://91.99.13.17/api-docs`
 
 ### Step 2: Create a Session
 1. Find `POST /session` under **Session** section
@@ -130,7 +130,7 @@ POST /search/{searchId}/continue
 // Create session and search
 async function quickSearch(keywords) {
   // 1. Create session
-  const sessionResp = await fetch('http://91.99.13.17:3001/api/session', {
+  const sessionResp = await fetch('http://91.99.13.17/api/session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId: 'quick-user' })
@@ -138,7 +138,7 @@ async function quickSearch(keywords) {
   const { data: { sessionId } } = await sessionResp.json();
 
   // 2. Search
-  const searchResp = await fetch('http://91.99.13.17:3001/api/search', {
+  const searchResp = await fetch('http://91.99.13.17/api/search', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -169,7 +169,7 @@ quickSearch('artificial intelligence').then(result => {
 import requests
 
 def quick_search(keywords):
-    BASE = 'http://91.99.13.17:3001/api'
+    BASE = 'http://91.99.13.17/api'
     
     # 1. Create session
     session = requests.post(f'{BASE}/session', 
@@ -202,15 +202,15 @@ for phd in result['data']['results']:
 
 ```bash
 # 1. Health check
-curl http://91.99.13.17:3001/api/health
+curl http://91.99.13.17/api/health
 
 # 2. Create session
-curl -X POST http://91.99.13.17:3001/api/session \
+curl -X POST http://91.99.13.17/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId":"curl-user"}'
 
 # 3. Search (replace SESSION_ID)
-curl -X POST http://91.99.13.17:3001/api/search \
+curl -X POST http://91.99.13.17/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "curl-user",
@@ -226,7 +226,7 @@ curl -X POST http://91.99.13.17:3001/api/search \
 
 ### 1. Always Check Health First
 ```bash
-curl http://91.99.13.17:3001/api/health/ready
+curl http://91.99.13.17/api/health/ready
 ```
 If `ready: false`, wait a bit before searching.
 

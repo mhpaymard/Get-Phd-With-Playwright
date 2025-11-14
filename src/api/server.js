@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
         service: 'FindAPhD Search API',
         version: '1.0.0',
         status: 'running',
-        documentation: `http://91.99.13.17:${PORT}/api-docs`,
+        documentation: `http://91.99.13.17:/api-docs`,
         endpoints: {
             search: '/api/search',
             session: '/api/session',
@@ -97,12 +97,12 @@ async function start() {
         await browserPool.initialize();
         app.listen(PORT, () => {
             console.log(`\n${'='.repeat(60)}`);
-            console.log(`✓ FindAPhD API Server running on port ${PORT}`);
+            console.log(`✓ FindAPhD API Server running on port `);
             console.log(`✓ Browser pool initialized with max ${browserPool.getMaxTabs()} tabs`);
             console.log(`\n📚 Documentation URLs:`);
-            console.log(`   • Swagger UI:    http://91.99.13.17:${PORT}/api-docs`);
-            console.log(`   • API Info:      http://91.99.13.17:${PORT}/`);
-            console.log(`   • Health Check:  http://91.99.13.17:${PORT}/api/health`);
+            console.log(`   • Swagger UI:    http://91.99.13.17:/api-docs`);
+            console.log(`   • API Info:      http://91.99.13.17:/`);
+            console.log(`   • Health Check:  http://91.99.13.17:/api/health`);
             console.log(`${'='.repeat(60)}\n`);
         });
     } catch (error) {

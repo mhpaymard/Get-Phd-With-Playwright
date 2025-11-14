@@ -11,7 +11,7 @@ npm install
 npm start
 
 # باز کردن Swagger UI در مرورگر
-# http://91.99.13.17:3001/api-docs
+# http://91.99.13.17/api-docs
 ```
 
 ---
@@ -58,10 +58,10 @@ npm run docs           # باز کردن Swagger UI
 ## 🌐 آدرس‌های مهم (بعد از اجرا)
 
 ```
-✓ Swagger UI:      http://91.99.13.17:3001/api-docs
-✓ API Root:        http://91.99.13.17:3001/
-✓ Health Check:    http://91.99.13.17:3001/api/health
-✓ Ready Check:     http://91.99.13.17:3001/api/health/ready
+✓ Swagger UI:      http://91.99.13.17/api-docs
+✓ API Root:        http://91.99.13.17/
+✓ Health Check:    http://91.99.13.17/api/health
+✓ Ready Check:     http://91.99.13.17/api/health/ready
 ```
 
 ---
@@ -94,7 +94,7 @@ npm run test:full
 npm start
 
 # باز کردن مرورگر
-# http://91.99.13.17:3001/api-docs
+# http://91.99.13.17/api-docs
 
 # تست در Swagger UI
 ```
@@ -124,12 +124,12 @@ npm start
 
 ### Health Check
 ```bash
-curl http://91.99.13.17:3001/api/health
+curl http://91.99.13.17/api/health
 ```
 
 ### ایجاد Session
 ```bash
-curl -X POST http://91.99.13.17:3001/api/session \
+curl -X POST http://91.99.13.17/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId":"test-user"}'
 ```
@@ -138,7 +138,7 @@ curl -X POST http://91.99.13.17:3001/api/session \
 ```bash
 SESSION_ID="your-session-id"
 
-curl -X POST http://91.99.13.17:3001/api/search \
+curl -X POST http://91.99.13.17/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "test-user",
@@ -156,7 +156,7 @@ curl -X POST http://91.99.13.17:3001/api/search \
 ```bash
 1. npm install              # نصب
 2. npm start                # اجرا
-3. # باز کردن: http://91.99.13.17:3001/api-docs
+3. # باز کردن: http://91.99.13.17/api-docs
 4. # تست در Swagger UI
 ```
 
@@ -185,10 +185,10 @@ npm run test:real           # تست واقعی
 ### چک وضعیت
 ```bash
 # سرور در حال اجرا؟
-curl http://91.99.13.17:3001/api/health
+curl http://91.99.13.17/api/health
 
 # آماده دریافت درخواست؟
-curl http://91.99.13.17:3001/api/health/ready
+curl http://91.99.13.17/api/health/ready
 ```
 
 ### مشاهده لاگ‌ها
@@ -210,7 +210,7 @@ Ctrl + C
 ### Port در حال استفاده
 ```bash
 # Windows
-netstat -ano | findstr :3001
+netstat -ano | findstr 
 taskkill /PID <PID> /F
 
 # تغییر پورت
@@ -244,9 +244,9 @@ npm install
 ✓ Browser pool initialized with max 100 tabs
 
 📚 Documentation URLs:
-   • Swagger UI:    http://91.99.13.17:3001/api-docs
-   • API Info:      http://91.99.13.17:3001/
-   • Health Check:  http://91.99.13.17:3001/api/health
+   • Swagger UI:    http://91.99.13.17/api-docs
+   • API Info:      http://91.99.13.17/
+   • Health Check:  http://91.99.13.17/api/health
 ============================================================
 ```
 
@@ -301,7 +301,7 @@ npm install
 npm start
 
 # مرحله 2: باز کردن Swagger UI
-# مرورگر: http://91.99.13.17:3001/api-docs
+# مرورگر: http://91.99.13.17/api-docs
 
 # مرحله 3: تست در Swagger
 # 1. POST /session → ایجاد session
@@ -357,7 +357,7 @@ MAX_BROWSER_TABS=50 npm start
 | اجرا | `npm start` |
 | توسعه | `npm run dev` |
 | تست | `npm run test:full` |
-| مستندات | http://91.99.13.17:3001/api-docs |
+| مستندات | http://91.99.13.17/api-docs |
 | خاموش | `Ctrl + C` |
 
 ---

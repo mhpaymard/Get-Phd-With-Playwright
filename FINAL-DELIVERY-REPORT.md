@@ -93,7 +93,7 @@ npm start
 
 باز کنید در مرورگر:
 ```
-http://91.99.13.17:3001/api-docs
+http://91.99.13.17/api-docs
 ```
 
 ### 3. تست API
@@ -114,10 +114,10 @@ node test-swagger.js
 
 | نام | URL | توضیحات |
 |-----|-----|---------|
-| **Swagger UI** | `http://91.99.13.17:3001/api-docs` | مستندات تعاملی |
-| **API Info** | `http://91.99.13.17:3001/` | اطلاعات کلی API |
-| **Health Check** | `http://91.99.13.17:3001/api/health` | وضعیت سرور |
-| **Base API** | `http://91.99.13.17:3001/api` | Base URL برای Flutter |
+| **Swagger UI** | `http://91.99.13.17/api-docs` | مستندات تعاملی |
+| **API Info** | `http://91.99.13.17/` | اطلاعات کلی API |
+| **Health Check** | `http://91.99.13.17/api/health` | وضعیت سرور |
+| **Base API** | `http://91.99.13.17/api` | Base URL برای Flutter |
 
 ---
 
@@ -172,7 +172,7 @@ node test-swagger.js
 
 ### Request:
 ```bash
-POST http://91.99.13.17:3001/api/search
+POST http://91.99.13.17/api/search
 Content-Type: application/json
 
 {
@@ -279,7 +279,7 @@ NODE_ENV=development
 ### اگر Swagger باز نشد:
 ```bash
 # چک کنید سرور در حال اجراست
-curl http://91.99.13.17:3001/api/health
+curl http://91.99.13.17/api/health
 
 # دوباره start کنید
 npm start

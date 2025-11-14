@@ -45,9 +45,9 @@ node src/api/server.js
 ✓ Browser pool initialized with max 100 tabs
 
 📚 Documentation URLs:
-   • Swagger UI:    http://91.99.13.17:3001/api-docs
-   • API Info:      http://91.99.13.17:3001/
-   • Health Check:  http://91.99.13.17:3001/api/health
+   • Swagger UI:    http://91.99.13.17/api-docs
+   • API Info:      http://91.99.13.17/
+   • Health Check:  http://91.99.13.17/api/health
 ============================================================
 ```
 
@@ -56,7 +56,7 @@ node src/api/server.js
 مرورگر خود را باز کنید و به آدرس زیر بروید:
 
 ```
-http://91.99.13.17:3001/api-docs
+http://91.99.13.17/api-docs
 ```
 
 شما یک رابط کاربری زیبا خواهید دید که تمام endpoint های API را نمایش می‌دهد.
@@ -76,7 +76,7 @@ http://91.99.13.17:3001/api-docs
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  Servers:                                               │
-│  ▼ http://91.99.13.17:3001/api  [Development Server]     │
+│  ▼ http://91.99.13.17/api  [Development Server]     │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │  [ Health ] وضعیت و سلامت سرویس                        │
@@ -136,7 +136,7 @@ http://91.99.13.17:3001/api-docs
 
 **Request URL:**
 ```
-http://91.99.13.17:3001/api/health
+http://91.99.13.17/api/health
 ```
 
 **Response:**
@@ -333,7 +333,7 @@ get-phd/
   },
   "servers": [
     {
-      "url": "http://91.99.13.17:3001/api",
+      "url": "http://91.99.13.17/api",
       "description": "Development Server"
     },
     {
@@ -399,7 +399,7 @@ swagger-codegen generate -i swagger.json -l java -o ./java-client
 ```javascript
 // 1. ایجاد Session
 async function createSession(userId) {
-  const response = await fetch('http://91.99.13.17:3001/api/session', {
+  const response = await fetch('http://91.99.13.17/api/session', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId })
@@ -410,7 +410,7 @@ async function createSession(userId) {
 
 // 2. انجام جستجو
 async function performSearch(sessionId, keywords, filters = {}) {
-  const response = await fetch('http://91.99.13.17:3001/api/search', {
+  const response = await fetch('http://91.99.13.17/api/search', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -428,7 +428,7 @@ async function performSearch(sessionId, keywords, filters = {}) {
 // 3. دریافت صفحات بعدی
 async function getNextPage(searchId, sessionId, page) {
   const response = await fetch(
-    `http://91.99.13.17:3001/api/search/${searchId}/continue`,
+    `http://91.99.13.17/api/search/${searchId}/continue`,
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -480,7 +480,7 @@ main();
 import requests
 import json
 
-BASE_URL = 'http://91.99.13.17:3001/api'
+BASE_URL = 'http://91.99.13.17/api'
 
 class FindAPhDClient:
     def __init__(self, user_id):
@@ -570,7 +570,7 @@ if __name__ == '__main__':
 
 ```bash
 # 1. ایجاد Session
-curl -X POST http://91.99.13.17:3001/api/session \
+curl -X POST http://91.99.13.17/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId": "user-curl-test"}'
 
@@ -587,7 +587,7 @@ curl -X POST http://91.99.13.17:3001/api/session \
 # 2. جستجو
 SESSION_ID="abc-123-def-456"
 
-curl -X POST http://91.99.13.17:3001/api/search \
+curl -X POST http://91.99.13.17/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "user-curl-test",
@@ -603,10 +603,10 @@ curl -X POST http://91.99.13.17:3001/api/search \
 # 3. دریافت نتیجه
 SEARCH_ID="search-xyz-789"
 
-curl "http://91.99.13.17:3001/api/search/${SEARCH_ID}?sessionId=${SESSION_ID}"
+curl "http://91.99.13.17/api/search/${SEARCH_ID}?sessionId=${SESSION_ID}"
 
 # 4. صفحه بعدی
-curl -X POST "http://91.99.13.17:3001/api/search/${SEARCH_ID}/continue" \
+curl -X POST "http://91.99.13.17/api/search/${SEARCH_ID}/continue" \
   -H "Content-Type: application/json" \
   -d '{
     "sessionId": "'$SESSION_ID'",
@@ -614,10 +614,10 @@ curl -X POST "http://91.99.13.17:3001/api/search/${SEARCH_ID}/continue" \
   }'
 
 # 5. مشاهده تاریخچه
-curl "http://91.99.13.17:3001/api/search/history/${SESSION_ID}"
+curl "http://91.99.13.17/api/search/history/${SESSION_ID}"
 
 # 6. حذف Session
-curl -X DELETE "http://91.99.13.17:3001/api/session/${SESSION_ID}"
+curl -X DELETE "http://91.99.13.17/api/session/${SESSION_ID}"
 ```
 
 ---
@@ -721,7 +721,7 @@ import {
 } from './ts-client';
 
 const config = new Configuration({
-  basePath: 'http://91.99.13.17:3001/api'
+  basePath: 'http://91.99.13.17/api'
 });
 
 const searchApi = new SearchApi(config);
@@ -756,7 +756,7 @@ main();
 
 ```javascript
 // .env.development
-API_BASE_URL=http://91.99.13.17:3001/api
+API_BASE_URL=http://91.99.13.17/api
 
 // .env.production
 API_BASE_URL=https://api.yourdomain.com/api
@@ -799,7 +799,7 @@ API محدودیت تعداد تب‌های همزمان دارد (100 تب):
 ```javascript
 // چک کردن وضعیت قبل از جستجو
 async function checkAvailability() {
-  const health = await fetch('http://91.99.13.17:3001/api/health/ready');
+  const health = await fetch('http://91.99.13.17/api/health/ready');
   const data = await health.json();
   
   if (!data.ready) {
@@ -821,10 +821,10 @@ async function checkAvailability() {
 node src/api/server.js
 
 # 2. دسترسی به Swagger UI
-# مرورگر: http://91.99.13.17:3001/api-docs
+# مرورگر: http://91.99.13.17/api-docs
 
 # 3. تست سریع با curl
-curl http://91.99.13.17:3001/api/health
+curl http://91.99.13.17/api/health
 
 # 4. تولید Python Client
 openapi-generator-cli generate -i swagger.json -g python -o ./python-client

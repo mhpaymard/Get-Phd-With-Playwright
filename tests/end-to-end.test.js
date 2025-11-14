@@ -284,9 +284,9 @@ async function runEndToEndTest() {
 
     console.log('\n💡 Next steps:');
     console.log('   1. Run the server: npm start');
-    console.log('   2. Open Swagger UI: https://applycore.ca:3001/api-docs');
-    console.log('   3. Monitor crawler: https://applycore.ca:3001/api/crawler/status');
-    console.log('   4. Search PhDs: https://applycore.ca:3001/api/phd/search');
+    console.log('   2. Open Swagger UI: https://applycore.ca/api-docs');
+    console.log('   3. Monitor crawler: https://applycore.ca/api/crawler/status');
+    console.log('   4. Search PhDs: https://applycore.ca/api/phd/search');
     console.log('');
 
     await db.close();

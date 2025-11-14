@@ -9,7 +9,7 @@
 ## 🌐 API Base URL
 
 ```
-Development:  http://91.99.13.17:3001/api
+Development:  http://91.99.13.17/api
 Production:   https://api.yourdomain.com/api
 ```
 
@@ -17,7 +17,7 @@ Production:   https://api.yourdomain.com/api
 
 ## 📚 Swagger Documentation
 
-**URL:** `http://91.99.13.17:3001/api-docs`
+**URL:** `http://91.99.13.17/api-docs`
 
 در مرورگر باز کنید و تمام Endpoint ها، Request/Response ها و Example ها را مشاهده کنید.
 
@@ -398,7 +398,7 @@ class SearchResponse {
 import 'package:dio/dio.dart';
 
 class ApiClient {
-  static const String baseUrl = 'http://91.99.13.17:3001/api';
+  static const String baseUrl = 'http://91.99.13.17/api';
   
   late final Dio dio;
   
@@ -499,12 +499,12 @@ Append new results to list
 
 ```bash
 # 1. Create session
-curl -X POST http://91.99.13.17:3001/api/session \
+curl -X POST http://91.99.13.17/api/session \
   -H "Content-Type: application/json" \
   -d '{"userId": "test-user"}'
 
 # 2. Search
-curl -X POST http://91.99.13.17:3001/api/search \
+curl -X POST http://91.99.13.17/api/search \
   -H "Content-Type: application/json" \
   -d '{
     "userId": "test-user",
@@ -569,8 +569,8 @@ node test-api-simple.js
 
 **اگر مشکلی پیش آمد:**
 
-1. Swagger را چک کنید: `http://91.99.13.17:3001/api-docs`
-2. Health Check بزنید: `http://91.99.13.17:3001/api/health`
+1. Swagger را چک کنید: `http://91.99.13.17/api-docs`
+2. Health Check بزنید: `http://91.99.13.17/api/health`
 3. لاگ‌های سرور را ببینید
 4. با تیم Backend تماس بگیرید
 
@@ -578,8 +578,8 @@ node test-api-simple.js
 
 ## ✅ API آماده استفاده است!
 
-**Base URL:** `http://91.99.13.17:3001/api`
-**Swagger:** `http://91.99.13.17:3001/api-docs`
+**Base URL:** `http://91.99.13.17/api`
+**Swagger:** `http://91.99.13.17/api-docs`
 **Status:** ✅ Working (Crawler جدید نصب شده)
 
 **موفق باشید!** 🚀

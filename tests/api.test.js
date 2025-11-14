@@ -1,7 +1,7 @@
 // API Integration Tests
 const http = require('http');
 
-const API_BASE = 'http://91.99.13.17:3001/api';
+const API_BASE = 'http://91.99.13.17/api';
 
 function makeRequest(method, path, body = null) {
     return new Promise((resolve, reject) => {
